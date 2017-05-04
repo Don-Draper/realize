@@ -1,0 +1,56 @@
+body {
+  font-family: "Raleway";
+  font-weight: lighter;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.container {
+  position: absolute;
+} 
+
+.paraWidth {
+  max-width: 80px;
+}
+
+h3 .word-wrap {
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.container md-button {
+  display: block;            
+  width: 100%;
+  margin: 2px;
+  text-align: center;
+}
+
+.widecell {
+  min-width: 200px;
+}
+
+.md-button.cat-button {
+  min-width: 130px;
+  color: blue;
+}
+
+.checkbox-text {
+  font-size: 20px;
+}
+
+md-checkbox {
+  margin: 10px;
+  cursor: pointer;
+  padding-left: 18px;
+  padding-right: 0;
+  line-height: 26px;
+  min-width: 18px;
+  min-height: 18px;
+}

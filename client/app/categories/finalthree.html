@@ -1,0 +1,27 @@
+<div ng-controller="categoriesController">
+  <h1 layout="row" layout-align="center">Of those, what's the most important of all?</h1>
+  <br>
+  <br>
+  <div layout="row" layout-align="center">
+    <md-list ng-repeat="category in threeChoices">
+
+      <md-list-item>
+
+        <input class="checkboxListThree" type="checkbox" checklist-model="primary" checklist-value="category"><div class="checkbox-text">{{category}}</div>
+
+      </md-list-item>
+
+    </md-list>
+
+  </div>
+   <br/>
+   <br/>
+  <div layout="row" layout-align="center">
+
+   <md-button type="submit" class="md-raised md-primary cat-button" ng-click="grabResponseAndShowBeliefs()">Submit</md-button>
+
+  </div>
+
+</div>
+
+
