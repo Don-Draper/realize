@@ -1,0 +1,38 @@
+{
+  "name": "realize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Don-Draper/realize.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Don-Draper/realize/issues"
+  },
+  "homepage": "https://github.com/Don-Draper/realize#readme",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^4.0.0-alpha.4",
+    "canvas": "^1.6.5",
+    "checklist-model": "^0.11.0",
+    "composer": "^0.14.0",
+    "express": "^4.15.2",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.2",
+    "morgan": "^1.8.1",
+    "q": "^1.5.0"
+  }
+}

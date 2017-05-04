@@ -1,0 +1,36 @@
+<div ng-controller="categoriesController">
+  <h1 layout="row" layout-align="center">Which three are most important to you?</h1>
+  <br/>
+<!--   <p layout="wrap" flex="60" layout-align="center">Part of what makes each person unique is the set of ideas that surround us as we grow. The ideas we make a priority - those we spend the most time and energy upon - play a big role in shaping whom we become</p> -->
+
+
+
+
+<!--   <md-list class="flex flex-col" layout="column">
+    <md-list-item flex="40" class="checkboxList bigger-checklist" style="width:50%" ng-repeat="category in data track by $index"> -->
+
+
+
+
+  <table cellpadding="10" layout="row" layout-align="center">
+    <tr ng-style="{'font-size': '20px'}" ng-repeat="category in data track by $index">
+    <td align="left" class="widecell">
+
+      <input type="checkbox" checklist-model="threeChoices" checklist-value="category.name" class="checkboxList checkbox-text" checklist-change="checkChanged(name)" ng-disabled="checked===limit">     {{category.name}}
+
+    </td>
+
+    <td align="left">{{category.description}}
+    </td>
+  </tr>
+  </table>
+
+<!--     </md-list-item>
+  </md-list> -->
+  <br/>
+    <div layout="row" layout-align="center">
+
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Submit</md-button>
+    </div>
+
+</div>
