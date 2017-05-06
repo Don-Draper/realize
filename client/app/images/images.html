@@ -1,0 +1,23 @@
+<div ng-controller="imagesController">
+  <div layout="row" layout-align="center" >
+
+    <h2>Which image inspires the best in you?</h2><br/>
+
+
+
+<!-- <md-content class="md-padding" layout="row" layout-wrap> -->
+  <div ng-repeat="image in urls" flex="30">
+    <img src="{{image}}">
+    <h1>{{image.tag}}</h1>
+
+  </div>
+<!--       <img src="http://localhost:4000/assets/power.jpg">
+      <img src="http://localhost:4000/assets/amflag-shield.png"> -->
+<!-- </md-content> -->
+
+
+</div>
+
+<!--   <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button> -->
+
+</div>

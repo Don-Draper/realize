@@ -7,9 +7,10 @@ angular.module('app.categories', ['app.checklist-model'])
   this.mainBeliefs = [];
   this.userCategories = [];
   this.tempSeven = [];
+  this.urls = [];
 })
 
-.controller('categoriesController', function($scope, $location, dataService, Categories, Auth) {
+.controller('categoriesController', function($scope, $location, dataService, Categories, Images, Auth) {
   $scope.data;
 // $scope is the intermediary between what the user sees and the
 // factory. $scope methods grab from the factory and display it
@@ -50,8 +51,8 @@ angular.module('app.categories', ['app.checklist-model'])
   };
 
   $scope.toggleCatInListOfThree = function(index){
-    console.log("reaching addCatToListOfThree");
-    console.log("index: ", index);
+    // console.log("reaching addCatToListOfThree");
+    // console.log("index: ", index);
     $scope.threeChoices.push(categories[index]);
 
 
@@ -74,6 +75,11 @@ angular.module('app.categories', ['app.checklist-model'])
 
   $scope.grabResponseAndShowQuestionTwo = function() {
     $location.path('/finalthree');
+  }
+
+  $scope.moveToImages = function() {
+    // imagesController.getAll();
+    $location.path('/images');
   }
 
   $scope.getRandomBelief = function(itemId) {
@@ -152,7 +158,7 @@ angular.module('app.categories', ['app.checklist-model'])
       var temp = arr[Math.floor(Math.random()*arr.length)];
       $scope.tempSeven.push($scope.threeChoices[2]);
       if(!$scope.mainBeliefs.includes(temp)) {
-        console.log($scope.mainBeliefs)
+        // console.log($scope.mainBeliefs)
         $scope.mainBeliefs.push(temp);
       }
     }

@@ -3,6 +3,7 @@ angular.module('app', [
   'app.auth',
   'app.categories',
   'ngMaterial',
+  'app.images',
   //'app.modalService',
   'ngRoute'
 
@@ -77,6 +78,10 @@ angular.module('app', [
     .when('/homebase', {
       templateUrl: './app/categories/homebase.html',
       controller: 'categoriesController'    
+    })
+    .when('/images', {
+      templateUrl: './app/images/images.html',
+      controller: 'imagesController'
     })
     .otherwise({
       redirectTo: '/signin'
