@@ -80,9 +80,13 @@ angular.module('app', [
       controller: 'categoriesController'    
     })
     .when('/images', {
-      templateUrl: './app/images/images.html',
+      templateUrl: './app/canvas/canvas.html',
       controller: 'imagesController'
     })
+    // .when('/images', {
+    //   templateUrl: './app/images/images.html',
+    //   controller: 'imagesController'
+    // })
     .otherwise({
       redirectTo: '/signin'
     });

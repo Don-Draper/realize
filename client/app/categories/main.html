@@ -1,10 +1,12 @@
-<div layout="row" layout-align="center">
+<div ng-controller="categoriesController" layout="row" layout-align="center">
 
-    <h2>What's YOUR Seven?</h2><br/>
+    <h2>What's your last name?</h2><br/>
 
 </div>
 
 <div layout="row" layout-align="center">
+
+  <input type="text" ng-model="lastName">
 
   <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button>
 

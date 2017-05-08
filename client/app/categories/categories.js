@@ -8,6 +8,16 @@ angular.module('app.categories', ['app.checklist-model'])
   this.userCategories = [];
   this.tempSeven = [];
   this.urls = [];
+  this.mainBeliefsString = '';
+  this.changeMainBeliefsFromArrayToString = function() {
+    var final = '';
+    for(var i = 0; i < this.mainBeliefs.length; i ++) {
+      final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
+    }
+    this.mainBeliefsString = final;
+  };
+  this.lastName = null;
+
 })
 
 .controller('categoriesController', function($scope, $location, dataService, Categories, Images, Auth) {
@@ -21,6 +31,7 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.primary = dataService.primary;
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
+  $scope.lastName = dataService.lastName;
 
   $scope.workable = [];
 
@@ -78,6 +89,7 @@ angular.module('app.categories', ['app.checklist-model'])
   }
 
   $scope.moveToImages = function() {
+    dataService.changeMainBeliefsFromArrayToString();
     // imagesController.getAll();
     $location.path('/images');
   }
