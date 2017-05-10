@@ -1,24 +1,24 @@
 angular.module('app.categories', ['app.checklist-model'])
 
-.service('dataService', function () {
-  this.threeChoices = [];
-  this.primary = [];
-  this.sevenBeliefs = [];
-  this.mainBeliefs = [];
-  this.userCategories = [];
-  this.tempSeven = [];
-  this.urls = [];
-  this.mainBeliefsString = '';
-  this.changeMainBeliefsFromArrayToString = function() {
-    var final = '';
-    for(var i = 0; i < this.mainBeliefs.length; i ++) {
-      final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
-    }
-    this.mainBeliefsString = final;
-  };
-  this.lastName = null;
+// .service('dataService', function () {
+//   this.threeChoices = [];
+//   this.primary = [];
+//   this.sevenBeliefs = [];
+//   this.mainBeliefs = [];
+//   this.userCategories = [];
+//   this.tempSeven = [];
+//   this.urls = [];
+//   this.mainBeliefsString = '';
+//   this.changeMainBeliefsFromArrayToString = function() {
+//     var final = '';
+//     for(var i = 0; i < this.mainBeliefs.length; i ++) {
+//       final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
+//     }
+//     this.mainBeliefsString = final;
+//   };
+//   this.lastName = 'start';
 
-})
+// })
 
 .controller('categoriesController', function($scope, $location, dataService, Categories, Images, Auth) {
   $scope.data;
@@ -61,14 +61,6 @@ angular.module('app.categories', ['app.checklist-model'])
     })
   };
 
-  $scope.toggleCatInListOfThree = function(index){
-    // console.log("reaching addCatToListOfThree");
-    // console.log("index: ", index);
-    $scope.threeChoices.push(categories[index]);
-
-
-  };
-
   $scope.getAll();
   $scope.obj = {};
 
@@ -92,6 +84,10 @@ angular.module('app.categories', ['app.checklist-model'])
     dataService.changeMainBeliefsFromArrayToString();
     // imagesController.getAll();
     $location.path('/images');
+  }
+
+  $scope.show = function() {
+    console.log("lastName: ", dataService.lastName);
   }
 
   $scope.getRandomBelief = function(itemId) {
@@ -199,32 +195,6 @@ angular.module('app.categories', ['app.checklist-model'])
 
   $scope.makeImage = function() {
     $location.path('/create');
-  }
-
-  $scope.myCanvas = function() {
-
-  // $location.path('/fabric');
-
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-
-    var img = document.getElementById("scream");
-    // console.log(img.src);
-    ctx.drawImage(img,120,50);
-
-    ctx.font = "15px Arial";
-    ctx.fillText($scope.sevenBeliefs[0],110,370,280);
-    ctx.fillText($scope.sevenBeliefs[1],110,390,280);
-    ctx.fillText($scope.sevenBeliefs[2],110,410,280);
-    ctx.fillText($scope.sevenBeliefs[3],110,430,280);
-    ctx.fillText($scope.sevenBeliefs[4],110,450,280);
-    ctx.fillText($scope.sevenBeliefs[5],110,470,280);
-    ctx.fillText($scope.sevenBeliefs[6],110,490,280);
-    // if($scope.sevenBeliefs[7]){
-    ctx.fillText($scope.sevenBeliefs[7],110,510,280);
-    // }
-      // ctx.fillText($scope.sevenBeliefs[8],110,530,280);
-
   }
 
 })

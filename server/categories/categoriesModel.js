@@ -218,7 +218,8 @@ var data = [
       "In the middle of difficulty lies opportunity.",
       "Failure brings you one step closer to your goal.",
       "Work. Fail. Repeat.",
-      "Pain is weakness leaving the body."    ]
+      "Pain is weakness leaving the body."
+    ]
   },
   {
     "name":"Prudence",
@@ -227,7 +228,8 @@ var data = [
       "Strength  Wisdom  Courage"
     ],
     "beliefs":[
-      "Invest one-fourth of everything you earn",
+      "Invest one-fourth of everything you earn.",
+      "Priorities: Physically fit, emotionally stable and spiritually sound.",
       "Spend less than you earn. Invest the rest.",
       "Adjust or accept. Do not whine.",
       "Change the changeable, accept the unchangeable and remove yourself from the unacceptable.",

@@ -1,5 +1,27 @@
 <div ng-controller="imagesController">
 
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Gruppo">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Vast+Shadow">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Spirax">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Great+Vibes">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Poiret+One">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Revalia">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Cinzel+Decorative">
+  <link rel="stylesheet" type="text/css"          
+        href="https://fonts.googleapis.com/css?family=Playfair+Display+SC">
+  <script src="jquery-3.2.1.min.js"></script>
+
   <div layout="row" layout-align="center">
     <canvas id="canvas" width="500" height="700" style="border:1px solid #000000"></canvas>
     <embed src="../assets/amflag-shield.svg" id="my-image">
@@ -8,4 +30,10 @@
   <div layout="row" layout-align="center">
     <md-button class="md-raised md-primary cat-button" ng-click="createCanvas()">Make Canvas</md-button>
   </div>
+  <div layout="row" layout-align="center">
+    <md-button class="md-raised md-primary cat-button" ng-click="createCanvas.changeFont()">change font</md-button>
+  </div>
+
+<button onclick="changeFont()">change font family</button>
+
 </div>

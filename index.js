@@ -7,9 +7,9 @@ var app = express();
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/realize');
-// mongoose.connect('mongodb://stanguis@ds117271.mlab.com:17271/realize');
-
+var MONGOLAB_URI='mongodb://emmitfitz:Emmit3900@ds117271.mlab.com:17271/realize';
+// mongoose.connect('mongodb://localhost/realize');
+mongoose.connect(MONGOLAB_URI);
 
 require('./server/config/routes.js')(app, express);
 require('./server/config/middleware.js')(app, express);

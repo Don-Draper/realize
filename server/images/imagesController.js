@@ -10,7 +10,6 @@ var findOneAndChange = Q.nbind(Image.findOneAndUpdate, Image);
 module.exports = {
 
   getAllImages: function(req, res, next) {
-    console.log("reached getallimages in controller ", req);
     findAllImages({})
     .then(function (images) {
         res.json(images);

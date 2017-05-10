@@ -8,11 +8,27 @@ angular.module('app', [
   'ngRoute'
 
   ])  
-  // .config(function($mdThemingProvider){
-  //   $mdThemingProvider.theme('default')
-  //     .primaryPalette('teal')
-  //     .accentPalette('orange')
-  // })
+
+.service('dataService', function () {
+  this.threeChoices = [];
+  this.primary = [];
+  this.sevenBeliefs = [];
+  this.mainBeliefs = [];
+  this.userCategories = [];
+  this.tempSeven = [];
+  this.urls = [];
+  this.mainBeliefsString = '';
+  this.changeMainBeliefsFromArrayToString = function() {
+    var final = '';
+    for(var i = 0; i < this.mainBeliefs.length; i ++) {
+      final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
+    }
+    this.mainBeliefsString = final;
+  };
+  this.lastName = 'start';
+  this.chosenImage = '';
+
+})
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
@@ -51,8 +67,8 @@ angular.module('app', [
     })
     .when('/', {
       templateUrl: './app/categories/main.html',
-      controller: 'categoriesController',
-      controller: 'AuthController'
+      controller: 'categoriesController'
+      // controller: 'AuthController'
       //controller: 'modalController'
     })
     .when('/firstseven', {
@@ -79,14 +95,14 @@ angular.module('app', [
       templateUrl: './app/categories/homebase.html',
       controller: 'categoriesController'    
     })
-    .when('/images', {
-      templateUrl: './app/canvas/canvas.html',
-      controller: 'imagesController'
-    })
     // .when('/images', {
-    //   templateUrl: './app/images/images.html',
+    //   templateUrl: './app/canvas/canvas.html',
     //   controller: 'imagesController'
     // })
+    .when('/images', {
+      templateUrl: './app/images/images.html',
+      controller: 'imagesController'
+    })
     .otherwise({
       redirectTo: '/signin'
     });
