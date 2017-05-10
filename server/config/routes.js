@@ -1,5 +1,6 @@
 var categoriesController = require('../categories/categoriesController.js');
 var userController = require('../users/userController.js');
+var imagesController = require('../images/imagesController.js');
 
 
 module.exports = function(app, express) {
@@ -41,5 +42,7 @@ module.exports = function(app, express) {
   app.post('/api/getusercatsandbeliefs', userController.getCatsAndBeliefs);
 
   app.post('/api/deletebelief', userController.deleteMainBelief);
+
+  app.get('/api/images', imagesController.getAllImages);
 
 };

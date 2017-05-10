@@ -1,15 +1,26 @@
 angular.module('app.categories', ['app.checklist-model'])
 
-.service('dataService', function () {
-  this.threeChoices = [];
-  this.primary = [];
-  this.sevenBeliefs = [];
-  this.mainBeliefs = [];
-  this.userCategories = [];
-  this.tempSeven = [];
-})
+// .service('dataService', function () {
+//   this.threeChoices = [];
+//   this.primary = [];
+//   this.sevenBeliefs = [];
+//   this.mainBeliefs = [];
+//   this.userCategories = [];
+//   this.tempSeven = [];
+//   this.urls = [];
+//   this.mainBeliefsString = '';
+//   this.changeMainBeliefsFromArrayToString = function() {
+//     var final = '';
+//     for(var i = 0; i < this.mainBeliefs.length; i ++) {
+//       final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
+//     }
+//     this.mainBeliefsString = final;
+//   };
+//   this.lastName = 'start';
 
-.controller('categoriesController', function($scope, $location, dataService, Categories, Auth) {
+// })
+
+.controller('categoriesController', function($scope, $location, dataService, Categories, Images, Auth) {
   $scope.data;
 // $scope is the intermediary between what the user sees and the
 // factory. $scope methods grab from the factory and display it
@@ -20,6 +31,7 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.primary = dataService.primary;
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
+  $scope.lastName = dataService.lastName;
 
   $scope.workable = [];
 
@@ -49,14 +61,6 @@ angular.module('app.categories', ['app.checklist-model'])
     })
   };
 
-  $scope.toggleCatInListOfThree = function(index){
-    console.log("reaching addCatToListOfThree");
-    console.log("index: ", index);
-    $scope.threeChoices.push(categories[index]);
-
-
-  };
-
   $scope.getAll();
   $scope.obj = {};
 
@@ -74,6 +78,16 @@ angular.module('app.categories', ['app.checklist-model'])
 
   $scope.grabResponseAndShowQuestionTwo = function() {
     $location.path('/finalthree');
+  }
+
+  $scope.moveToImages = function() {
+    dataService.changeMainBeliefsFromArrayToString();
+    // imagesController.getAll();
+    $location.path('/images');
+  }
+
+  $scope.show = function() {
+    console.log("lastName: ", dataService.lastName);
   }
 
   $scope.getRandomBelief = function(itemId) {
@@ -152,7 +166,7 @@ angular.module('app.categories', ['app.checklist-model'])
       var temp = arr[Math.floor(Math.random()*arr.length)];
       $scope.tempSeven.push($scope.threeChoices[2]);
       if(!$scope.mainBeliefs.includes(temp)) {
-        console.log($scope.mainBeliefs)
+        // console.log($scope.mainBeliefs)
         $scope.mainBeliefs.push(temp);
       }
     }
@@ -181,32 +195,6 @@ angular.module('app.categories', ['app.checklist-model'])
 
   $scope.makeImage = function() {
     $location.path('/create');
-  }
-
-  $scope.myCanvas = function() {
-
-  // $location.path('/fabric');
-
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-
-    var img = document.getElementById("scream");
-    // console.log(img.src);
-    ctx.drawImage(img,120,50);
-
-    ctx.font = "15px Arial";
-    ctx.fillText($scope.sevenBeliefs[0],110,370,280);
-    ctx.fillText($scope.sevenBeliefs[1],110,390,280);
-    ctx.fillText($scope.sevenBeliefs[2],110,410,280);
-    ctx.fillText($scope.sevenBeliefs[3],110,430,280);
-    ctx.fillText($scope.sevenBeliefs[4],110,450,280);
-    ctx.fillText($scope.sevenBeliefs[5],110,470,280);
-    ctx.fillText($scope.sevenBeliefs[6],110,490,280);
-    // if($scope.sevenBeliefs[7]){
-    ctx.fillText($scope.sevenBeliefs[7],110,510,280);
-    // }
-      // ctx.fillText($scope.sevenBeliefs[8],110,530,280);
-
   }
 
 })

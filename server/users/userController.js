@@ -15,7 +15,8 @@ var findOneAndChange = Q.nbind(UserCategory.findOneAndUpdate, UserCategory);
 var removeUserCategory = Q.nbind(UserCategory.remove, UserCategory);
 var findUserAndGetCategories = Q.nbind(UserCategory.find, UserCategory);
 
-var categories = ['Faith', 'Hope', 'Kindness', 'Fortitude', 'Diligence', 'Prudence', 'Temperance'];
+var categories = ['Faith', 'Hope', 'Empathy', 'Perseverance', 'Diligence', 
+                  'Prudence', 'Temperance', 'Happiness', 'Creativity', 'Learning'];
 
 module.exports = {
  ///////////////////////////user authentication requests//////////////////////
@@ -181,7 +182,7 @@ module.exports = {
 
   //field on each user document
   addMainBeliefs: function(req, res) {
-    console.log("Request.body: ", req.body);
+    // console.log("Request.body: ", req.body);
     findUserAndChange(
       {username: req.body.username},
       {$pushAll: {mainBeliefs: req.body.beliefs}},

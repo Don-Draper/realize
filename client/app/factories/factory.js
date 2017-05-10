@@ -58,6 +58,27 @@ angular.module('app.factory', [])
     addBelief: addBelief,
     getUserCatsAndBeliefs: getUserCatsAndBeliefs
   }
+
+})
+
+.factory('Images', function($http){
+
+  var getImages = function() {
+    console.log("reached the Images factory");
+    return $http({
+      method: 'GET',
+      url: '/api/images'
+    })
+    .then(function(response){
+      console.log("response.data in factory: ", response.data);
+      return response.data;
+    });
+  };
+
+  return {
+    getImages: getImages
+  }
+
 })
 
 .factory('Auth', function ($http, $location, $window) {

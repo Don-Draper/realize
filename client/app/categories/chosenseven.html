@@ -1,6 +1,8 @@
-<div class="beliefsContainer" ng-controller="categoriesController">
+<div class="beliefsContainer">
   <h1 layout="row" layout-align="center">Your Cultural Summary</h1>
   <h3 layout="row" layout-align="center" class="word-wrap">You can choose another saying randomly from the category list or click on the text and change it however you like</h3>
+
+        <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show lastName</md-button>
 
   <br/>
   <br/>
@@ -8,6 +10,9 @@
     <tr ng-style="{'font-size': '20px'}" ng-repeat="belief in mainBeliefs track by $index">
     <td align="center">
       {{tempSeven[$index]}}
+    </td>
+    <td>
+      {{$index+1}}. 
     </td>
     <td align="left">
       <div>
@@ -41,7 +46,7 @@
     </div>
     <div layout="row" layout-align="center">
 
-      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="grabSevenAndShowImages()" class="btn-primary" >Submit</md-button>
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToImages()" class="btn-primary" >Submit</md-button>
     </div>
 
   </div>

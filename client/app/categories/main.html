@@ -1,11 +1,21 @@
-<div layout="row" layout-align="center">
+<div class="image" style="background-image: url('../assets/space-sunset.jpg')">
+  <div layout="row" layout-align="center">
 
-    <h2>What's YOUR Seven?</h2><br/>
+      <h2>What's your last name?</h2><br/>
 
-</div>
+  </div>
 
-<div layout="row" layout-align="center">
 
-  <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button>
 
+  <div layout="row" layout-align="center">
+
+    
+    <input type="text" ng-value="lastName" ng-model="lastName">
+    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show lastName</md-button>
+
+    {{lastName}}
+
+    <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button>
+
+  </div>
 </div>

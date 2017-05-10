@@ -1,0 +1,42 @@
+<div>
+  <div layout="column" layout-align="center center" >
+  
+    <h1>Inspire them!</h1>
+
+    <h3>Think of your favorite sports team, university or club. Each has an image that unites its members and inspires emotions</h3>
+
+  </div>
+
+  <md-content class="md-padding" layout="row" layout-align="center" layout-wrap>
+    <md-card ng-repeat="image in images" flex="24">
+      <img src="{{image.trueUrl}}">
+      <md-card-content>
+        <div flex layout="column" layout-align="center">
+          <h3 style="text-align:center">{{image.tag}}</h3>
+          <md-button type="submit" class="md-raised md-primary cat-button" ng-click="chooseImage(image.trueUrl)">
+            Choose
+          </md-button>
+        </div>
+      </md-card-content>
+    </md-card>
+
+  </md-content>
+
+
+
+<!-- <md-content class="md-padding" layout="row" layout-wrap> -->
+<!--       <img src="http://localhost:4000/assets/power.jpg">
+      <img src="http://localhost:4000/assets/amflag-shield.png"> -->
+<!-- </md-content> -->
+
+
+
+<!--   <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button> -->
+
+</div>
+
+
+
+
+
+
