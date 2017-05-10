@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "bootstrap": "^4.0.0-alpha.4",
-    "canvas": "^1.6.5",
     "checklist-model": "^0.11.0",
     "composer": "^0.14.0",
     "express": "^4.15.2",
