@@ -81,13 +81,13 @@ angular.module('app.categories', ['app.checklist-model'])
   }
 
   $scope.moveToImages = function() {
-    dataService.changeMainBeliefsFromArrayToString();
+    // dataService.changeMainBeliefsFromArrayToString();
     // imagesController.getAll();
-    $location.path('/images');
+    $location.path('/demo');
   }
 
   $scope.show = function() {
-    console.log("lastName: ", dataService.lastName);
+    console.log("lastName: ", $scope.lastName);
   }
 
   $scope.getRandomBelief = function(itemId) {
