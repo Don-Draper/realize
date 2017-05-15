@@ -1,7 +1,7 @@
-angular.module('common.fabric.window', ['common.fabric.canvas'])
+angular.module('common.fabric.window', [])
 
 .factory('FabricWindow', ['$window', function($window) {
-   
-	return { Canvas : $window.fabric};
+
+  return $window.fabric;
 
 }]);

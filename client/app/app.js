@@ -31,6 +31,7 @@ angular.module('app', [
   };
   this.lastName = '';
   this.chosenImage = '';
+  this.sevenForFabric = [];
 
 })
 
