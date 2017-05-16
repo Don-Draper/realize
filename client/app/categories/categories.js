@@ -84,7 +84,7 @@ angular.module('app.categories', ['app.checklist-model'])
     dataService.changeMainBeliefsFromArrayToString();
     // imagesController.getAll();
 
-    $location.path('/demo');
+    $location.path('/images');
     console.log("mainbeliefs: ", $scope.mainBeliefs);
   }
 

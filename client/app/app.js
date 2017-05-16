@@ -100,24 +100,12 @@ angular.module('app', [
       templateUrl: './app/categories/homebase.html',
       controller: 'categoriesController'    
     })
-    // .when('/images', {
-    //   templateUrl: './app/canvas/canvas.html',
-    //   controller: 'imagesController'
-    // })
     .when('/images', {
       templateUrl: './app/images/images.html',
       controller: 'imagesController'
     })
-    .when('/gallery', {
-      templateUrl: './app/images/gallery.html',
-      controller: 'imagesController'
-    })
     .when('/demo', {
       templateUrl: './app/categories/Demo.html',
-      controller: 'ExampleCtrl'
-    })
-    .when('/fabric', {
-      templateUrl: './app/fabric/fabric.html',
       controller: 'ExampleCtrl'
     })
     .otherwise({

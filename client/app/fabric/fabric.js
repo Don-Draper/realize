@@ -126,7 +126,7 @@ angular.module('common.fabric', [
 			canvas.calcOffset();
 			canvas.renderAll();
 			self.renderCount++;
-			console.log('Render cycle:', self.renderCount);
+			// console.log('Render cycle:', self.renderCount);
 		};
 
 		self.setCanvas = function(newCanvas) {
@@ -874,7 +874,9 @@ angular.module('common.fabric', [
 			JSONObject.height = JSONObject.height || 300;
 			self.canvasOriginalHeight = JSONObject.height;
 
-			self.setCanvasSize(self.canvasOriginalWidth, self.canvasOriginalHeight);
+			self.setCanvasSize(1510, 1947);
+
+			// self.setCanvasSize(self.canvasOriginalWidth, self.canvasOriginalHeight);
 
 			self.render();
 			self.setDirty(false);

@@ -1,6 +1,6 @@
 angular.module('app.images', [])
 
-.controller('imagesController', function($scope, Images, Categories, dataService) {
+.controller('imagesController', function($scope, $location, Images, Categories, dataService) {
 
   $scope.urls = dataService.urls;
   $scope.images = [];
@@ -29,7 +29,10 @@ angular.module('app.images', [])
   }
 
   $scope.chooseImage = function(imageUrl) {
-    console.log(imageUrl);
+    dataService.chosenImage = imageUrl;
+    $location.path('/demo');
+    // console.log(imageUrl);
+
   }
 
   $scope.getAll();

@@ -32,4 +32,4 @@ angular.module('common.fabric.dirtyStatus', [])
 
 	return self;
 
-}]);app
+}]);

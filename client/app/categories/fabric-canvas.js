@@ -4,11 +4,17 @@ angular.module('app.example', [
 	'common.fabric.constants'
 ])
 
-.controller('ExampleCtrl', ['$scope', 'Fabric', 'dataService', 'FabricConstants', 'Keypress', function($scope, Fabric, dataService, FabricConstants, Keypress) {
+.controller('ExampleCtrl', ['$scope', 'Fabric', 'dataService', 'FabricConstants', 'Keypress', function(
+	$scope, 
+	Fabric, 
+	dataService, 
+	FabricConstants, 
+	Keypress
+
+	) {
 
 	$scope.fabric = {};
 	$scope.FabricConstants = FabricConstants;
-	$scope.sevenForFabric = dataService.sevenForFabric;
 
 	//
 	// Creating Canvas Objects
@@ -18,7 +24,7 @@ angular.module('app.example', [
 	};
 
 	$scope.addImage = function(image) {
-		$scope.fabric.addImage('http://stargate-sg1-solutions.com/blog/wp-content/uploads/2007/08/daniel-season-nine.jpg');
+		$scope.fabric.addImage(dataService.chosenImage);
 	};
 
 	$scope.addText = function() {
