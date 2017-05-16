@@ -1,6 +1,6 @@
 angular.module('app.images', [])
 
-.controller('imagesController', function($scope, Images, Categories, dataService) {
+.controller('imagesController', function($scope, $location, Images, Categories, dataService) {
 
   $scope.urls = dataService.urls;
   $scope.images = [];
@@ -17,8 +17,22 @@ angular.module('app.images', [])
     })
   };
 
+  $scope.getGalleryImages = function() {
+    Images.getImages().then(function(data){
+      $scope.images = data;
+      for(var i = 0; i < data.length; i ++){
+        $scope.urls.push(data[i].trueUrl);
+      }
+    }).catch(function(err) {
+      console.log(err);
+    })
+  }
+
   $scope.chooseImage = function(imageUrl) {
-    console.log(imageUrl);
+    dataService.chosenImage = imageUrl;
+    $location.path('/demo');
+    // console.log(imageUrl);
+
   }
 
   $scope.getAll();

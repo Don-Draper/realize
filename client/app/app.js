@@ -4,6 +4,10 @@ angular.module('app', [
   'app.categories',
   'ngMaterial',
   'app.images',
+  'app.example',
+  // 'app.common.fabric',
+  // 'app.common.fabric.utilities',
+  // 'app.common.fabric.constants',
   //'app.modalService',
   'ngRoute'
 
@@ -25,8 +29,9 @@ angular.module('app', [
     }
     this.mainBeliefsString = final;
   };
-  this.lastName = 'start';
+  this.lastName = '';
   this.chosenImage = '';
+  this.sevenForFabric = [];
 
 })
 
@@ -95,13 +100,13 @@ angular.module('app', [
       templateUrl: './app/categories/homebase.html',
       controller: 'categoriesController'    
     })
-    // .when('/images', {
-    //   templateUrl: './app/canvas/canvas.html',
-    //   controller: 'imagesController'
-    // })
     .when('/images', {
       templateUrl: './app/images/images.html',
       controller: 'imagesController'
+    })
+    .when('/demo', {
+      templateUrl: './app/categories/Demo.html',
+      controller: 'ExampleCtrl'
     })
     .otherwise({
       redirectTo: '/signin'

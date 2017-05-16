@@ -15,10 +15,10 @@ angular.module('common.fabric', [
 		var JSONObject;
 		var self = angular.extend({
 			canvasBackgroundColor: '#ffffff',
-			canvasWidth: 300,
-			canvasHeight: 300,
-			canvasOriginalHeight: 300,
-			canvasOriginalWidth: 300,
+			canvasWidth: 1510,
+			canvasHeight: 1947,
+			canvasOriginalHeight: 1510,
+			canvasOriginalWidth: 1947,
 			maxContinuousRenderLoops: 25,
 			continuousRenderTimeDelay: 500,
 			editable: true,
@@ -126,7 +126,7 @@ angular.module('common.fabric', [
 			canvas.calcOffset();
 			canvas.renderAll();
 			self.renderCount++;
-			console.log('Render cycle:', self.renderCount);
+			// console.log('Render cycle:', self.renderCount);
 		};
 
 		self.setCanvas = function(newCanvas) {
@@ -356,34 +356,6 @@ angular.module('common.fabric', [
 		};
 
 		//
-		// Underline
-		// ==============================================================
-		self.isUnderline = function() {
-			return getActiveStyle('textDecoration').indexOf('underline') > -1;
-		};
-
-		self.toggleUnderline = function() {
-			var value = self.isUnderline() ? getActiveStyle('textDecoration').replace('underline', '') : (getActiveStyle('textDecoration') + ' underline');
-
-			setActiveStyle('textDecoration', value);
-			self.render();
-		};
-
-		//
-		// Linethrough
-		// ==============================================================
-		self.isLinethrough = function() {
-			return getActiveStyle('textDecoration').indexOf('line-through') > -1;
-		};
-
-		self.toggleLinethrough = function() {
-			var value = self.isLinethrough() ? getActiveStyle('textDecoration').replace('line-through', '') : (getActiveStyle('textDecoration') + ' line-through');
-
-			setActiveStyle('textDecoration', value);
-			self.render();
-		};
-
-		//
 		// Text Align
 		// ==============================================================
 		self.getTextAlign = function() {
@@ -405,22 +377,22 @@ angular.module('common.fabric', [
 			setActiveStyle('opacity', value);
 		};
 
-		//
-		// FlipX
-		// ==============================================================
-		self.getFlipX = function() {
-			return getActiveProp('flipX');
-		};
+		// //
+		// // FlipX
+		// // ==============================================================
+		// self.getFlipX = function() {
+		// 	return getActiveProp('flipX');
+		// };
 
-		self.setFlipX = function(value) {
-			setActiveProp('flipX', value);
-		};
+		// self.setFlipX = function(value) {
+		// 	setActiveProp('flipX', value);
+		// };
 
-		self.toggleFlipX = function() {
-			var value = self.getFlipX() ? false : true;
-			self.setFlipX(value);
-			self.render();
-		};
+		// self.toggleFlipX = function() {
+		// 	var value = self.getFlipX() ? false : true;
+		// 	self.setFlipX(value);
+		// 	self.render();
+		// };
 
 		//
 		// Align Active Object
@@ -902,7 +874,9 @@ angular.module('common.fabric', [
 			JSONObject.height = JSONObject.height || 300;
 			self.canvasOriginalHeight = JSONObject.height;
 
-			self.setCanvasSize(self.canvasOriginalWidth, self.canvasOriginalHeight);
+			self.setCanvasSize(1510, 1947);
+
+			// self.setCanvasSize(self.canvasOriginalWidth, self.canvasOriginalHeight);
 
 			self.render();
 			self.setDirty(false);

@@ -90,65 +90,6 @@ angular.module('common.fabric.constants', [])
 			{ name: 'Ranchers' }
 		],
 
-		shapeCategories: [
-			{
-				name: 'Popular Shapes',
-				shapes: [
-					'arrow6',
-					'bubble4',
-					'circle1',
-					'rectangle1',
-					'star1',
-					'triangle1'
-				]
-			},
-			{
-				name: 'Simple Shapes',
-				shapes: [
-					'circle1',
-					'heart1',
-					'rectangle1',
-					'triangle1',
-					'star1',
-					'star2',
-					'star3',
-					'square1'
-				]
-			},
-			{
-				name: 'Arrows & Pointers',
-				shapes: [
-					'arrow1',
-					'arrow9',
-					'arrow3',
-					'arrow6',
-				]
-			},
-			{
-				name: 'Bubbles & Balloons',
-				shapes: [
-					'bubble5',
-					'bubble4'
-				]
-			},
-			{
-				name: 'Check Marks',
-				shapes: [
-
-				]
-			},
-			{
-				name: 'Badges',
-				shapes: [
-					'badge1',
-					'badge2',
-					'badge4',
-					'badge5',
-					'badge6'
-				]
-			}
-		],
-
 		JSONExportProperties: [
 			'height',
 			'width',
@@ -184,7 +125,7 @@ angular.module('common.fabric.constants', [])
 			scaleX: 1,
 			scaleY: 1,
 			fontFamily: 'Arial',
-			fontSize: 40,
+			fontSize: 50,
 			fill: '#454545',
 			textAlign: 'left'
 		}, objectDefaults)

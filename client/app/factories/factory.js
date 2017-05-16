@@ -75,8 +75,21 @@ angular.module('app.factory', [])
     });
   };
 
+  // var getGalleryImages = function() {
+  //   console.log("reached the Gallery factory");
+  //   return $http({
+  //     method: 'GET',
+  //     url: '/api/gallery'
+  //   })
+  //   .then(function(response){
+  //     console.log("response.data in factory: ", response.data);
+  //     return response.data;
+  //   });
+  // };
+
   return {
     getImages: getImages
+    // getGalleryImages: getGalleryImages
   }
 
 })

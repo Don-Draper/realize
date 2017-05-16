@@ -45,4 +45,6 @@ module.exports = function(app, express) {
 
   app.get('/api/images', imagesController.getAllImages);
 
+  // app.get('/api/gallery', imagesController.getGalleryImages);
+
 };

@@ -8,6 +8,7 @@ var ImageSchema = new Schema({
     required: true,
     unique: true
   },
+  type: String,
   trueUrl: String,
   watermarkedUrl: String,
   tag: String,
@@ -20,64 +21,76 @@ var Image = mongoose.model('Image', ImageSchema);
 var data = [
   {
     "filename":"amflag.png",
-    "trueUrl":"http://localhost:4000/assets/amflag.png",
-    "tag":"Freedom, Justice, Courage"
+    "trueUrl":"assets/amflag.png",
+    "tag":"Freedom, Justice, Courage",
+    "type":"icon"
   },
   {
     "filename":"blue-lion-open-mouth.png",
-    "trueUrl":"http://localhost:4000/assets/blue-lion-open-mouth.png",
-    "tag":"Courage, Strength, Perseverance"
+    "trueUrl":"assets/blue-lion-open-mouth.png",
+    "tag":"Courage, Strength, Perseverance",
+    "type":"icon"
   },
   {
     "filename":"power.jpg",
-    "trueUrl":"http://localhost:4000/assets/power.jpg",
-    "tag":"Strength"
+    "trueUrl":"assets/power.jpg",
+    "tag":"Strength",
+    "type":"icon"
   },
   {
     "filename":"amflag-eagle.png",
-    "trueUrl":"http://localhost:4000/assets/amflag-eagle.png",
-    "tag":"Freedom, Justice, Strength"
+    "trueUrl":"assets/amflag-eagle.png",
+    "tag":"Freedom, Justice, Strength",
+    "type":"icon"
   }, 
   {
     "filename":"black-and-white-star.png",
-    "trueUrl":"http://localhost:4000/assets/black-and-white-star.png",
-    "tag":"Creativity"
+    "trueUrl":"assets/black-and-white-star.png",
+    "tag":"Creativity",
+    "type":"icon"
   },  
   {
     "filename":"family-blue.png",
-    "trueUrl":"http://localhost:4000/assets/family-blue.png",
-    "tag":"Family, Love, Strength"
+    "trueUrl":"assets/family-blue.png",
+    "tag":"Family, Love, Strength",
+    "type":"icon"
   },  
   {
     "filename":"seed-of-life.png",
-    "trueUrl":"http://localhost:4000/assets/seed-of-life.png",
-    "tag":"Nature, Harmony"
+    "trueUrl":"assets/seed-of-life.png",
+    "tag":"Nature, Harmony",
+    "type":"icon"
   },  
   {
     "filename":"goal-play.png",
-    "trueUrl":"http://localhost:4000/assets/goal-play.png",
-    "tag":"Creativity, Diligence"
+    "trueUrl":"assets/goal-play.png",
+    "tag":"Creativity, Diligence",
+    "type":"icon"
   },  
   {
     "filename":"perseverance.jpg",
-    "trueUrl":"http://localhost:4000/assets/perseverance.jpg",
-    "tag":"Perseverance"
+    "trueUrl":"assets/perseverance.jpg",
+    "tag":"Perseverance",
+    "type":"icon"
   },  
   {
     "filename":"blue-bull.png",
-    "trueUrl":"http://localhost:4000/assets/blue-bull.png",
-    "tag":"Strength"
+    "trueUrl":"assets/blue-bull.png",
+    "tag":"Strength",
+    "type":"icon"
   },  
   {
     "filename":"creativity.png",
-    "trueUrl":"http://localhost:4000/assets/creativity.png",
-    "tag":"Creativity"
+    "trueUrl":"assets/creativity.png",
+    "tag":"Creativity",
+    "type":"icon"
   },  
   {
     "filename":"paintbrush.png",
-    "trueUrl":"http://localhost:4000/assets/paintbrush.png",
-    "tag":"Creativity"
-  } 
+    "trueUrl":"assets/paintbrush.png",
+    "tag":"Creativity",
+    "type":"icon"
+  }
 
 ];
 

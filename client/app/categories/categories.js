@@ -20,7 +20,7 @@ angular.module('app.categories', ['app.checklist-model'])
 
 // })
 
-.controller('categoriesController', function($scope, $location, dataService, Categories, Images, Auth) {
+.controller('categoriesController', function($scope, $location, dataService, Fabric, Categories, Images, Auth) {
   $scope.data;
 // $scope is the intermediary between what the user sees and the
 // factory. $scope methods grab from the factory and display it
@@ -83,11 +83,13 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.moveToImages = function() {
     dataService.changeMainBeliefsFromArrayToString();
     // imagesController.getAll();
+
     $location.path('/images');
+    console.log("mainbeliefs: ", $scope.mainBeliefs);
   }
 
   $scope.show = function() {
-    console.log("lastName: ", dataService.lastName);
+    console.log("lastName: ", $scope.lastName);
   }
 
   $scope.getRandomBelief = function(itemId) {

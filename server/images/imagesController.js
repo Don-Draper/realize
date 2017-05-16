@@ -19,4 +19,14 @@ module.exports = {
       });
   }
 
+  // getGalleryImages: function(req, res, next) {
+  //   findAllImages({})
+  //   .then(function (images) {
+  //       res.json(images);
+  //     })
+  //     .fail(function (error) {
+  //       next(error);
+  //     });
+  // }
+
 };
