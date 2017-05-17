@@ -5,10 +5,6 @@ angular.module('app', [
   'ngMaterial',
   'app.images',
   'app.example',
-  // 'app.common.fabric',
-  // 'app.common.fabric.utilities',
-  // 'app.common.fabric.constants',
-  //'app.modalService',
   'ngRoute'
 
   ])  
