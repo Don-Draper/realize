@@ -10,7 +10,7 @@ angular.module('common.fabric.constants', [])
 		cornerSize: 10,
 		transparentCorners: false,
 		hasRotatingPoint: true,
-		centerTransform: true
+		centerTransform: true,
 	};
 
 	return {
@@ -121,13 +121,37 @@ angular.module('common.fabric.constants', [])
 		}, objectDefaults),
 
 		textDefaults: angular.extend({
-			originX: 'left',
+			originX: 'center',
 			scaleX: 1,
 			scaleY: 1,
 			fontFamily: 'Arial',
 			fontSize: 50,
 			fill: '#454545',
-			textAlign: 'left'
+			textAlign: 'left',
+			top: 950,
+			left: 700
+		}, objectDefaults),
+
+		itextDefaults: angular.extend({
+			originX: 'center',
+			originY: 'top',
+			scaleX: 1,
+			scaleY: 1,
+			fontFamily: 'Arial',
+			fontSize: 50,
+			fill: '#454545',
+			textAlign: 'left',
+			top: 950
+		}, objectDefaults),
+
+		lastNameDefaults: angular.extend({
+			originX: 'center',
+			originY: 'bottom',
+			fontFamily: 'Arial',
+			fontSize: 120,
+			fill: 'black',
+			textAlign: 'left',
+			top: 800
 		}, objectDefaults)
 
 	};

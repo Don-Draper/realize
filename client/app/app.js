@@ -25,7 +25,7 @@ angular.module('app', [
     }
     this.mainBeliefsString = final;
   };
-  this.lastName = '';
+  this.lastName = 'Ponomarev';
   this.chosenImage = '';
   this.sevenForFabric = [];
 
