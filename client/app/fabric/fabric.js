@@ -30,6 +30,8 @@ angular.module('common.fabric', [
 			downloadMultipler: 2,
 			imageDefaults: {},
 			textDefaults: {},
+			itextDefaults: {},
+			lastNameDefaults: {},
 			shapeDefaults: {},
 			windowDefaults: {
 				transparentCorners: false,
@@ -211,6 +213,7 @@ angular.module('common.fabric', [
 			self.setObjectZoom(object);
 			canvas.setActiveObject(object);
 			object.bringToFront();
+			
 			self.center();
 			self.render();
 		};
@@ -270,9 +273,89 @@ angular.module('common.fabric', [
 			str = str || 'New Text';
 			var object = new FabricWindow.Text(str, self.textDefaults);
 			object.id = self.createId();
-
 			self.addObjectToCanvas(object);
 		};
+
+		self.setFormat = function(imageURL, str, lastName) {
+			fabric.Image.fromURL(imageURL, function(object) {
+				object.id = self.createId();
+				var img1 = object.set({ left: 225, top: 100, height: 150, width: 150});	
+				canvas.add(img1);
+			});
+
+			lastName = lastName || '';
+			var object1 = new FabricWindow.Text(lastName, self.lastNameDefaults);
+			object1.id = self.createId();
+			self.addObjectToCanvas(object1);
+			object1.centerH();
+
+			str = str || 'New Text';			
+			var object2 = new FabricWindow.Text(str, self.itextDefaults);
+			object2.id = self.createId();
+			self.addObjectToCanvas(object2);
+			object2.centerH();
+			canvas.renderAll();
+		}
+		self.setArray = function(str) {
+			var temp_array = '';
+			if(Array.isArray(str)) {
+				for(var i = 0; i < str.length; i ++) {
+					temp_array += self.setFontStyle(str[i]);
+					temp_array += '\n';
+				}
+			}
+			else {
+				temp_array = self.setFontStyle(str);
+			}
+			return temp_array;
+		}
+		self.setFontStyle = function(newVal) {
+			if (typeof newVal === 'string') {
+				var temp_newVal = '';				
+				var temp_num = 0,
+					first_enter = null,
+					second_enter = null,
+					temp_newVal1 = newVal;
+
+				for(var i = 0; i < newVal.length; i++) {
+					if(newVal[i] == '\n') {
+						temp_num = 0;
+						if(first_enter == null) {
+							first_enter = i;
+						}
+						else if(second_enter == null) {
+							second_enter = i;
+						}
+						else {
+							first_enter = second_enter;
+							second_enter = i;
+						}
+						if (first_enter != null && second_enter != null && (second_enter - first_enter) > 47) {
+							temp_newVal = '';
+							for (var j = 0; j < i+1; j++) {
+								if (j == (first_enter + 47)) {
+									temp_newVal += '\n  ';
+								}
+								temp_newVal += newVal[j];
+							}
+						}
+						else {
+							temp_newVal += newVal[i];
+						}
+					}
+					else {
+						temp_num++;
+						if (temp_num == 47){
+							temp_newVal += '\n  ';
+							temp_num = 0;
+						}								
+						temp_newVal += newVal[i];
+					}
+											
+				}
+				return temp_newVal;
+			}
+		}
 
 		self.getText = function() {
 			return getActiveProp('text');
@@ -400,7 +483,7 @@ angular.module('common.fabric', [
 		self.center = function() {
 			var activeObject = canvas.getActiveObject();
 			if (activeObject) {
-				activeObject.center();
+				//activeObject.center();
 				self.updateActiveObjectOriginals();
 				self.render();
 			}
@@ -670,7 +753,7 @@ angular.module('common.fabric', [
 		// ==============================================================
 		self.getJSON = function() {
 			var initialCanvasScale = self.canvasScale;
-			self.canvasScale = 1;
+			self.canvasScale = 0.4;
 			self.resetZoom();
 
 			var json = JSON.stringify(canvas.toJSON(self.JSONExportProperties));
@@ -862,7 +945,7 @@ angular.module('common.fabric', [
 
 			JSONObject = JSONObject || {};
 
-			self.canvasScale = 1;
+			self.canvasScale = 0.4;
 
 			JSONObject.background = JSONObject.background || '#ffffff';
 			self.setCanvasBackgroundColor(JSONObject.background);

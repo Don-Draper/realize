@@ -31,7 +31,9 @@ angular.module('common.fabric.directive', [
 
 			$scope.$watch('fabric.selectedObject.text', function(newVal) {
 				if (typeof newVal === 'string') {
-					$scope.fabric.setText(newVal);
+					var temp_newVal = '';
+					temp_newVal = $scope.fabric.setArray(newVal);
+					$scope.fabric.setText(temp_newVal);
 					$scope.fabric.render();
 				}
 			});
@@ -83,7 +85,7 @@ angular.module('common.fabric.directive', [
 					$scope.fabric.setTint(newVal);
 					$scope.fabric.render();
 				}
-			});
+			});			
 		}
 	};
 

@@ -59,9 +59,12 @@ angular.module('app.example', [
 		$scope.fabric = new Fabric({
 			JSONExportProperties: FabricConstants.JSONExportProperties,
 			textDefaults: FabricConstants.textDefaults,
+			lastNameDefaults: FabricConstants.lastNameDefaults,
+			itextDefaults: FabricConstants.itextDefaults,
 			shapeDefaults: FabricConstants.shapeDefaults,
 			json: {}
 		});
+		$scope.fabric.setFormat(dataService.chosenImage, dataService.mainBeliefsString, dataService.lastName);		
 	};
 
 	$scope.$on('canvas:created', $scope.init);
