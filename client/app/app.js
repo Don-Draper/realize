@@ -10,7 +10,7 @@ angular.module('app', [
   ])  
 
 .service('dataService', function () {
-  this.chosenLastName = 'Pomorov';
+  this.chosenLastName = '';
   this.threeChoices = [];
   this.primary = [];
   this.sevenBeliefs = [];

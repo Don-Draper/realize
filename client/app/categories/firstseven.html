@@ -3,31 +3,13 @@
   <h1 class="hereandnow">Realize</h1>
   </button>
 </md-toolbar>
-<div>
+<div layout="column" layout-align="center center">
   <h1 layout="row" layout-align="center">Which three are most important to you?</h1>
-  {{chosenThree}}
+  <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >
+    <p layout="row" layout-align="center" class="word-wrap">Cultures are defined by their chosen priorities. The Spartans, for example, held courage and combat skills as most important of all. As a result, their military prowess is legendary. We all gravitate toward what our culture holds dear.</p>
+    <p>Which of these define YOUR ideal culture?</p>
+  </div>
   <br/>
-
-<!--   <md-content class="md-padding" layout="row" layout-align="center" layout-wrap>
-    <md-card ng-repeat="category in data track by $index" flex="19">
-      <md-card-content>
-        <div flex layout="column" layout-align="center">
-          <h1 style="text-align:center">{{category.name}}</h1>
-          <h3>{{category.description}}</h3>
-          <md-button type="submit" class="md-raised md-primary cat-button" ng-click="chooseImage(image.trueUrl)">
-            Add/Remove
-          </md-button>
-        </div>
-      </md-card-content>
-    </md-card>
-
-  </md-content> -->
-
-
-
-
-
-      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button>
 
   <table cellpadding="10" layout="row" layout-align="center">
     <tr ng-style="{'font-size': '20px'}" ng-repeat="category in data track by $index">

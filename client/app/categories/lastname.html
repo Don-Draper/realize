@@ -1,17 +1,23 @@
-  <div layout="row" layout-align="center">
+<md-toolbar color="primary">
+  <button>
+  <h1 class="hereandnow">Realize</h1>
+  </button>
+</md-toolbar>
+<div layout="column" layout-align="center center">
 
       <h2>What's your last name?</h2><br/>
 
   </div>
+    <br/>
 
-  <div layout="column" layout-align="center">
+  <div layout="column" layout-align="center center">
 
-    
-    <input type="text" ng-value="string" ng-model="chosen.lastName">
-    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button>
+    <md-input-container>
+    <input ng-style="{'font-size': '28px', 'text-align': 'center'}" type="text" placeholder="Click Here to Enter Name" ng-value="string" ng-model="chosen.lastName">
+    </md-input-container>
 
-    {{chosen.lastName}}
+    <br/>
 
-    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToImages()" class="btn-primary" >Create My Image</button>
+    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToImages()" class="btn-primary" >Submit</button>
 
-  </div>
+</div>

@@ -165,3 +165,7 @@ md-checkbox {
   min-width: 18px;
   min-height: 18px;
 }
+
+.form-control {
+  font-weight: normal;
+}

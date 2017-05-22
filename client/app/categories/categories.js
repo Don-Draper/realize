@@ -34,7 +34,7 @@ angular.module('app.categories', ['app.checklist-model'])
 
 
   $scope.workable = [];
-  $scope.chosen = {'lastName':'Tan'};
+  $scope.chosen = {'lastName':''};
 
   $scope.tempSeven = dataService.tempSeven;
 
