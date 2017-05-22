@@ -59,12 +59,12 @@ angular.module('app.example', [
 		$scope.fabric = new Fabric({
 			JSONExportProperties: FabricConstants.JSONExportProperties,
 			textDefaults: FabricConstants.textDefaults,
-			lastNameDefaults: FabricConstants.lastNameDefaults,
+			chosenLastNameDefaults: FabricConstants.chosenLastNameDefaults,
 			itextDefaults: FabricConstants.itextDefaults,
 			shapeDefaults: FabricConstants.shapeDefaults,
 			json: {}
 		});
-		$scope.fabric.setFormat(dataService.chosenImage, dataService.mainBeliefsString, dataService.lastName);		
+		$scope.fabric.setFormat(dataService.chosenImage, dataService.mainBeliefsString, dataService.chosenLastName);		
 	};
 
 	$scope.$on('canvas:created', $scope.init);

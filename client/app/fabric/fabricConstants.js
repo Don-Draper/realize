@@ -144,7 +144,7 @@ angular.module('common.fabric.constants', [])
 			top: 950
 		}, objectDefaults),
 
-		lastNameDefaults: angular.extend({
+		chosenLastNameDefaults: angular.extend({
 			originX: 'center',
 			originY: 'bottom',
 			fontFamily: 'Arial',

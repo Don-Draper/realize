@@ -1,0 +1,17 @@
+  <div layout="row" layout-align="center">
+
+      <h2>What's your last name?</h2><br/>
+
+  </div>
+
+  <div layout="column" layout-align="center">
+
+    
+    <input type="text" ng-value="string" ng-model="chosen.lastName">
+    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button>
+
+    {{chosen.lastName}}
+
+    <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToImages()" class="btn-primary" >Create My Image</button>
+
+  </div>

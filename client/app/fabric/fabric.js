@@ -276,15 +276,15 @@ angular.module('common.fabric', [
 			self.addObjectToCanvas(object);
 		};
 
-		self.setFormat = function(imageURL, str, lastName) {
+		self.setFormat = function(imageURL, str, chosenLastName) {
 			fabric.Image.fromURL(imageURL, function(object) {
 				object.id = self.createId();
 				var img1 = object.set({ left: 225, top: 100, height: 150, width: 150});	
 				canvas.add(img1);
 			});
 
-			lastName = lastName || '';
-			var object1 = new FabricWindow.Text(lastName, self.lastNameDefaults);
+			chosenLastName = chosenLastName || '';
+			var object1 = new FabricWindow.Text(chosenLastName, self.chosenLastNameDefaults);
 			object1.id = self.createId();
 			self.addObjectToCanvas(object1);
 			object1.centerH();

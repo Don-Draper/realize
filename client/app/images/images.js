@@ -1,10 +1,11 @@
 angular.module('app.images', [])
 
-.controller('imagesController', function($scope, $location, Images, Categories, dataService) {
+.controller('imagesController', function($scope, $location, Images, dataService) {
 
   $scope.urls = dataService.urls;
   $scope.images = [];
   $scope.chosenImage = dataService.chosenImage;
+  $scope.chosenLastName = dataService.chosenLastName;
 
   $scope.getAll = function() {
     Images.getImages().then(function(data){
@@ -37,7 +38,7 @@ angular.module('app.images', [])
 
   $scope.getAll();
   $scope.mainBeliefsString = dataService.mainBeliefsString;
-  // $scope.lastName = dataService.lastName;
+  // $scope.chosenLastName = dataService.chosenLastName;
 
   $scope.createCanvas = function() {
     var canvas = new fabric.Canvas('canvas');
@@ -58,7 +59,7 @@ angular.module('app.images', [])
 
     canvas.add(text);
 
-    var lastName = new fabric.Text("Tanguis", {
+    var chosenLastName = new fabric.Text("Tanguis", {
       fontFamily: 'Limelight',
       fontSize: 85,
       // lockUniScaling: true,
@@ -67,9 +68,9 @@ angular.module('app.images', [])
       // originY: 'center'
     });
 
-    lastName.set({top: 250, left: 100});
-    // fabric.canvas.centerH(lastName);
-    canvas.add(lastName);
+    chosenLastName.set({top: 250, left: 100});
+    // fabric.canvas.centerH(chosenLastName);
+    canvas.add(chosenLastName);
 
     // var textAsset = new fabric.Text('Tanguis', {
     //             fontFamily: 'Playfair Display SC',

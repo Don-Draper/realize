@@ -16,11 +16,11 @@ angular.module('app.categories', ['app.checklist-model'])
 //     }
 //     this.mainBeliefsString = final;
 //   };
-//   this.lastName = 'start';
+//   this.chosenLastName = 'start';
 
 // })
 
-.controller('categoriesController', function($scope, $location, dataService, Fabric, Categories, Images, Auth) {
+.controller('categoriesController', function($scope, $location, dataService, Categories, Auth) {
   $scope.data;
 // $scope is the intermediary between what the user sees and the
 // factory. $scope methods grab from the factory and display it
@@ -31,9 +31,10 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.primary = dataService.primary;
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
-  $scope.lastName = dataService.lastName;
+
 
   $scope.workable = [];
+  $scope.chosen = {'lastName':'Tan'};
 
   $scope.tempSeven = dataService.tempSeven;
 
@@ -80,17 +81,21 @@ angular.module('app.categories', ['app.checklist-model'])
     $location.path('/finalthree');
   }
 
+  $scope.show = function() {
+    console.log("lastName: ", $scope.chosen.lastName);
+  }
+
   $scope.moveToImages = function() {
     dataService.changeMainBeliefsFromArrayToString();
-    // imagesController.getAll();
-
+    dataService.chosenLastName = $scope.chosen.lastName;
     $location.path('/images');
-    console.log("mainbeliefs: ", $scope.mainBeliefs);
+    // console.log("mainbeliefs: ", $scope.mainBeliefs);
   }
 
-  $scope.show = function() {
-    console.log("lastName: ", $scope.lastName);
+  $scope.moveToLastName = function() {
+    $location.path('/lastname');
   }
+
 
   $scope.getRandomBelief = function(itemId) {
     if(itemId <= 2){

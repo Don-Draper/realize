@@ -10,6 +10,7 @@ angular.module('app', [
   ])  
 
 .service('dataService', function () {
+  this.chosenLastName = 'Pomorov';
   this.threeChoices = [];
   this.primary = [];
   this.sevenBeliefs = [];
@@ -25,7 +26,6 @@ angular.module('app', [
     }
     this.mainBeliefsString = final;
   };
-  this.lastName = 'Ponomarev';
   this.chosenImage = '';
   this.sevenForFabric = [];
 
@@ -82,6 +82,10 @@ angular.module('app', [
     })
     .when('/chosenseven', {
       templateUrl: './app/categories/chosenseven.html',
+      controller: 'categoriesController'
+    })
+    .when('/lastname', {
+      templateUrl: './app/categories/lastname.html',
       controller: 'categoriesController'
     })
     .when('/create', {
