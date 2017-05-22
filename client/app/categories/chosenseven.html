@@ -1,10 +1,17 @@
-<div class="beliefsContainer">
-  <h1 layout="row" layout-align="center">Your Cultural Summary</h1>
-  <h3 layout="row" layout-align="center" class="word-wrap">You can choose another saying randomly from the category list or click on the text and change it however you like</h3>
+<md-toolbar color="primary">
+  <button>
+  <h1 class="hereandnow">Realize</h1>
+  </button>
+</md-toolbar>
+<div class="beliefsContainer" layout="column" layout-align="center center">
+  <h1 >Your Cultural Summary</h1>
+  <div ng-style="{'max-width': '40em', 'text-align': 'center', 'font-size': '20px'}" >
+  <p layout="row" layout-align="center" class="word-wrap">Based on your chosen priorities, we have selected seven cultural standards and mental habits from a large database of quotes from poets, geniuses and founding fathers. On the left you'll see which category each belongs to. The button on the right will choose another one randomly from our database. Or click on the text and change it however you like.</p>
+  <p>Got one of your own? Just add it in</p>
+  </div>
 
  <!--        <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button> -->
 
-  <br/>
   <br/>
   <table cellpadding="10" layout="row" layout-align="center">
     <tr ng-style="{'font-size': '20px'}" ng-repeat="belief in mainBeliefs track by $index">
