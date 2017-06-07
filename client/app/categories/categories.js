@@ -211,39 +211,30 @@ angular.module('app.categories', ['app.checklist-model'])
     for(var i = 0; i < dataService.threeChoices.length; i++) {
       if(name == dataService.threeChoices[i]) {
         dataService.threeChoices.splice(i, 1);
-        $scope.copyArray($scope.removeChoices, dataService.threeChoices);
-        //$scope.removeChoices = dataService.threeChoices;
-        // dataService.threeChoices = $scope.threeChoices;
         return true;
       }     
     }  
-     dataService.threeChoices.push(name);
-     // $scope.sendChoices = dataService.threeChoices;
-     $scope.copyArray($scope.sendChoices, dataService.threeChoices);
-      // dataService.threeChoices = $scope.threeChoices;
-      return false;  
+    dataService.threeChoices.push(name);
+    return false;  
   }
 
   $scope.sendChoice = function() {
-    // console.log($scope.sendChoices);
-    // $scope.copyArray(dataService.threeChoices, $scope.sendChoices);
     for(var i = 0; i < $scope.sendChoices.length; i++){
+      for(var j= 0; j < dataService.threeChoices.length; j++) {
+        if(dataService.threeChoices[j] == $scope.sendChoices[i])
+          break;
+      }
       dataService.threeChoices.push($scope.sendChoices[i]);
     }
-    // dataService.threeChoices = $scope.sendChoices;
   }
 
   $scope.removeChoice = function() {
-    console.log($scope.removeChoices);
-    console.log(dataService.threeChoices);
-    // $scope.copyArray(dataService.threeChoices, $scope.removeChoices);
     for(var i = 0; i < $scope.removeChoices.length; i++) {
       for (var j = 0; j < dataService.threeChoices.length; j++) {
         if(dataService.threeChoices[j] == $scope.removeChoices[i])
           dataService.threeChoices.splice(j, 1);
       }      
     }
-    // dataService.threeChoices = $scope.removeChoices;
   }
 
   $scope.disableSendchoice = function(name) {
