@@ -31,7 +31,7 @@ input .lastname {
   z-index: 2;
   position: absolute;
   display: block;
-  
+
 }
 
 .hereandnow {
@@ -41,7 +41,7 @@ input .lastname {
 
 .container {
   position: absolute;
-} 
+}
 
 .paraWidth {
   max-width: 80px;
@@ -53,7 +53,7 @@ h3 .word-wrap {
 }
 
 .container md-button {
-  display: block;            
+  display: block;
   width: 100%;
   margin: 2px;
   text-align: center;
@@ -144,7 +144,6 @@ body {
       top: 0px;
       padding: 5px;
       width: 240px;
-
       textarea {
         font-size: 12px;
       }
@@ -152,6 +151,9 @@ body {
   }
 }
 
+.object-menu-menu .btn.button-menu-trigger{
+  display: none;
+}
 .object-font-family-preview {
   text-transform: capitalize;
 }
@@ -165,6 +167,7 @@ md-checkbox {
   min-width: 18px;
   min-height: 18px;
 }
+
 
 .form-control {
   font-weight: normal;
