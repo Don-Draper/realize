@@ -11,7 +11,7 @@
   </div>
   <br/>
 
-  <table cellpadding="10" layout="row" layout-align="center">
+  <!--<table cellpadding="10" layout="row" layout-align="center">
     <tr ng-style="{'font-size': '20px'}" ng-repeat="category in data track by $index">
     <td align="left" class="widecell">
 
@@ -22,7 +22,55 @@
     <td align="left">{{category.description}}
     </td>
   </tr>
-  </table>
+  </table>-->
+  <div layout="row" layout-xs="column">
+    <div class="select_board" ng-style="{ 'height': '600px', 'overflow': 'auto'}" flex="40">
+      <div layout="row" layout-xs="column" ng-repeat="category in data track by $index" ng-hide="disableSendchoice(category.name)">
+        <div flex="10">
+          <md-checkbox md-no-ink aria-label={{category.name}} class="md-primary" checklist-model="sendChoices" checklist-value="category.name" ng-disabled="checked===limit">
+          </md-checkbox>
+        </div>
+        <div flex="90">
+          <md-card>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{category.name}}</span>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button ng-click="checkChanged(category.name)">Add</md-button>
+            </md-card-actions>
+          </md-card>
+        </div>      
+      </div>
+    </div>
+    <div class="trun_borad" flex="20">
+      <md-button class="md-raised md-primary" ng-click="sendChoice()">Send</md-button>
+    </div>
+    <div class="trun_borad" flex="20">
+      <md-button class="md-raised md-primary" ng-click="removeChoice()">Remove</md-button>
+    </div>
+    <div class="choice_board" ng-style="{ 'height': '600px', 'overflow': 'auto'}" flexflex="40">
+      <div layout="row" layout-xs="column" ng-repeat="category in data track by $index"  ng-hide="disableRemovechoice(category.name)">
+        <div flex="10">
+          <md-checkbox md-no-ink aria-label={{category.name}} class="md-primary" checklist-model="removeChoices" checklist-value="category.name" ng-disabled="checked===limit">
+          </md-checkbox>
+        </div>
+        <div flex="90">
+          <md-card>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{category.name}}</span>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button ng-click="checkChanged(category.name)">Remove</md-button>
+            </md-card-actions>
+          </md-card>
+        </div>      
+      </div>
+    </div>
+  </div>
   <br/>
     <div layout="row" layout-align="center">
 
