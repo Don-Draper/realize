@@ -33,8 +33,8 @@ angular.module('app', [
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('teal', {
-      'default': '400',
+    .primaryPalette('indigo', {
+      'default': '600',
       'hue-1' : '100',
       'hue-2' : '600',
       'hue-3' : 'A100'
@@ -66,13 +66,13 @@ angular.module('app', [
       templateUrl: './app/auth/deleteUser.html',
       controller: 'AuthController'
     })
+    // .when('/', {
+    //   templateUrl: './app/categories/main.html',
+    //   controller: 'categoriesController'
+    //   // controller: 'AuthController'
+    //   //controller: 'modalController'
+    // })
     .when('/', {
-      templateUrl: './app/categories/main.html',
-      controller: 'categoriesController'
-      // controller: 'AuthController'
-      //controller: 'modalController'
-    })
-    .when('/firstseven', {
       templateUrl: './app/categories/firstseven.html',
       controller: 'categoriesController'
     })

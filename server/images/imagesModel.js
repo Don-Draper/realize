@@ -38,9 +38,9 @@ var data = [
     "type":"icon"
   },
   {
-    "filename":"amflag-eagle.png",
-    "trueUrl":"assets/amflag-eagle.png",
-    "tag":"Freedom, Justice, Strength",
+    "filename":"bear-coin2.svg",
+    "trueUrl":"assets/bear-coin2.svg",
+    "tag":"Strength",
     "type":"icon"
   }, 
   {
