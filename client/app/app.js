@@ -7,7 +7,7 @@ angular.module('app', [
   'app.example',
   'ngRoute'
 
-  ])  
+  ])
 
 .service('dataService', function () {
   this.chosenLastName = '';
@@ -20,11 +20,11 @@ angular.module('app', [
   this.urls = [];
   this.mainBeliefsString = '';
   this.changeMainBeliefsFromArrayToString = function() {
-    var final = '';
+    var final = [];
     for(var i = 0; i < this.mainBeliefs.length; i ++) {
-      final += `${i+1}.  ${this.mainBeliefs[i]}\n`;
+      final.push(this.mainBeliefs[i]);
     }
-    this.mainBeliefsString = final;
+    this.mainBeliefsString = final.join("\n");
   };
   this.chosenImage = '';
   this.sevenForFabric = [];
@@ -33,8 +33,8 @@ angular.module('app', [
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('indigo', {
-      'default': '600',
+    .primaryPalette('teal', {
+      'default': '400',
       'hue-1' : '100',
       'hue-2' : '600',
       'hue-3' : 'A100'
@@ -94,11 +94,11 @@ angular.module('app', [
     })
     .when('/icons', {
       templateUrl: './app/categories/icons.html',
-      controller: 'categoriesController'     
+      controller: 'categoriesController'
     })
     .when('/homebase', {
       templateUrl: './app/categories/homebase.html',
-      controller: 'categoriesController'    
+      controller: 'categoriesController'
     })
     .when('/images', {
       templateUrl: './app/images/images.html',
@@ -134,7 +134,7 @@ angular.module('app', [
   return attach;
 })
 .run(function ($rootScope, $location, Auth) {
-  // here we look at the token in localstorage to see if the user exists by 
+  // here we look at the token in localstorage to see if the user exists by
   // sending to the server for validation
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
