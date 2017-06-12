@@ -99,6 +99,7 @@ fabric.util.object.extend(fabric.Object.prototype, {
 
   fabric.util.object.extend(fabric.Image.prototype, {
     async: true,
+    initProportinalSize : true,
     toObjectNative: fabric.Image.prototype.toObject,
     toObject:     function(){
       var obj = fabric.Image.prototype.toObjectNative.apply(this,arguments);
@@ -124,6 +125,42 @@ fabric.util.object.extend(fabric.Object.prototype, {
           fabric.Object.prototype.initialize.call(this, options, callback);
         }.bind(this));//adding callback
     },
+    /**
+     * @private
+     * @param {Object} [options] Object with width/height properties
+     */
+    _setWidthHeight: function(options) {
+      if('width' in options){
+        this.width = options.width;
+      }else{
+        var _el = this.getElement();
+        if(!_el || !_el.width){
+          this.width = 0;
+        }else{
+          if(this.initProportinalSize && 'height' in options){
+            this.width = (options.height  / _el.height ) * _el.width;
+          } else {
+            this.width = _el.width;
+          }
+        }
+      }
+
+      if('height' in options){
+        this.height = options.height;
+      }else{
+        var _el = this.getElement();
+        if(!_el || !_el.height){
+          this.height = 0;
+        }else{
+          if(this.initProportinalSize && 'width' in options){
+            this.height = (options.width  / _el.width ) * _el.height;
+          } else {
+            this.height = _el.height;
+          }
+        }
+      }
+    },
+
     _initElement: function (element, options, callback) {
       this.setElement(fabric.util.getById(element), callback, options);
       fabric.util.addClass(this.getElement(), fabric.Image.CSS_CANVAS);

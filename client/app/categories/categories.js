@@ -27,12 +27,10 @@ angular.module('app.categories', ['app.checklist-model'])
 // via html
 
   $scope.sevenBeliefs = dataService.sevenBeliefs;
-  $scope.threeChoices = dataService.threeChoices;  
+  $scope.threeChoices = dataService.threeChoices;
   $scope.primary = dataService.primary;
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
-  $scope.sendChoices = [];
-  $scope.removeChoices = [];
 
 
   $scope.workable = [];
@@ -206,57 +204,4 @@ angular.module('app.categories', ['app.checklist-model'])
     $location.path('/create');
   }
 
-  $scope.checkChanged = function(name) {
-    console.log(name);
-    for(var i = 0; i < dataService.threeChoices.length; i++) {
-      if(name == dataService.threeChoices[i]) {
-        dataService.threeChoices.splice(i, 1);
-        return true;
-      }     
-    }  
-    dataService.threeChoices.push(name);
-    return false;  
-  }
-
-  $scope.sendChoice = function() {
-    for(var i = 0; i < $scope.sendChoices.length; i++){
-      for(var j= 0; j < dataService.threeChoices.length; j++) {
-        if(dataService.threeChoices[j] == $scope.sendChoices[i])
-          break;
-      }
-      dataService.threeChoices.push($scope.sendChoices[i]);
-    }
-  }
-
-  $scope.removeChoice = function() {
-    for(var i = 0; i < $scope.removeChoices.length; i++) {
-      for (var j = 0; j < dataService.threeChoices.length; j++) {
-        if(dataService.threeChoices[j] == $scope.removeChoices[i])
-          dataService.threeChoices.splice(j, 1);
-      }      
-    }
-  }
-
-  $scope.disableSendchoice = function(name) {
-    for(var i = 0; i < dataService.threeChoices.length; i++) {
-      if(name == dataService.threeChoices[i])
-        return true
-    }
-    return false;
-  }
-  
-  $scope.disableRemovechoice = function(name) {
-    for(var i = 0; i < dataService.threeChoices.length; i++) {
-      if(name == dataService.threeChoices[i]){
-        return false
-      }        
-    }
-    return true;
-  }
-  $scope.copyArray = function(ctr, ptr) {
-    ctr = [];
-    for(var i= 0; i < ptr.length; i++){
-      ctr[i] = ptr[i];
-    }
-  }
 })
