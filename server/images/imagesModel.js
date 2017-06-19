@@ -110,10 +110,10 @@ var data = [
    //      console.log('collection removed')
    //      });
 
-   Image.collection.insertMany(data, function(err,r) {
-    assert.equal(null, err);
-    assert.equal(14, r.insertedCount);
-   });
+   // Image.collection.insertMany(data, function(err,r) {
+   //  assert.equal(null, err);
+   //  assert.equal(14, r.insertedCount);
+   // });
 
 module.exports = Image;
 
