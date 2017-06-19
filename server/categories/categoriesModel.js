@@ -98,7 +98,7 @@ var data = [
       "Before you speak, answer these: Is it true? Is it necessary? Is it kind?",
       "Be kind. Impose your will forcefully upon those who are not.",
       "One kind word can warm three winter months.",
-      "Life isn't work living, unless it is lived for someone else.",
+      "Life isn't worth living unless it is lived for someone else.",
       "Preparation is the key to remaining calm under pressure.",
       "If someone loves you and hurts you, chances are they're in pain.",
       "Find joy in the accomplishments of others.",

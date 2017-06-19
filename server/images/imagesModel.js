@@ -20,74 +20,86 @@ var Image = mongoose.model('Image', ImageSchema);
 
 var data = [
   {
-    "filename":"amflag.png",
-    "trueUrl":"assets/amflag.png",
+    "filename":"jesus4.svg",
+    "trueUrl":"assets/jesus4.svg",
     "tag":"Freedom, Justice, Courage",
     "type":"icon"
   },
   {
-    "filename":"blue-lion-open-mouth.png",
-    "trueUrl":"assets/blue-lion-open-mouth.png",
+    "filename":"jesus5.svg",
+    "trueUrl":"assets/jesus5.svg",
     "tag":"Courage, Strength, Perseverance",
     "type":"icon"
   },
   {
-    "filename":"power.jpg",
-    "trueUrl":"assets/power.jpg",
+    "filename":"fleurdelis4.svg",
+    "trueUrl":"assets/fleurdelis4.svg",
     "tag":"Strength",
     "type":"icon"
   },
   {
-    "filename":"bear-coin2.svg",
-    "trueUrl":"assets/bear-coin2.svg",
+    "filename":"bear22.svg",
+    "trueUrl":"assets/bear22.svg",
     "tag":"Strength",
     "type":"icon"
   }, 
   {
-    "filename":"black-and-white-star.png",
-    "trueUrl":"assets/black-and-white-star.png",
+    "filename":"u-blackletter.svg",
+    "trueUrl":"assets/u-blackletter.svg",
     "tag":"Creativity",
     "type":"icon"
   },  
   {
-    "filename":"family-blue.png",
-    "trueUrl":"assets/family-blue.png",
+    "filename":"t-blackletter.svg",
+    "trueUrl":"assets/t-blackletter.svg",
     "tag":"Family, Love, Strength",
     "type":"icon"
   },  
   {
-    "filename":"seed-of-life.png",
-    "trueUrl":"assets/seed-of-life.png",
+    "filename":"surfer.svg",
+    "trueUrl":"assets/surfer.svg",
     "tag":"Nature, Harmony",
     "type":"icon"
   },  
   {
-    "filename":"goal-play.png",
-    "trueUrl":"assets/goal-play.png",
+    "filename":"warrior2.svg",
+    "trueUrl":"assets/warrior2.svg",
     "tag":"Creativity, Diligence",
     "type":"icon"
   },  
-  {
-    "filename":"perseverance.jpg",
-    "trueUrl":"assets/perseverance.jpg",
+  { 
+    "filename":"lion11.svg",
+    "trueUrl":"assets/lion17.svg",
     "tag":"Perseverance",
     "type":"icon"
   },  
   {
-    "filename":"blue-bull.png",
-    "trueUrl":"assets/blue-bull.png",
+    "filename":"lion5.svg",
+    "trueUrl":"assets/lion5.svg",
     "tag":"Strength",
     "type":"icon"
   },  
   {
-    "filename":"creativity.png",
-    "trueUrl":"assets/creativity.png",
+    "filename":"eagle8.svg",
+    "trueUrl":"assets/eagle8.svg",
     "tag":"Creativity",
     "type":"icon"
   },  
   {
-    "filename":"paintbrush.png",
-    "trueUrl":"assets/paintbrush.png",
+    "filename":"lion-3.svg",
+    "trueUrl":"assets/lion-3.svg",
+    "tag":"Creativity",
+    "type":"icon"
+  }, 
+  {
+    "filename":"a-anglican.svg",
+    "trueUrl":"assets/a-anglican.svg",
+    "tag":"Creativity",
+    "type":"icon"
+  },
+  {
+    "filename":"b-anglican.svg",
+    "trueUrl":"assets/b-anglican.svg",
     "tag":"Creativity",
     "type":"icon"
   }
@@ -98,9 +110,18 @@ var data = [
    //      console.log('collection removed')
    //      });
 
-   // Image.collection.insertMany(data, function(err,r) {
-   //  assert.equal(null, err);
-   //  assert.equal(12, r.insertedCount);
-   // });
+   Image.collection.insertMany(data, function(err,r) {
+    assert.equal(null, err);
+    assert.equal(14, r.insertedCount);
+   });
 
 module.exports = Image;
+
+
+
+
+
+
+
+
+
