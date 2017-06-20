@@ -98,6 +98,18 @@ var data = [
     "type":"icon"
   },
   {
+    "filename":"connecting.svg",
+    "trueUrl":"assets/connecting.svg",
+    "tag":"Creativity",
+    "type":"icon"
+  },
+  {
+    "filename":"perseverance.svg",
+    "trueUrl":"assets/perseverance.svg",
+    "tag":"Creativity",
+    "type":"icon"
+  },
+  {
     "filename":"b-anglican.svg",
     "trueUrl":"assets/b-anglican.svg",
     "tag":"Creativity",
@@ -112,7 +124,7 @@ var data = [
 
    // Image.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(14, r.insertedCount);
+   //  assert.equal(16, r.insertedCount);
    // });
 
 module.exports = Image;

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333">
+    <title>The Wedding Legacy</title>
+    <meta name="description" content="Material Style Theme">
+    <link rel="shortcut icon" href="assets/img/favicon.png?v=3">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION LAYERS STYLES -->
+<!--     <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/layers.css"> -->
+    <!-- REVOLUTION NAVIGATION STYLES -->
+<!--     <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/navigation.css"> -->
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <!-- TYPEWRITER ADDON -->
+<!--     <script type="text/javascript" src="assets/plugins/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution-addons/typewriter/css/typewriter.css"> -->
+    <link rel="stylesheet" href="assets/css/style.indigo-600.min.css" />
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sb-site-container">
+      <!-- Modal -->
+      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header shadow-2dp no-pb">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+              <div class="modal-title text-center">
+                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">M</span>
+                <h3 class="no-m ms-site-title">Wedding
+                  <span>Legacy</span>
+                </h3>
+              </div>
+              <div class="modal-header-tabs">
+                <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-account"></i> Login</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-account-add"></i> Register</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-key"></i> Recovery Pass</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user">Username</label>
+                          <input type="text" id="ms-form-user" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Password</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-6">
+                          <div class="form-group no-mt">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Remember Me </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <button class="btn btn-raised btn-primary pull-right">Login</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                  <div class="text-center">
+                    <h3>Login with</h3>
+                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
+                      <i class="zmdi zmdi-facebook"></i> Facebook</a>
+                    <!--                             <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> -->
+<!--                     <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google">
+                      <i class="zmdi zmdi-google"></i> Google</a> -->
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+                  <form>
+                    <fieldset>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user">Username</label>
+                          <input type="text" id="ms-form-user" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email">Email</label>
+                          <input type="email" id="ms-form-email" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Password</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Re-type Password</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <button class="btn btn-raised btn-block btn-primary">Register Now</button>
+                    </fieldset>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+                  <fieldset>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-account"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-user">Username</label>
+                        <input type="text" id="ms-form-user" class="form-control"> </div>
+                    </div>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-email"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-email">Email</label>
+                        <input type="email" id="ms-form-email" class="form-control"> </div>
+                    </div>
+                    <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+                  </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="ms-header ms-header-primary">
+        <div class="container container-full">
+          <div class="ms-title">
+            <a href="index.html">
+              <!-- <img src="assets/img/demo/logo-header.png" alt=""> -->
+              <span class="ms-logo animated zoomInDown animation-delay-5">W</span>
+              <h1 class="animated fadeInRight animation-delay-6">Wedding
+                <span>Legacy</span>
+              </h1>
+            </a>
+          </div>
+          <div class="header-right">
+            <div class="share-menu">
+              <ul class="share-menu-list">
+<!--                 <li class="animated fadeInRight animation-delay-3">
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                </li> -->
+                <li class="animated fadeInRight animation-delay-2">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                </li>
+                <li class="animated fadeInRight animation-delay-1">
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7">
+                <i class="zmdi zmdi-share"></i>
+              </a>
+            </div>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
+              <i class="zmdi zmdi-account"></i>
+            </a>
+<!--             <form class="search-form animated zoomInDown animation-delay-9">
+              <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+              <label for="search-box">
+                <i class="zmdi zmdi-search"></i>
+              </label>
+            </form> -->
+            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
+              <i class="zmdi zmdi-menu"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
+        <div class="container container-full">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
+              <span class="ms-logo ms-logo-sm">W</span>
+              <span class="ms-title">Wedding
+                <strong>Legacy</strong>
+              </span>
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li >
+                <a href="index.html" class="dropdown-toggle animated fadeIn animation-delay-4" data-name="home">Home
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="modal" data-target="#ms-account-modal" data-name="page">Login
+                </a>
+              </li>
+              <li class="dropdown yamm-fw">
+                <a href="portfolio-masonry.html" class="dropdown-toggle animated fadeIn animation-delay-6" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Portfolio
+                </a>
+              </li>
+              
+<!--               <li class="btn-navbar-menu">
+                <a href="javascript:void(0)" class="sb-toggle-left">
+                  <i class="zmdi zmdi-menu"></i>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+          <!-- navbar-collapse collapse -->
+          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+            <i class="zmdi zmdi-menu"></i>
+          </a>
+        </div>
+        <!-- container -->
+      </nav>
+      <div class="material-background"></div>
+      <div class="container">
+        <div class="text-center mb-6">
+          <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5">Portfolio</h1><br/>
+
+              <a href="index2.html"><div class="tp-caption btn btn-raised btn-warning btn-lg" id="slide-2934-layer-8" data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']" data-y="['middle','middle','top','top']" data-voffset="['80','120','350','300']">
+                 Want to build one?  It's free! </div></a>
+<!--           <p class="lead lead-lg color-white text-center center-block mt-2 mb-4 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">Discover our projects and the
+            <span class="colorStar">rigorous process</span> of creation. Our principles are creativity, design, experience and knowledge.</p> -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row masonry-container">
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/egle-framed.jpg" alt="" class="img-responsive">
+<!--                     <figcaption class="ms-thumbnail-caption text-center">
+                      <div class="ms-thumbnail-caption-content">
+                        <h4 class="ms-thumbnail-caption-title mb-2">Egle</h4>
+                        <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-circle-xs mr-1 btn-circle-white color-danger">
+                          <i class="zmdi zmdi-favorite"></i>
+                        </a>
+                      </div>
+                    </figcaption> -->
+                  </figure>
+                  <div class="card-block text-center">
+<!--                     <a href="javascript:void(0)" class="btn-circle btn-circle-royal btn-circle-raised btn-card-float right wow zoomInDown index-2">
+                      <i class="zmdi zmdi-star"></i>
+                    </a> -->
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Creativity, Happiness, Prudence</p>
+                    <h4 class="color-royal">Story</h4>
+                    <p>Mix ingredients in large brain. Love, nurture and shape mixture into smart, kind and resilient. Bake in reinforced Cultureware® for 18 years. Kiss and release into wild.</p>
+                    <p>MAKES ONE (1) PERSONALITY</p>
+                    <br/>
+<!--                     <a href="javascript:void(0)" class="btn btn-royal">
+                      <i class="zmdi zmdi-star"></i> Button</a>
+                    <a href="javascript:void(0)" class="btn btn-royal btn-raised">
+                      <i class="zmdi zmdi-globe"></i> Button</a> -->
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/kennedy-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Faith, Kindness, Perseverance</p>
+                    <h4 class="color-royal">Story</h4>
+                    "A family that prays together stays together," he said. "And sticking to your goals no matter what. Those two things can take you anywhere."                 
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2 category-3">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/sinclair-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Learning, Perseverance, Diligence</p>
+                    <h4 class="color-royal">Story</h4>
+                    Every night it's prayers first, then the Sinclair Creed. It's been that way for three generations. They hold hands and recite it in harmony before every holiday meal. Semper Improvidus: <p>Latin for "Always Improving."</p>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/canizaro-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Perseverance, Prudence, Diligence</p>
+                    <h4 class="color-royal">Story</h4>
+                    Make love a priority in all decisions. Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit. 
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/rockwood-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Creativity, Happiness, Learning</p>
+                    <h4 class="color-royal">Story</h4>
+                    Einstein once said, "Be independent of the opinion of others." In his eyes, different is truly magnificent.
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/gonzalez-framed.png" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Diligence, Prudence, Perseverance</p>
+                    <h4 class="color-royal">Story</h4>
+                    Dr. Gonzalez is one of the hardest-working people I have ever encountered. The motto in the red ribbon: Excellence Through Effort.
+                    <br/>
+                    <br/>   
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2 category-3">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/hines-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Faith, Prudence, Kindness</p>
+                    <h4 class="color-royal">Story</h4>
+                    What better rule to accentuate and prioritize than the Golden Rule?
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/gifford-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Creativity, Happiness, Prudence</p>
+                    <h4 class="color-royal">Story</h4>
+                    Imagine one of the first impressions you ever have of your family's last name is a splash of colors and open arms within the sturdiness and stability of an oak tree.
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/tanguis-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Creativity, Perseverance, Learning</p>
+                    <h4 class="color-royal">Story</h4>
+                    The real voyage of life consists not in new landscapes but in having new eyes.
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/vanderbilt-framed.png" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Faith, Diligence, Perseverance</p>
+                    <h4 class="color-royal">Story</h4>
+                    Faith with an understanding and appreciation for humanity is the best way to live. Procrastination and excuses are for lesser souls. Visualize accomplishment then anticipate and strategize probable challenges.
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/einstein-framed.jpg" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Creativity, Happiness, Learning</p>
+                    <h4 class="color-royal">Story</h4>
+                    Do you know anyone who displays Einstein's philosophy on effective thinking in their home? A better question is, 'Why the heck doesn't everyone?'
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="col-md-4 col-sm-6 masonry-item wow fadeInUp animation-delay-2">
+                <div class="card">
+                  <figure class="withripple zoom-img">
+                    <img src="assets/final-framed/gandhi-framed.png" alt="" class="img-responsive">
+                  </figure>
+                  <div class="card-block text-center">
+                    <h4 class="color-royal">Categories</h4>
+                    <p>Kindness, Prudence, Hope</p>
+                    <h4 class="color-royal">Story</h4>
+                    One of the greatest leaders in human history believed in self-discipline. His peaceful message to the hopeless on how to transform a life: "Conserve your anger - It will transmute into a power that will change your world."
+                    <br/>
+                    <br/>
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+
+
+
+      <aside class="ms-footbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 ms-footer-col">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Sitemap</h3>
+                <ul class="list-unstyled ms-icon-list three_cols">
+                  <li>
+                    <a href="index.html">
+                      <i class="zmdi zmdi-home"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="portfolio-masonry.html">
+                      <i class="zmdi zmdi-image-o"></i> Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="page-about.html">
+                      <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
+                  </li>
+                  <li>
+                    <a href="page-faq2.html">
+                      <i class="zmdi zmdi-help"></i> FAQ</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#ms-account-modal">
+                      <i class="zmdi zmdi-lock"></i> Login</a>
+                  </li>
+                  <li>
+                    <a href="page-contact.html">
+                      <i class="zmdi zmdi-email"></i> Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Join</h3>
+                <p class="">Once per month with specials and goodies. Unsubscribe anytime.</p>
+                <form>
+                  <div class="form-group label-floating mt-2 mb-1">
+                    <div class="input-group ms-input-subscribe">
+                      <label class="control-label" for="ms-subscribe">
+                        <i class="zmdi zmdi-email"></i> Email Adress</label>
+                      <input type="email" id="ms-subscribe" class="form-control"> </div>
+                  </div>
+                  <button class="ms-subscribre-btn" type="button">Subscribe</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                  <span class="ms-logo ms-logo-white ms-logo-sm mr-1">W</span>
+                  <h3 class="no-m ms-site-title">Wedding
+                    <span>Legacy</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-social">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+<!--                   <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a> -->
+                  <a href="javascript:void(0)" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Cultureware<sup>&trade;</sup> 2017</p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+    <!-- sb-site-container -->
+    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      <div class="sb-slidebar-container">
+        <header class="ms-slidebar-header">
+          <div class="ms-slidebar-login">
+            <a href="javascript:void(0)" class="withripple">
+              <i class="zmdi zmdi-account"></i> Login</a>
+            <a href="javascript:void(0)" class="withripple">
+              <i class="zmdi zmdi-account-add"></i> Register</a>
+          </div>
+          <div class="ms-slidebar-title">
+            <form class="search-form">
+              <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
+              <label for="search-box-slidebar">
+                <i class="zmdi zmdi-search"></i>
+              </label>
+            </form>
+            <div class="ms-slidebar-t">
+              <span class="ms-logo ms-logo-sm">W</span>
+              <h3>Wedding
+                <span>Legacy</span>
+              </h3>
+            </div>
+          </div>
+        </header>
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <!-- between these lines are the testing block -->
+          <li class="panel" role="tab" id="sch1">
+            <a href="index.html">
+              <i class="zmdi zmdi-home"></i> Home </a>
+          </li>
+          <li class="panel" role="tab" id="sch1">
+            <a href="javascript:void(0)">
+              <i class="zmdi zmdi-collection-image-o" ></i> Login </a>
+          </li>
+          <li class="panel" role="tab" id="sch1">
+            <a href="portfolio-masonry.html">
+              <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
+          </li>
+        </ul>
+        <div class="ms-slidebar-social ms-slidebar-block">
+          <h4 class="ms-slidebar-block-title">Social Links</h4>
+          <div class="ms-slidebar-social">
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
+              <i class="zmdi zmdi-facebook"></i>
+              <span class="badge badge-pink">12</span>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
+              <i class="zmdi zmdi-twitter"></i>
+              <span class="badge badge-pink">4</span>
+              <div class="ripple-container"></div>
+            </a>
+<!--             <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
+              <i class="zmdi zmdi-google"></i>
+              <div class="ripple-container"></div>
+            </a> -->
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
+              <i class="zmdi zmdi-instagram"></i>
+              <div class="ripple-container"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+  </body>
+</html>
