@@ -1,6 +1,6 @@
 body {
-  font-family: "Raleway";
-  font-weight: lighter;
+  font-family: "Roboto";
+  font-weight: normal;
 /*  background-image: '../assets/space-sunset.jpg';
 */}
 
@@ -22,7 +22,7 @@ input .lastname {
 }
 
 .image {
-  background-image: '../../assets/space-sunset.jpg';
+  /*background-image: '../../assets/space-sunset.jpg';*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ input .lastname {
 }
 
 .hereandnow {
-  font-family: 'Limelight';
+  font-family: 'Roboto';
   font-size: 50px;
 }
 
@@ -73,7 +73,7 @@ h3 .word-wrap {
 }
 
 body {
-  padding: 10px;
+  padding: 12px;
 }
 
 .image-builder-container {
