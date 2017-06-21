@@ -33,9 +33,9 @@ angular.module('app', [
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('teal', {
-      'default': '400',
-      'hue-1' : '100',
+    .primaryPalette('indigo', {
+      'default': '600',
+      'hue-1' : '300',
       'hue-2' : '600',
       'hue-3' : 'A100'
     })
