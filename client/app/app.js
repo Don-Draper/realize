@@ -66,13 +66,13 @@ angular.module('app', [
       templateUrl: './app/auth/deleteUser.html',
       controller: 'AuthController'
     })
-    // .when('/', {
-    //   templateUrl: './app/categories/main.html',
-    //   controller: 'categoriesController'
+    .when('/', {
+      templateUrl: './app/categories/main.html',
+      controller: 'categoriesController'
     //   // controller: 'AuthController'
     //   //controller: 'modalController'
-    // })
-    .when('/', {
+    })
+    .when('/firstseven', {
       templateUrl: './app/categories/firstseven.html',
       controller: 'categoriesController'
     })
@@ -88,12 +88,16 @@ angular.module('app', [
       templateUrl: './app/categories/lastname.html',
       controller: 'categoriesController'
     })
+    .when('/portfolio', {
+      templateUrl: './app/categories/portfolio.html',
+      controller: 'categoriesController'
+    })
     .when('/create', {
       templateUrl: './app/categories/create.html',
       controller: 'categoriesController'
     })
-    .when('/icons', {
-      templateUrl: './app/categories/icons.html',
+    .when('/commission', {
+      templateUrl: './app/categories/commission.html',
       controller: 'categoriesController'
     })
     .when('/homebase', {

@@ -1,13 +1,13 @@
-<div>
-  <h1 layout="row" layout-align="center">Of those, what's the most important of all?</h1>
+<div ng-style="{'color': 'black'}">
+  <h1 layout="column" layout-align="center center">Of those, what's the most important of all?</h1>
   <br>
   <br>
-  <div layout="row" layout-align="center">
+  <div layout="row" layout-align="center center">
     <md-list ng-repeat="category in threeChoices">
 
       <md-list-item>
 
-        <input class="checkboxListThree" type="checkbox" checklist-model="primary" checklist-value="category"><div class="checkbox-text">{{category}}</div>
+        <input class="checkboxListThree" type="checkbox" checklist-model="primary" checklist-value="category"><div class="checkbox-text" ng-style="{'font-size': '30px'}">&nbsp{{category}}</div>
 
       </md-list-item>
 

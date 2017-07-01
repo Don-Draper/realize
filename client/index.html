@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#333">
-    <title>Wedding Legacy</title>
+    <title>Realize Your Legacy</title>
     <meta name="description" content="Material Style Theme">
     <link rel="shortcut icon" href="assets/img/favicon.png?v=3">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-    <!-- REVOLUTION STYLE SHEETS -->
-    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION LAYERS STYLES -->
-<!--     <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/layers.css"> -->
-    <!-- REVOLUTION NAVIGATION STYLES -->
-<!--     <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution/css/navigation.css"> -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/jquery.fontselector.css">
+    <link rel="stylesheet" type="text/css" href="styles/jquery.minicolors.css">
+
+
     <link rel="stylesheet" href="assets/css/preload.min.css" />
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
-    <!-- TYPEWRITER ADDON -->
-<!--     <script type="text/javascript" src="assets/plugins/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/plugins/revolution/revolution-addons/typewriter/css/typewriter.css"> -->
+    
     <link rel="stylesheet" href="assets/css/style.indigo-600.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--[if lt IE 9]>
         <script src="assets/js/html5shiv.min.js"></script>
         <script src="assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+
     <div id="ms-preload" class="ms-preload">
       <div id="status">
         <div class="spinner">
@@ -49,8 +50,8 @@
                 </span>
               </button>
               <div class="modal-title text-center">
-                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">W</span>
-                <h3 class="no-m ms-site-title">Wedding
+                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">R</span>
+                <h3 class="no-m ms-site-title">Realize Your
                   <span>Legacy</span>
                 </h3>
               </div>
@@ -187,8 +188,8 @@
           <div class="ms-title">
             <a href="index.html">
               <!-- <img src="assets/img/demo/logo-header.png" alt=""> -->
-              <span class="ms-logo animated zoomInDown animation-delay-5">W</span>
-              <h1 class="animated fadeInRight animation-delay-6">Wedding
+              <span class="ms-logo animated zoomInDown animation-delay-5">R</span>
+              <h1 class="animated fadeInRight animation-delay-6">Realize Your
                 <span>Legacy</span>
               </h1>
             </a>
@@ -225,9 +226,9 @@
                 <i class="zmdi zmdi-search"></i>
               </label>
             </form> -->
-            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
+<!--             <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
               <i class="zmdi zmdi-menu"></i>
-            </a>
+            </a> -->
           </div>
         </div>
       </header>
@@ -236,8 +237,8 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
               <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
-              <span class="ms-logo ms-logo-sm">W</span>
-              <span class="ms-title">Wedding
+              <span class="ms-logo ms-logo-sm">R</span>
+              <span class="ms-title">Realize Your
                 <strong>Legacy</strong>
               </span>
             </a>
@@ -245,7 +246,7 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li >
-                <a href="index.html" class="dropdown-toggle animated fadeIn animation-delay-4" data-name="home">Home
+                <a href="#/" class="dropdown-toggle animated fadeIn animation-delay-4" data-name="home">Home
                 </a>
               </li>
               <li class="dropdown">
@@ -253,439 +254,21 @@
                 </a>
               </li>
               <li class="dropdown yamm-fw">
-                <a href="portfolio-masonry.html" class="dropdown-toggle animated fadeIn animation-delay-6" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Portfolio
+                <a href="#portfolio" class="dropdown-toggle animated fadeIn animation-delay-6" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Portfolio
                 </a>
               </li>
-              
-<!--               <li class="btn-navbar-menu">
-                <a href="javascript:void(0)" class="sb-toggle-left">
-                  <i class="zmdi zmdi-menu"></i>
-                </a>
-              </li> -->
             </ul>
           </div>
-          <!-- navbar-collapse collapse -->
-          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
-            <i class="zmdi zmdi-menu"></i>
-          </a>
         </div>
-        <!-- container -->
       </nav>
-      <div id="rev_slider_1049_1_wrapper" class="rev_slider_wrapper ms-hero-rev fullwidthbanner-container" data-alias="web-product-light-hero120" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-        <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
-        <div id="rev_slider_1049_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
-          <ul>
-            <!-- SLIDE  -->
-            <li data-index="rs-2934" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1500" data-rotate="0" data-saveperformance="off" data-title="Intro"
-              data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-              <!-- MAIN IMAGE -->
-              <img src="assets/plugins/revolution/assets/images/express_bglight.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
-              <!-- LAYERS -->
 
-              <div class="tp-caption   tp-resizeme rs-parallaxlevel-1" id="slide-2934-layer-2" data-x="['left','left','center','center']" data-hoffset="['590','865','70','60']" data-y="['top','top','top','bottom']" data-voffset="['120','216','580','63']"
-                data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":3350,"ease":"Power3.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;text-transform:left;border-width:0px;">
-                <img src="assets/img/demo/three-frames.png" alt="" data-ww="['864px','864px','330px','230px']" data-hh="['540px','540px','206px','144px']" width="653" height="408" data-no-retina> </div>
-
-              <div class="tp-caption WebProduct-Title   tp-resizeme" id="slide-2934-layer-7" data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']" data-y="['middle','middle','top','top']" data-voffset="['-110','-110','137','100']"
-                data-fontsize="['50','50','50','50']" data-lineheight="['50','50','50','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 11; white-space: nowrap;text-transform:left;">
-                <strong style="font-size:50px">The Wedding Legacy</strong>
-              </div>
-              <!-- LAYER NR. 8 -->
-              <div class="tp-caption WebProduct-SubTitle   tp-resizeme" id="slide-2934-layer-10" data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']" data-y="['middle','middle','top','top']" data-voffset="['-50','-50','220','180']"
-                data-fontsize="['15','15','15','13']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1250,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 12; white-space: nowrap;text-transform:left;letter-spacing:2px;font-weight:500;">The World's First Digital Family Heirloom</div><br/>
-              <!-- LAYER NR. 9 -->
-              <div class="tp-caption WebProduct-Content   tp-resizeme" id="slide-2934-layer-9" data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']" data-y="['middle','middle','top','top']" data-voffset="['0','30','265','220']"
-                data-fontsize="['16','16','16','14']" data-lineheight="['24','24','24','22']" data-width="['448','406','334','277']" data-height="['none','none','76','68']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1500,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 13; min-width: 448px; max-width: 448px; white-space: normal;text-transform:left;">A new and unique gift of meaningful elegance, guiding and inspiring family members for generations to come<br/>
-                </div>
-              <!-- LAYER NR. 10 -->
-              <a href="index2.html"><div class="tp-caption btn btn-raised btn-warning btn-lg" id="slide-2934-layer-8" data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']" data-y="['middle','middle','top','top']" data-voffset="['80','120','350','300']"
-                data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"scrollbelow","offset":"-50px","delay":""}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1750,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'>
-                 Upgrade to Wedding Gift 2.0 </div></a>
-            </li>
-          </ul>
-          <div style="" class="tp-static-layers">
-            <!-- LAYER NR. 11 -->
-            <div class="tp-caption -   tp-static-layer" id="slider-1049-layer-1" data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']" data-y="['top','top','top','top']" data-voffset="['30','30','30','30']" data-width="none"
-              data-height="none" data-whitespace="nowrap" data-type="text" data-actions='[{"event":"click","action":"toggleclass","layer":"slider-1049-layer-1","delay":"0","classname":"open"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1049-layer-3","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1049-layer-4","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1049-layer-5","delay":"0"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1049-layer-6","delay":"0"}]'
-              data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-startslide="-1" data-endslide="-1" data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","ease":"nothing"}]'
-              data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 15; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);text-transform:left;border-width:0px;">
-            </div>
-          </div>
-          <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;">
-          </div>
-        </div>
-      </div>
-      <!-- END REVOLUTION SLIDER -->
-
-      <div class="ms-hero ms-hero-material">
-        <span class="ms-hero-bg"></span>
-        <div class="container">
-          <div class="col-lg-6 col-md-7">
-            <div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel" data-interval="15000">
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <div class="carousel-caption">
-                    <div class="ms-hero-material-text-container">
-                      <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
-                        <h1 class="animated fadeInLeft animation-delay-15 font-smoothing">
-                          <strong>The Cultureware
-                            <sup>&trade;</sup> Wedding Legacy</strong>
-                        </h1>
-                        <h2 class="animated fadeInLeft animation-delay-18">The world's first
-                          <span class="color-warning">Customizable Digital Family Heirloom</span>.</h2>
-                      </header>
-                      <ul class="ms-hero-material-list">
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-18">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-royal shadow-3dp">
-                              <i class="zmdi zmdi-cake"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-23">Looking for unique and meaningful? Nothing is more meaningful than our ideas about how to live. People will ask them for years, "Where did you get that?" </div>
-                        </li>
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-20">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-success shadow-3dp">
-                              <i class="zmdi zmdi-favorite"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-19">You can celebrate the occasion by gifting meaningful elegance, guiding and inspiring family members for generations to come.</div>
-                        </li>
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-22">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-danger shadow-3dp">
-                              <i class="zmdi zmdi-thumb-down"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-21">Or you can get them that set of towels they registered for. They'll remember you for it. No, really.</div>
-                        </li>
-                      </ul>
-                      <div class="ms-hero-material-buttons text-right">
-                      <br/>
-                      <br/>
-<!--                         <div class="ms-hero-material-buttons text-right">
-                          <a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
-                            <i class="zmdi zmdi-settings"></i> Try the App</a>
-                          <a href="https://www.amazon.com/Westinghouse-6227900-Sylvestre-Three-Light-Interior/dp/B00CQODIO8/ref=sr_1_3?ie=UTF8&qid=1496686523&sr=8-3&keywords=bathroom+fixture" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
-                            <i class="zmdi zmdi-download"></i> Fixture, Please</a>
-                        </div> -->
-                      </div>
-                    </div>
-                    <!-- ms-hero-material-text-container -->
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="carousel-caption">
-                    <div class="ms-hero-material-text-container">
-                      <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
-                        <h1 class="animated fadeInLeft animation-delay-15">A canvas with
-                          <strong>infinite</strong> possibilities</h1>
-                        <h2 class="animated fadeInLeft animation-delay-18">Unlimited combinations to create
-                          <span class="color-warning">unique designs</span>.</h2>
-                      </header>
-                      <ul class="ms-hero-material-list">
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-18">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-info shadow-3dp">
-                              <i class="zmdi zmdi-favorite-outline"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-19">Answer a few questions and our Cultureware
-                            <sup>&trade;</sup> app finds which quotes from poets and geniuses perfectly sum up what's important to
-                            <span class="color-warning">you</span>. </div>
-                        </li>
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-20">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-royal shadow-3dp">
-                              <i class="zmdi zmdi-palette"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-21">Choose from a selection of inspiring and powerful images or upload any photo. You're the artist. The Cultureware App is your canvas.</div>
-                        </li>
-                        <li class="">
-                          <div class="ms-list-icon animated zoomInUp animation-delay-22">
-                            <span class="ms-icon ms-icon-circle ms-icon-xlg color-warning shadow-3dp">
-                              <i class="zmdi zmdi-flash"></i>
-                            </span>
-                          </div>
-                          <div class="ms-list-text animated fadeInRight animation-delay-23">Bring your cherished beliefs, good taste and unique style. Let the Cultureware
-                            <sup>&trade;</sup> App do the rest!</div>
-                        </li>
-                      </ul>
-                      <div class="ms-hero-material-buttons text-right">
-                      <br/>
-                      <br/>
-<!--                         <div class="ms-hero-material-buttons text-right">
-                          <a href="javascript:void(0);" class="btn btn-warning btn-raised animated fadeInLeft animation-delay-24 mr-2">
-                            <i class="zmdi zmdi-settings"></i> Customize</a>
-                          <a href="javascript:void(0);" class="btn btn-success btn-raised animated fadeInRight animation-delay-24">
-                            <i class="zmdi zmdi-download"></i> Learn More</a>
-                        </div> -->
-                      </div>
-                    </div>
-                    <!-- ms-hero-material-text-container -->
-                  </div>
-                </div>
+  <body>
 
 
-              <div class="carousel-controls">
-                  <!-- Controls -->
-                  <a class="left carousel-control animated zoomIn animation-delay-30" href="#carousel-hero" role="button" data-slide="prev">
-                    <i class="zmdi zmdi-chevron-left"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control animated zoomIn animation-delay-30" href="#carousel-hero" role="button" data-slide="next">
-                    <i class="zmdi zmdi-chevron-right"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-hero" data-slide-to="0" class="animated fadeInUpBig animation-delay-27 active"></li>
-                    <li data-target="#carousel-hero" data-slide-to="1" class="animated fadeInUpBig animation-delay-28"></li>
-                    <!--                             <li data-target="#carousel-hero" data-slide-to="2" class="animated fadeInUpBig animation-delay-29"></li> -->
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-5">
-            <div class="ms-hero-img animated zoomInUp animation-delay-30">
-              <img src="assets/img/demo/canizaro-framed.jpg" alt="" class="img-responsive">
-              <div id="carousel-hero-img" class="carousel carousel-fade slide" data-ride="carousel" data-interval="6000">
-                <!-- Indicators -->
-<!--                 <ol class="carousel-indicators carousel-indicators-hero-img">
-                  <li data-target="#carousel-hero-img" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-hero-img" data-slide-to="1"></li>
-                  <li data-target="#carousel-hero-img" data-slide-to="2"></li>
-                </ol> -->
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                  <div class="ms-hero-img-slider item active">
-                    <img src="assets/img/demo/gonzalez-framed.png" alt="" class="img-responsive"> </div>
-                  <div class="ms-hero-img-slider item">
-                    <img src="assets/img/demo/canizaro-framed.jpg" alt="" class="img-responsive"> </div>
-                  <div class="ms-hero-img-slider item">
-                    <img src="assets/img/demo/egle-framed.jpg" alt="" class="img-responsive"> </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div>
-        <!-- container -->
-      </div>
-
-      <!-- ms-hero ms-hero-black -->
-      <div class="container mt-6">
-        <h2 class="text-center color-primary mb-4">The Cultureware
-          <sup>&trade;</sup> Wedding Legacy</h2>
-        <div class="owl-dots"></div>
-        <div class="owl-carousel owl-theme">
-          <div class="card animation-delay-6">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/kennedy-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card card-dark-inverse animation-delay-8">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/egle-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card animation-delay-10">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/canizaro-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card animation-delay-6">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/gifford-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card card-dark-inverse animation-delay-8">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/vanderbilt-framed.png" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card animation-delay-10">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/sinclair-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card animation-delay-6">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/gonzalez-framed.png" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card card-dark-inverse animation-delay-8">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/hines-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-          <div class="card animation-delay-10">
-            <div class="withripple zoom-img">
-              <a href="javascript:void()">
-                <img src="assets/img/demo/einstein-framed.jpg" alt="..." class="img-responsive"> </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-4">
-        <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">How It Works</h2>
-        <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4"> We make building the Wedding Legacy
-          <span class="color-primary">EASY and FUN</span> with the Cultureware
-          <sup>&trade;</sup> App.</p>
-        <div class="ms-feature col-lg-4 col-md-6 col-sm-6 card wow flipInX animation-delay-8">
-          <div class="text-center card-block">
-            <span class="ms-icon ms-icon-circle ms-icon-xxlg color-warning">
-              <i class="zmdi zmdi-palette"></i>
-            </span>
-            <h4 class="color-warning">Ambassador</h4>
-            <p class="">Be a Cultural Ambassador and build it for the special couple or send an invite to the Cultureware App as your gift</p>
-            <a href="javascript:void(0)" class="btn btn-warning btn-raised">Try it Free</a>
-          </div>
-        </div>
-        <div class="ms-feature col-lg-4 col-md-6 col-sm-6 card wow flipInX animation-delay-10">
-          <div class="text-center card-block">
-            <span class="ms-icon ms-icon-circle ms-icon-xxlg color-success">
-              <i class="zmdi zmdi-audio"></i>
-            </span>
-            <h4 class="color-success">Tell Your Story</h4>
-            <p class="">Which ideas do you cherish?
-              <br/>The Cultureware App turns any wedding story into meaningful, lasting beauty</p>
-            <a href="javascript:void(0)" class="btn btn-success btn-raised">Take a Test Spin</a>
-          </div>
-        </div>
-        <div class="ms-feature col-lg-4 col-md-6 col-sm-6 card wow flipInX animation-delay-6">
-          <div class="text-center card-block">
-            <span class="ms-icon ms-icon-circle ms-icon-xxlg  color-danger">
-              <i class="zmdi zmdi-flower-alt"></i>
-            </span>
-            <h4 class="color-danger">Frame It and Ship It</h4>
-            <p class="">Download digital copies for posting. Includes lifetime access to the Cultureware App. As your family grows, so will your Legacy!</p>
-            <a href="javascript:void(0)" class="btn btn-danger btn-raised">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <!-- container -->
-      <div class="wrap wrap-mountain mt-6">
-        <div class="container">
-          <h2 class="text-center text-light mb-6 wow fadeInDown animation-delay-5">The Cultureware
-            <sup>&trade;</sup> App is the
-            <strong>new way</strong> to create digital heirlooms based on a family's chosen wisdom and cherished ideas</h2>
-          <div class="row">
-            <div class="col-md-6 col-md-push-6 mb-4  center-block">
-              <img src="assets/img/demo/rockwood-framed.jpg" alt="" class="img-responsive center-block wow zoomIn animation-delay-12 "> </div>
-            <div class="col-md-6 col-md-pull-6 pr-6">
-
-              <h3 class="wow fadeInLeft animation-delay-6">All great cultures share a structure: A name to unify, a meaningful image to inspire and a written set of ideas about how to live our best lives. The Wedding Legacy is more than trite decor or vanity plates. It is a cultural beacon that informs and inspires, unites and guides. Now and for generations to come. </h3>
-            <br/>
-              <h3 class="wow fadeInLeft animation-delay-7">The Wedding Legacy announces to all: "This is who we are. This is what we believe." </h3>
-            <br/>
-              <h3 class="wow fadeInLeft animation-delay-8">A wedding ceremony is a creative act, the union of two souls and their cherished ideals into something entirely new and beautiful. Immortalize the occasion with the Wedding Legacy. A digital canvas never fades. </h3>
-            <br/>
-            <br/>            
-              <div class="text-center">
-                <a href="portfolio-masonry.html" class="btn btn-warning btn-raised mr-1 wow flipInX animation-delay-14">
-                  <i class="zmdi zmdi-chart-donut"></i> Take It for a Spin. It's Free! </a>
-<!--                 <a href="javascript:void(0)" class="btn btn-info btn-raised wow flipInX animation-delay-16">
-                  <i class="zmdi zmdi-case"></i> Try the App Free</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<div class="wrap  ms-bg-fixed">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="uppercase color-black">Three Ways to get the Wedding Legacy</h2>
-            <br/>
-            <p class="lead uppercase color-light"> </p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 price-table price-table-success wow zoomInUp">
-                <header class="price-table-header">
-                    <span class="price-table-category">Cultureware</span>
-                    <h3>FREE</h3>
-                </header>
-                <div class="price-table-body">
-                    <ul class="price-table-list">
-                        <li><i class="zmdi zmdi-code"></i> Lifetime access to the app</li>
-                        <li><i class="zmdi zmdi-globe"></i> One-click posting to FB, Instagram</li>
-                        <li><i class="zmdi zmdi-settings"></i> Choose from selection of FREE images<sup>*</sup></li>
-                        <li><i class="zmdi zmdi-cloud"></i> Unlimited revisions</li>
-                    </ul>
-                    <p><sup>* Some images and features at additional cost</sup></p>
-                    <div class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-success btn-raised"><i class="zmdi zmdi-cloud-download"></i> Try It Free </a>
-                    </div>
-                    <br/>
-
-                    <ul class="price-table-list">
-                        <li><i class="zmdi zmdi-favorite"></i> Or get access to ALL images and features!</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-success btn-raised"><i class="zmdi zmdi-cloud-download"></i> Gift It for $25! </a>
-                    </div>                    
-                </div>
-            </div>
-            <div class="col-md-4 price-table price-table-info prominent wow zoomInDown">
-                <header class="price-table-header">
-                    <span class="price-table-category">Ambassador</span>
-                    <h3><sup>$</sup>149</h3>
-                </header>
-                <div class="price-table-body">
-                    <ul class="price-table-list">
-                        <li><i class="zmdi zmdi-code"></i> Lifetime access to the app</li>
-                        <li><i class="zmdi zmdi-globe"></i> One-click posting to FB, Instagram</li>
-                        <li><i class="zmdi zmdi-settings"></i> Choose ideas, images and colors</li>
-                        <li><i class="zmdi zmdi-favorite"></i> Access to ALL images and features</li>
-                        <li><i class="zmdi zmdi-cloud"></i> Mat, Frame and Shipping included</li>
-                        <li><i class="zmdi zmdi-email-open"></i> Personalized note to Wedding Couple</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info btn-raised"><i class="zmdi zmdi-cloud-download"></i> Get It Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 price-table price-table-royal wow zoomInUp">
-                <header class="price-table-header">
-                    <span class="price-table-category">Dynasty</span>
-                    <h3><sup>$</sup>795</h3>
-                </header>
-                <div class="price-table-body">
-                    <ul class="price-table-list">
-                        <li><i class="zmdi zmdi-code"></i> Lifetime access to the app</li>
-                        <li><i class="zmdi zmdi-globe"></i> Multiple file formats for Social Media</li>
-                        <li><i class="zmdi zmdi-palette"></i> Work directly with a Cultural Architect</li>
-                        <li><i class="zmdi zmdi-eye"></i> See your personal vision come to life</li>
-                        <li><i class="zmdi zmdi-balance"></i> Unlimited revisions</li> 
-                        <li><i class="zmdi zmdi-favorite-outline"></i> We aren't happy until you LOVE it</li>
-                        <li><i class="zmdi zmdi-cloud"></i> Mat, Frame and Shipping included</li>
-                        <li><i class="zmdi zmdi-star"></i> Image forever unique to your family</li>
-                    </ul>
-                    <div class="text-center">
-                        <a href="home-landing.html" class="btn btn-royal btn-raised"><i class="zmdi zmdi-cloud-download"></i> Commission Heirloom</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!--container -->
-</div>
+        <div ng-view></div>
 
 
+  </body>
 
       <aside class="ms-footbar">
         <div class="container">
@@ -699,7 +282,7 @@
                       <i class="zmdi zmdi-home"></i> Home</a>
                   </li>
                   <li>
-                    <a href="portfolio-masonry.html">
+                    <a href="#portfolio">
                       <i class="zmdi zmdi-image-o"></i> Portfolio</a>
                   </li>
                   <li>
@@ -722,7 +305,7 @@
               </div>
 
             </div>
-            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
+            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-indigo">
               <div class="ms-footbar-block">
                 <h3 class="ms-footbar-title">Join</h3>
                 <p class="">Once per month with specials and goodies. Unsubscribe anytime.</p>
@@ -795,8 +378,8 @@
               </label>
             </form>
             <div class="ms-slidebar-t">
-              <span class="ms-logo ms-logo-sm">W</span>
-              <h3>Wedding
+              <span class="ms-logo ms-logo-sm">R</span>
+              <h3>Realize Your
                 <span>Legacy</span>
               </h3>
             </div>
@@ -813,7 +396,7 @@
               <i class="zmdi zmdi-collection-image-o" ></i> Login </a>
           </li>
           <li class="panel" role="tab" id="sch1">
-            <a href="portfolio-masonry.html">
+            <a href="#portfolio">
               <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
           </li>
         </ul>
@@ -848,57 +431,71 @@
     <script type="text/javascript" src="assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/index.js"></script>
-    <script type="text/javascript">
-      var tpj = jQuery;
-      var revapi1049;
-      tpj(document).ready(function()
-      {
-        if (tpj("#rev_slider_1049_1").revolution == undefined)
-        {
-          revslider_showDoubleJqueryError("#rev_slider_1049_1");
-        }
-        else
-        {
-          revapi1049 = tpj("#rev_slider_1049_1").show().revolution(
-          {
-            sliderType: "hero",
-            jsFileLocation: "assets/plugins/revolution/revolution/js/",
-            sgliderLayout: "fullwidth",
-            dottedOverlay: "none",
-            delay: 9000,
-            navigation:
-            {},
-            responsiveLevels: [1240, 1024, 778, 480],
-            visibilityLevels: [1240, 1024, 778, 480],
-            gridwidth: [1400, 1240, 778, 480],
-            gridheight: [768, 768, 960, 720],
-            lazyType: "none",
-            parallax:
-            {
-              type: "mouse+scroll",
-              origo: "slidercenter",
-              speed: 2000,
-              levels: [1, 2, 3, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55],
-              type: "mouse+scroll",
-              disable_onmobile: "on"
-            },
-            shadow: 0,
-            spinner: "spinner2",
-            autoHeight: "off",
-            disableProgressBar: "on",
-            hideThumbsOnMobile: "off",
-            hideSliderAtLimit: 0,
-            hideCaptionAtLimit: 0,
-            hideAllCaptionAtLilmit: 0,
-            debugMode: false,
-            fallbacks:
-            {
-              simplifyAll: "off",
-              disableFocusListener: false,
-            }
-          });
-        }
-      }); /*ready*/
-    </script>
-  </body>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src="https://code.angularjs.org/1.3.11/angular-route.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="app/auth/auth.js"></script>
+<script src="app/images/images.js"></script>
+<!-- <script src="app/auth/modalService.js"></script> -->
+<script src="app/categories/categories.js"></script>
+<script src="app/factories/factory.js"></script>
+<script src="app/app.js"></script>
+<script src="app/checklist.js"></script>
+
+<script src='app/lib/jquery.js'></script>
+<script src='app/lib/$.minicolors.js'></script>
+<script src='app/lib/$.fontSelector.js'></script>
+<script src='app/lib/underscore.js'></script>
+<script src='app/lib/webfont.js'></script>
+<script src='app/lib/fabric.1.6.4.js'></script>
+<script src='app/lib/debug.js'></script>
+<script src='app/lib/saveAs.js'></script>
+
+<script src='app/fabric/modules/fiera.base.js'></script>
+<script src='app/fabric/modules/actionsToolbar.js'></script>
+
+<script src='app/fabric/modules/base.js'></script>
+<script src='app/fabric/modules/pluginsMixin.js'></script>
+<script src='app/fabric/modules/events.js'></script>
+<script src='app/fabric/modules/observe.js'></script>
+<script src='app/fabric/modules/application.js'></script>
+<script src='app/fabric/modules/staticCanvas.js'></script>
+<script src='app/fabric/modules/slide.js'></script>
+<script src='app/fabric/modules/eventListeners.js'></script>
+<script src='app/fabric/modules/prototypes.js'></script>
+<script src='app/fabric/modules/object.js'></script>
+<script src='app/fabric/modules/debug.js'></script>
+<script src='app/fabric/modules/saveAs.js'></script>
+<script src='app/fabric/modules/interactiveMode.js'></script>
+
+<script src='app/fabric/modules/fromURL.js'></script>
+<script src='app/fabric/modules/render.js'></script>
+<script src='app/fabric/modules/zoom.js'></script>
+<script src='app/fabric/modules/layers.js'></script>
+<script src='app/fabric/modules/toolbar.js'></script>
+<script src='app/fabric/modules/fonts.js'></script>
+<script src='app/fabric/modules/upload.js'></script>
+
+<script src='app/fabric/modules/slideObject.js'></script>
+<script src='app/fabric/modules/slideImage.js'></script>
+<script src='app/fabric/modules/slideText.js'></script>
+<script src='app/fabric/modules/textbox.list.js'></script>
+
+
+
+<script src="app/fabric/dp.fabric-angular.js"></script>
+<script src="app/fabric/fabricConstants.js"></script>
+<script src="app/fabric/fabricDirtyStatus.js"></script>
+<script src="app/categories/fabric-canvas.js"></script>
+
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+
+
 </html>

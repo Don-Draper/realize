@@ -7,15 +7,16 @@ var categorySchema = new mongoose.Schema({
   name: String,
   description: String,
   mottoes: [String],
-  beliefs: [String]
+  beliefs: [String], 
+  chosen: Number
 });
 
 var Category = mongoose.model('Category', categorySchema);
 
 var data = [
   {
-    "name":"Faith",
-    "description": "Trust and confidence in a person or an idea.",
+    "name":"Spirituality",
+    "description": "Religious faith or belief in a higher power.",
     "mottoes":[
       "Faith. Hope. Never quit."
     ],
@@ -80,8 +81,8 @@ var data = [
     ]
   },
   {
-    "name":"Empathy",
-    "description": "The ability to understand and share the feelings of others.",
+    "name":"Kindness",
+    "description": "The quality of being friendly, generous and considerate.",
     "mottoes":[
       "Kindness Matters"
     ],
@@ -181,7 +182,7 @@ var data = [
   },
   {
     "name":"Perseverance",
-    "description": "Moving forward toward a goal despite difficulty or delay.",
+    "description": "Moving toward completion of a goal despite difficulty or delay.",
     "mottoes":[
       "Hope. Faith. Never quit.",
       "Decide. Commit. Succeed.",
@@ -192,6 +193,7 @@ var data = [
     ],
     "beliefs":[
       "Never, ever quit",
+      "Pain is temporary. Quitting is forever.",
       "Fear brings more pain than the pain it fears.",
       "Never give up, no matter how impossible the situation looks. That's how legends are born.",
       "It's at the borders of pain and suffering that men are separated from boys.",
@@ -240,8 +242,8 @@ var data = [
     ]
   },
   {
-    "name":"Prudence",
-    "description": "Using wisdom and good judgement in decisions.",
+    "name":"Wisdom",
+    "description": "The quality of using good judgement in decisions.",
     "mottoes":[
       "Strength  Wisdom  Courage"
     ],
@@ -252,6 +254,7 @@ var data = [
       "We are responsible for what we do no matter how we feel.",
       "Priorities: Physically fit, emotionally stable and spiritually sound.",
       "Spend less than you earn. Invest the rest.",
+      "Practice the art of interpreting situations as they happen.",
       "Adjust or accept. Do not whine.",
       "Truth alone will endure. All the rest will be swept away before the tide of time.",
       "If you wish to know a man, ignore his words and observe his actions.",
@@ -265,7 +268,7 @@ var data = [
       "Fix Reason firmly in her seat and call to her tribunal every fact, every opinion.",
       "He that is good at making excuses is seldom good at anything else.",
       "Poor is the man who is slave to his emotions.",
-      "Inside each of us are two wolves: Good and Bad. Which one wins? The one you feed.",
+      "Inside each of us are two fighting wolves, Good and Bad. Which wins? The one you feed.",
       "Take nothing personally. Nothing others do is because of you.",
       "Do what you say you will do.",
       "Worrying is as effective as trying to solve an algebra problem by chewing bubble gum.",
@@ -276,7 +279,7 @@ var data = [
       "Do unto others as you would have them do unto you.",
       "You are neither your thoughts nor your emotions. Only the weak are subject to them.",
       "Know your exact net worth at all times.",
-      "Above all, face your fear.",
+      "Always face fear.",
       "Weakness of attitude becomes weakness of character.",
       "Preparation is the key to remaining calm under pressure.",
       "In all matters of money, take nothing personally but remain vigilant - all are self-interested.",
@@ -307,7 +310,7 @@ var data = [
     ]
   },
   {
-    "name":"Temperance",
+    "name":"Self-Discipline",
     "description":"The ability to delay gratification.",
     "mottoes":[
       "Hope. Faith. Never quit."
@@ -352,9 +355,11 @@ var data = [
       "Only fools worry about things beyond their control.",
       "Be yourself. Everyone else is already taken.",
       "Try something new. Enjoy the fun of failure.",
+      "I am satisfied: I see, dance, laugh and sing.",
       "Wherever you are, be there totally.",
       "Make your needs known.",
       "Never outgrow play.",
+      "Capture every opportunity by practicing the art of interpreting situations as they happen.",
       "Happiness is when what you think, what you say and what you do are in harmony.",
       "Enjoy it while it's here. Let go when it leaves.",
       "Our biggest regrets are often opportunities we miss because of fear.",
