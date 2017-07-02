@@ -25721,7 +25721,7 @@ _IMG.actions = fabric.util.object.extend(_IMG.actions,{
     type: 'effect',
     className:   "fa fa-dot-circle-o",
     effectTpl:
-    '<button id="select-colors-action-button" class="fa fa-check"></button>'+
+    '<button id="select-colors-action-button" class="fa fa-check">Select Color</button>'+
     '<input id="select-colors-checkbox" type="checkbox">' +
     '<input id="select-colors-threshold" type="range"   min="1" max="255">',
     actionParameters: function(el,data){

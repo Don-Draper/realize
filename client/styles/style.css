@@ -22,7 +22,6 @@ input .lastname {
 }
 
 .image {
-  /*background-image: '../../assets/space-sunset.jpg';*/
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
