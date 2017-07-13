@@ -894,9 +894,9 @@ var data = [
 
 ];
 
-   Image.collection.remove({}, function(err) {
-        console.log('collection removed')
-        });
+   // Image.collection.remove({}, function(err) {
+   //      console.log('collection removed')
+   //      });
 
    // Image.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
