@@ -1,9 +1,8 @@
-
-<div ng-style="{'color': 'black'}" layout="column" layout-align="center center">
+<div layout="column" layout-align="center center">
 
   <h1 layout="row" layout-align="center">Your Cultural Legacy</h1>
   <div class="legacy" >
-    <p style="font-weight: normal" layout="row" layout-align="center" class="word-wrap">Click on the image or the text. When the blue squares appear, you can drag to move. To change the size, click on a blue corner square and drag. </p>
+    <p style="font-weight: normal" layout="row" layout-align="center" class="word-wrap">Click on the image or the text. When the blue squares appear, you can drag to move. To change the size, click on a blue corner square and drag. Have fun with it! There's limited functionality for now so if you mess up beyond repair, you'll have to start over from the beginning of the app. When you're done, click the Download button and you'll get a PNG image to keep.</p>
   </div>
 </div>
 
@@ -18,6 +17,11 @@
 
       <div id="application-menu"></div>
       <div id="slide-menu"></div>
+      <hr/>
+      <div id="images-library" ff-gallery
+           elements="app.getLibraryElements()"
+           app="app"></div>
+      <hr/>
       <div id="object-menu"></div>
     </div>
 
@@ -29,4 +33,3 @@
     </div>
   </div>
 </div>
-

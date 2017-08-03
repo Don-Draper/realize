@@ -1,503 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#333">
-    <title>Realize Your Legacy</title>
-    <meta name="description" content="Material Style Theme">
-    <link rel="shortcut icon" href="assets/img/favicon.png?v=3">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 
+    <head>
+        <meta charset="utf-8" />
+        <title>Realize Your Legacy</title>
 
-<!--     <link rel="stylesheet" type="text/css" href="styles/jquery.fontselector.css">
-    <link rel="stylesheet" type="text/css" href="styles/jquery.minicolors.css"> -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/demo.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Limelight">
+        <link rel="stylesheet" type="text/css" href="styles/jquery.fontselector.css">
+        <link rel="stylesheet" type="text/css" href="styles/jquery.minicolors.css">
 
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="assets/css/preload.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins.min.css" />
-    
-    <link rel="stylesheet" href="assets/css/style.indigo-600.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
-    <!--[if lt IE 9]>
-        <script src="assets/js/html5shiv.min.js"></script>
-        <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-    <div id="ms-preload" class="ms-preload">
-      <div id="status">
-        <div class="spinner">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
-        </div>
-      </div>
-    </div>
-    <div class="sb-site-container">
-      <!-- Modal -->
-      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog animated zoomIn animated-3x" role="document">
-          <div class="modal-content">
-            <div class="modal-header shadow-2dp no-pb">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">
-                  <i class="zmdi zmdi-close"></i>
-                </span>
-              </button>
-              <div class="modal-title text-center">
-                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">R</span>
-                <h3 class="no-m ms-site-title">Realize Your
-                  <span>Legacy</span>
-                </h3>
-              </div>
-              <div class="modal-header-tabs">
-                <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="zmdi zmdi-account"></i> Login</a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="zmdi zmdi-account-add"></i> Register</a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="zmdi zmdi-key"></i> Recovery Pass</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="modal-body">
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
-                  <form autocomplete="off">
-                    <fieldset>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-account"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-user">Username</label>
-                          <input type="text" id="ms-form-user" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <div class="row mt-2">
-                        <div class="col-md-6">
-                          <div class="form-group no-mt">
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox"> Remember Me </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <button class="btn btn-raised btn-primary pull-right">Login</button>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </form>
-                  <div class="text-center">
-                    <h3>Login with</h3>
-                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
-                      <i class="zmdi zmdi-facebook"></i> Facebook</a>
-                    <!--                             <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-twitter"><i class="zmdi zmdi-twitter"></i> Twitter</a> -->
-<!--                     <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google">
-                      <i class="zmdi zmdi-google"></i> Google</a> -->
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
-                  <form>
-                    <fieldset>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-account"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-user">Username</label>
-                          <input type="text" id="ms-form-user" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-email"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-email">Email</label>
-                          <input type="email" id="ms-form-email" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="zmdi zmdi-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Re-type Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <button class="btn btn-raised btn-block btn-primary">Register Now</button>
-                    </fieldset>
-                  </form>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
-                  <fieldset>
-                    <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="zmdi zmdi-account"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-user">Username</label>
-                        <input type="text" id="ms-form-user" class="form-control"> </div>
-                    </div>
-                    <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="zmdi zmdi-email"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-email">Email</label>
-                        <input type="email" id="ms-form-email" class="form-control"> </div>
-                    </div>
-                    <button class="btn btn-raised btn-block btn-primary">Send Password</button>
-                  </fieldset>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <header class="ms-header ms-header-primary">
-        <div class="container container-full">
-          <div class="ms-title">
-            <a href="index.html">
-              <!-- <img src="assets/img/demo/logo-header.png" alt=""> -->
-              <span class="ms-logo animated zoomInDown animation-delay-5">R</span>
-              <h1 class="animated fadeInRight animation-delay-6">Realize Your
-                <span>Legacy</span>
-              </h1>
-            </a>
-          </div>
-          <div class="header-right">
-            <div class="share-menu">
-              <ul class="share-menu-list">
-<!--                 <li class="animated fadeInRight animation-delay-3">
-                  <a href="javascript:void(0)" class="btn-circle btn-google">
-                    <i class="zmdi zmdi-google"></i>
-                  </a>
-                </li> -->
-                <li class="animated fadeInRight animation-delay-2">
-                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
-                    <i class="zmdi zmdi-facebook"></i>
-                  </a>
-                </li>
-                <li class="animated fadeInRight animation-delay-1">
-                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
-                    <i class="zmdi zmdi-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-              <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7">
-                <i class="zmdi zmdi-share"></i>
-              </a>
-            </div>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
-              <i class="zmdi zmdi-account"></i>
-            </a>
-<!--             <form class="search-form animated zoomInDown animation-delay-9">
-              <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
-              <label for="search-box">
-                <i class="zmdi zmdi-search"></i>
-              </label>
-            </form> -->
-<!--             <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
-              <i class="zmdi zmdi-menu"></i>
-            </a> -->
-          </div>
-        </div>
-      </header>
-      <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
-        <div class="container container-full">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
-              <span class="ms-logo ms-logo-sm">R</span>
-              <span class="ms-title">Realize Your
-                <strong>Legacy</strong>
-              </span>
-            </a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li >
-                <a href="#/" class="dropdown-toggle animated fadeIn animation-delay-4" data-name="home">Home
-                </a>
-              </li>
-              <li class="dropdown">
-                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="modal" data-target="#ms-account-modal" data-name="page">Login
-                </a>
-              </li>
-              <li class="dropdown yamm-fw">
-                <a href="#portfolio" class="dropdown-toggle animated fadeIn animation-delay-6" role="button" aria-haspopup="true" aria-expanded="false" data-name="component">Portfolio
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-  <body>
+    <body>
 
 
         <div ng-view></div>
 
 
-  </body>
-
-      <aside class="ms-footbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 ms-footer-col">
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title">Sitemap</h3>
-                <ul class="list-unstyled ms-icon-list three_cols">
-                  <li>
-                    <a href="index.html">
-                      <i class="zmdi zmdi-home"></i> Home</a>
-                  </li>
-                  <li>
-                    <a href="#portfolio">
-                      <i class="zmdi zmdi-image-o"></i> Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="page-about.html">
-                      <i class="zmdi zmdi-favorite-outline"></i> About Us</a>
-                  </li>
-                  <li>
-                    <a href="page-faq2.html">
-                      <i class="zmdi zmdi-help"></i> FAQ</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#ms-account-modal">
-                      <i class="zmdi zmdi-lock"></i> Login</a>
-                  </li>
-                  <li>
-                    <a href="page-contact.html">
-                      <i class="zmdi zmdi-email"></i> Contact</a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-indigo">
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title">Join</h3>
-                <p class="">Once per month with specials and goodies. Unsubscribe anytime.</p>
-                <form>
-                  <div class="form-group label-floating mt-2 mb-1">
-                    <div class="input-group ms-input-subscribe">
-                      <label class="control-label" for="ms-subscribe">
-                        <i class="zmdi zmdi-email"></i> Email Adress</label>
-                      <input type="email" id="ms-subscribe" class="form-control"> </div>
-                  </div>
-                  <button class="ms-subscribre-btn" type="button">Subscribe</button>
-                </form>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">
-              <div class="ms-footbar-block">
-                <div class="ms-footbar-title">
-                  <span class="ms-logo ms-logo-white ms-logo-sm mr-1">W</span>
-                  <h3 class="no-m ms-site-title">Wedding
-                    <span>Legacy</span>
-                  </h3>
-                </div>
-              </div>
-              <div class="ms-footbar-block">
-                <div class="ms-footbar-social">
-                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
-                    <i class="zmdi zmdi-facebook"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
-                    <i class="zmdi zmdi-twitter"></i>
-                  </a>
-<!--                   <a href="javascript:void(0)" class="btn-circle btn-google">
-                    <i class="zmdi zmdi-google"></i>
-                  </a> -->
-                  <a href="javascript:void(0)" class="btn-circle btn-instagram">
-                    <i class="zmdi zmdi-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-      <footer class="ms-footer">
-        <div class="container">
-          <p>Copyright &copy; Cultureware<sup>&trade;</sup> 2017</p>
-        </div>
-      </footer>
-      <div class="btn-back-top">
-        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
-          <i class="zmdi zmdi-long-arrow-up"></i>
-        </a>
-      </div>
-    </div>
-    <!-- sb-site-container -->
-    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
-      <div class="sb-slidebar-container">
-        <header class="ms-slidebar-header">
-          <div class="ms-slidebar-login">
-            <a href="javascript:void(0)" class="withripple">
-              <i class="zmdi zmdi-account"></i> Login</a>
-            <a href="javascript:void(0)" class="withripple">
-              <i class="zmdi zmdi-account-add"></i> Register</a>
-          </div>
-          <div class="ms-slidebar-title">
-            <form class="search-form">
-              <input id="search-box-slidebar" type="text" class="search-input" placeholder="Search..." name="q" />
-              <label for="search-box-slidebar">
-                <i class="zmdi zmdi-search"></i>
-              </label>
-            </form>
-            <div class="ms-slidebar-t">
-              <span class="ms-logo ms-logo-sm">R</span>
-              <h3>Realize Your
-                <span>Legacy</span>
-              </h3>
-            </div>
-          </div>
-        </header>
-        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
-          <!-- between these lines are the testing block -->
-          <li class="panel" role="tab" id="sch1">
-            <a href="index.html">
-              <i class="zmdi zmdi-home"></i> Home </a>
-          </li>
-          <li class="panel" role="tab" id="sch1">
-            <a href="javascript:void(0)">
-              <i class="zmdi zmdi-collection-image-o" ></i> Login </a>
-          </li>
-          <li class="panel" role="tab" id="sch1">
-            <a href="#portfolio">
-              <i class="zmdi zmdi-collection-image-o"></i> Portfolio </a>
-          </li>
-        </ul>
-        <div class="ms-slidebar-social ms-slidebar-block">
-          <h4 class="ms-slidebar-block-title">Social Links</h4>
-          <div class="ms-slidebar-social">
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
-              <i class="zmdi zmdi-facebook"></i>
-              <span class="badge badge-pink">12</span>
-              <div class="ripple-container"></div>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
-              <i class="zmdi zmdi-twitter"></i>
-              <span class="badge badge-pink">4</span>
-              <div class="ripple-container"></div>
-            </a>
-<!--             <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
-              <i class="zmdi zmdi-google"></i>
-              <div class="ripple-container"></div>
-            </a> -->
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
-              <i class="zmdi zmdi-instagram"></i>
-              <div class="ripple-container"></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="assets/js/plugins.min.js"></script>
-    <!-- REVOLUTION JS FILES -->
-    <script type="text/javascript" src="assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
-    <script src="assets/js/index.js"></script>
+    </body>
 
 
+        <script src='app/lib/jquery.js'></script>
+        <script src='app/lib/$.minicolors.js'></script>
+        <script src='app/lib/$.fontSelector.js'></script>
+        <script src='app/lib/underscore.js'></script>
+        <script src='app/lib/webfont.js'></script>
+        <script src='app/lib/fabric.1.6.4.js'></script>
+        <script src='app/lib/debug.js'></script>
+        <script src='app/lib/saveAs.js'></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+        <script src="https://code.angularjs.org/1.3.11/angular-route.js"></script>
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
-<script src="https://code.angularjs.org/1.3.11/angular-route.js"></script>
-<script src="https://apis.google.com/js/api.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-<script src="app/auth/auth.js"></script>
-<script src="app/images/images.js"></script>
-<!-- <script src="app/auth/modalService.js"></script> -->
-<script src="app/categories/categories.js"></script>
-<script src="app/factories/factory.js"></script>
-<script src="app/app.js"></script>
-<script src="app/checklist.js"></script>
+        <script src="app/auth/auth.js"></script>
+        <script src="app/images/images.js"></script>
+        <script src="app/categories/categories.js"></script>
+        <script src="app/factories/factory.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/checklist.js"></script>
 
-
-
-<!-- <script src='app/lib/jquery.js'></script> -->
-<script src='app/lib/$.minicolors.js'></script>
-<script src='app/lib/$.fontSelector.js'></script>
-<script src='app/lib/underscore.js'></script>
-<script src='app/lib/webfont.js'></script>
-<script src='app/lib/fabric.1.6.4.js'></script>
-<script src='app/lib/debug.js'></script>
-<script src='app/lib/saveAs.js'></script>
-
-<script src='app/fabric/modules/fiera.base.js'></script>
-<script src='app/fabric/modules/actionsToolbar.js'></script>
-
-<script src='app/fabric/modules/base.js'></script>
-<script src='app/fabric/modules/pluginsMixin.js'></script>
-<script src='app/fabric/modules/events.js'></script>
-<script src='app/fabric/modules/observe.js'></script>
-<script src='app/fabric/modules/application.js'></script>
-<script src='app/fabric/modules/staticCanvas.js'></script>
-<script src='app/fabric/modules/slide.js'></script>
-<script src='app/fabric/modules/eventListeners.js'></script>
-<script src='app/fabric/modules/prototypes.js'></script>
-<script src='app/fabric/modules/object.js'></script>
-<script src='app/fabric/modules/debug.js'></script>
-<script src='app/fabric/modules/saveAs.js'></script>
-<script src='app/fabric/modules/interactiveMode.js'></script>
-
-<script src='app/fabric/modules/fromURL.js'></script>
-<script src='app/fabric/modules/render.js'></script>
-<script src='app/fabric/modules/zoom.js'></script>
-<script src='app/fabric/modules/layers.js'></script>
-<script src='app/fabric/modules/toolbar.js'></script>
-<script src='app/fabric/modules/fonts.js'></script>
-<script src='app/fabric/modules/upload.js'></script>
-
-<script src='app/fabric/modules/slideObject.js'></script>
-<script src='app/fabric/modules/slideImage.js'></script>
-<script src='app/fabric/modules/slideText.js'></script>
-<script src='app/fabric/modules/textbox.list.js'></script>
-
-
-
-<script src="app/fabric/dp.fabric-angular.js"></script>
-<script src="app/fabric/fabricConstants.js"></script>
-<script src="app/fabric/fabricDirtyStatus.js"></script>
-<script src="app/categories/fabric-canvas.js"></script>
-
-<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-
+        <script src="app/lib/fiera.dev.js"></script>
+        <script src="app/fabric/dp.fabric-angular.js"></script>
+        <script src="app/fabric/fabricConstants.js"></script>
+        <script src="app/fabric/fabricDirtyStatus.js"></script>
+        <script src="app/categories/fabric-canvas.js"></script>
 
 </html>

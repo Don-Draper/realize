@@ -1,25 +1,21 @@
 
-
-
-
-<div ng-style="{'color': 'black'}">
+<div>
   <div layout="column" layout-align="center center" >
   
   <h1 layout="row" layout-align="center">Choose an Image</h1>
   <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >
-    <p layout="row" layout-align="center" class="word-wrap">We dream not in words but in images, bypassing the mind and speaking directly to the soul.</p>
-    <p>Which one inspires <i>you</i>?</p>
-    <p>(You'll be able to add more images and change their colors on the next page)</p>
+    <p layout="row" layout-align="center" class="word-wrap">Every great culture has at least one image that unites and inspires its members. How do you feel when you see the icon of your favorite team or university? Doesn't every successful company and every great app have a logo? That's no accident. It's because colors and shapes speak directly to the soul, in a language we're all fluent in: Passion. </p>
+    <p>Which one inspires YOU?</p>
   </div>
 
   </div>
 
-  <md-content md-image-no-fill class="md-padding" layout="row" layout-align="center" layout-wrap>
+  <md-content class="md-padding" layout="row" layout-align="center" layout-wrap>
     <md-card ng-repeat="image in images" flex="24">
-      <img height="42" width="42" src="{{image.trueUrl}}">
+      <img src="{{image.trueUrl}}">
       <md-card-content>
         <div flex layout="column" layout-align="center">
-<!--           <h3 style="text-align:center">{{image.tag}}</h3> -->
+          <h3 style="text-align:center">{{image.tag}}</h3>
           <md-button type="submit" class="md-raised md-primary cat-button" ng-click="chooseImage(image.trueUrl)">
             Choose
           </md-button>
@@ -41,6 +37,8 @@
 <!--   <md-button class="md-raised md-primary cat-button" type="submit" href="#/firstseven" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Create A Culture</button> -->
 
 </div>
+
+
 
 
 

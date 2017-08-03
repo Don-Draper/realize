@@ -1,3 +1,36 @@
+<!-- <md-toolbar color="primary">
+  <button>
+  <h1 class="hereandnow">Realize</h1>
+  </button>
+</md-toolbar>
+<div layout="column" layout-align="center center">
+  <h1 layout="row" layout-align="center">Which three are most important to you?</h1>
+  <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >
+    <p layout="row" layout-align="center" class="word-wrap">Cultures are defined by their chosen priorities. The Spartans, for example, held courage and combat skills as most important of all. As a result, their military prowess is legendary. We all gravitate toward what our culture holds dear.</p>
+    <p>Which of these define YOUR ideal culture?</p>
+  </div>
+  <br/>
+
+  <table cellpadding="10" layout="row" layout-align="center">
+    <tr ng-style="{'font-size': '20px'}" ng-repeat="category in data track by $index">
+    <td align="left" class="widecell">
+
+      <input type="checkbox" checklist-model="threeChoices" checklist-value="category.name" class="checkboxList checkbox-text" checklist-change="checkChanged(name)" ng-disabled="checked===limit">     {{category.name}}
+
+    </td>
+
+    <td align="left">{{category.description}}
+    </td>
+  </tr>
+  </table>
+  <br/>
+    <div layout="row" layout-align="center">
+
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Submit</md-button>
+    </div>
+
+</div> -->
+
 <div layout="column" ng-style="{'color': 'black'}" layout-align="center center">
   <h1 layout="row"  layout-align="center">Which three are most important to you?</h1>
   <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >

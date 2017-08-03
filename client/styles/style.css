@@ -1,6 +1,6 @@
 body {
-  font-family: "Roboto";
-  font-weight: normal;
+  font-family: "Raleway";
+  font-weight: lighter;
 /*  background-image: '../assets/space-sunset.jpg';
 */}
 
@@ -22,6 +22,7 @@ input .lastname {
 }
 
 .image {
+  background-image: '../../assets/space-sunset.jpg';
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -34,7 +35,7 @@ input .lastname {
 }
 
 .hereandnow {
-  font-family: 'Roboto';
+  font-family: 'Limelight';
   font-size: 50px;
 }
 
@@ -72,7 +73,7 @@ h3 .word-wrap {
 }
 
 body {
-  padding: 12px;
+  padding: 10px;
 }
 
 .image-builder-container {

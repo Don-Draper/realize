@@ -84,8 +84,6 @@ fabric.util.promise = {
   }
 };
 
-
-
 fabric.Object.prototype.set = function(key, value) {
   if (typeof key === 'object') {
     this._setObject(key, value);
@@ -104,14 +102,24 @@ fabric.Object.prototype.set = function(key, value) {
 fabric.Object.prototype._setObject = function(options,callback) {
   var keys = Object.keys(options);
   if(this.optionsOrder){
-    for(var i = this.optionsOrder.length; i--;){
-      var prop = this.optionsOrder[i];
-      var ii = keys.indexOf(prop);
-      if(ii != -1){
-        keys.splice(ii, 1);
+    var middleIndex = this.optionsOrder.indexOf("*") || -1;
+
+    var i = middleIndex, prop , keyIndex;
+
+    while((prop = this.optionsOrder[--i])){
+      if((keyIndex = keys.indexOf(prop)) !== -1){
+        keys.splice(keyIndex, 1);
         keys.unshift(prop);
       }
     }
+    i = middleIndex;
+    while(prop = this.optionsOrder[++i]){
+      if((keyIndex = keys.indexOf(prop)) !== -1){
+        keys.splice(keyIndex, 1);
+        keys.push(prop);
+      }
+    }
+
   }
   for (var i = 0; i < keys.length; i++) {
     var prop = keys[i];
@@ -165,7 +173,6 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
   _setObject: fabric.Object.prototype._setObject,
   originalState: {},
   stateProperties: [],
-  specialProperties: ["backgroundImage","objects"],
   editingObject: null,
   getObjectByID: function(_id){
     var layers = this.layers || [{objects: this._objects}];
@@ -207,6 +214,21 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
     }
     return states;
   },
+  _finalizeCurrentTransform: function () {
+
+    var transform = this._currentTransform,
+      target = transform.target;
+
+    if (target._scaling) {
+      target._scaling = false;
+    }
+
+    target.setCoords();
+
+    this._restoreOriginXY(target);
+    // only fire :modified event if target coordinates were changed during mousedown-mouseup
+    this.fireModifiedIfChanged(target);
+  },
   fireModifiedIfChanged: function (target) {
     if (this.stateful) {
       var _states = target.hasStateChanged();
@@ -216,14 +238,14 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
       }
     }
   },
-  _set: function (key, value,callback) {
-    if (this.specialProperties.indexOf(key) !== -1) {
-      this["set" + fabric.util.string.capitalize(key, true)](value,callback);
-    } else {
-      fabric.Object.prototype._set.call(this, key, value);
-    }
-    return this;
-  },
+  // _set: function (key, value,callback) {
+  //   if (this.specialProperties.indexOf(key) !== -1) {
+  //     this["set" + fabric.util.string.capitalize(key, true)](value,callback);
+  //   } else {
+  //     fabric.Object.prototype._set.call(this, key, value);
+  //   }
+  //   return this;
+  // },
   get: fabric.Object.prototype.get,
   set: fabric.Object.prototype.set,
   hasStateChanged: fabric.Object.prototype.hasStateChanged,
