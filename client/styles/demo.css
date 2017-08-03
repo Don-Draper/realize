@@ -2,11 +2,13 @@
 
 body {
   padding: 10px;
+
 }
 .image-builder-container {
   position: relative;
 }
 .image-builder-container .image-builder {
+  font-family: "Jesus-Christ";
   background: #cacaca;
   box-sizing: border-box;
   border: 1px solid #cacaca;
@@ -71,6 +73,7 @@ body {
 }
 .image-builder-container .object-controls-container .object-controls textarea {
   font-size: 12px;
+  font-family: "Jesus-Christ";
 }
 .object-font-family-preview {
   text-transform: capitalize;
@@ -102,4 +105,10 @@ body {
 }
 .object-menu-item.object-menu-menu.hovered .button-menu-trigger, .object-menu-item.object-menu-menu.toggled .button-menu-trigger{
   display: none;
+}
+
+@font-face {
+    font-family: Jesus-Christ;
+    src: url(/assets/Jesus-Christ.ttf);
+    font-weight:400;
 }

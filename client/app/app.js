@@ -33,9 +33,9 @@ angular.module('app', [
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('indigo', {
-      'default': '600',
-      'hue-1' : '300',
+    .primaryPalette('teal', {
+      'default': '400',
+      'hue-1' : '100',
       'hue-2' : '600',
       'hue-3' : 'A100'
     })
@@ -69,8 +69,8 @@ angular.module('app', [
     .when('/', {
       templateUrl: './app/categories/main.html',
       controller: 'categoriesController'
-    //   // controller: 'AuthController'
-    //   //controller: 'modalController'
+      // controller: 'AuthController'
+      //controller: 'modalController'
     })
     .when('/firstseven', {
       templateUrl: './app/categories/firstseven.html',
@@ -88,16 +88,12 @@ angular.module('app', [
       templateUrl: './app/categories/lastname.html',
       controller: 'categoriesController'
     })
-    .when('/portfolio', {
-      templateUrl: './app/categories/portfolio.html',
-      controller: 'categoriesController'
-    })
     .when('/create', {
       templateUrl: './app/categories/create.html',
       controller: 'categoriesController'
     })
-    .when('/commission', {
-      templateUrl: './app/categories/commission.html',
+    .when('/icons', {
+      templateUrl: './app/categories/icons.html',
       controller: 'categoriesController'
     })
     .when('/homebase', {

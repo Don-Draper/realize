@@ -1,26 +1,122 @@
 'use strict';
 
-//require("./staticCanvas");
+require("./static-canvas.ext");
 
+/**
+ * # SlideCanvas
+ * Inherited from fabric.Canvas
+ *
+ *
+
+ ## method: load
+
+Mathod allows to add new objects and set new attributes of canvas.
+
+ ```javascript
+ load : ({
+    backgroundImage: string,
+    objects: [FabricShapeOptions],
+    customSyncOption: any,
+    customAsyncOption: any
+  },callback) : void
+ ```
+
+ To extend loading behavior and use custom options it is possible to define **set fucntions** in Canvas prototype.
+
+ ```javascript
+ // Canvas Prototype
+ setCustomAsyncOption: function(val,callback){
+  this.doAsyncMethod(val,callback)
+}
+ setCustomSyncOption: function(val){
+  this.customSyncOtion = val;
+}
+ ```
+
+ ### attribute: backgroundImageProperties
+
+ default attributes for background image
+
+ ### freeDrawingBrush
+
+ default active drawing brush
+
+ ```
+ freeDrawingBrush: "PaintBucketBrush" | "PaintPenBrush" | "PencilBrush"
+ ```
+
+ ### attribute: onSlideLoaded
+
+ onSlideLoaded calls as a callback for load fucntion
+
+ ### attribute: backgroundPosition
+
+ onSlideLoaded calls as a callback for load fucntion
+
+ ```
+ backgroundPosition: 'manual' | 'resize' | 'fit' | 'cover' | 'center'
+ ```
+
+ - manual - background will ne not scaled and put at left top corner
+ - resize - canvas will be resized according to image size
+ - fit - will be scaled to fit canvas size
+ - cover - will be scaled to cover all canvas size
+ - center - backogrund will be not scaled but put in the middle
+
+ ### method: setInteractiveMode
+
+ switch between drawing and hand( moving cunvas by mouse) modes
+
+ ```javascript
+ canvas.setInteractiveMode( mode : "hand" | "mixed") : void
+ ```
+
+ ### drawingColor
+
+ drawing color using by brushes
+
+ */
 fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, {
   type: 'slide-canvas',
-  _createUpperCanvasNative: fabric.Canvas.prototype._createUpperCanvas,
+  /**
+   * initialized width of the canvas
+   */
   width: 160 ,
+  /**
+   * initialized height of the canvas
+   */
   height: 90,
+  /**
+   * output quality
+   */
   dotsPerUnit: 1,
   scale: 1,
   loaded: false,
+  /**
+   * allow user to interact with canvas
+   */
+  interactive: true,
+  /**
+   * fill not the slide area, but whole canvas with background color
+   */
   insertBackgroundColor: false,
+  uploadClass: 'Image',
+  uploadImageTool: false,
+  addTextTool: false,
+  insertAddText: false,
+  insertUploadImage: false,
+  defaultText: "text",
+  defaultTextType: "text",
+  thumbSize: {
+    width: 50,
+    height: 100
+  },
+  storeProperties: ['*','backgroundImage','width','height'],
+  contextTopImageSmoothingEnabled: true,
   plugins: {
     initialize: [
-      function initZooming(options) {
-        this.enableClipAreaZooming && this.enableClipAreaZooming();
-      }
     ],
     preloaders: [
-      function initTemplate(options){
-        this.template && this.setTemplate(this.template);
-      }
     ],
     loaders: [],
     savers : [
@@ -48,12 +144,15 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
       }
     ]
   },
+  setBackgroundColor: function(backgroundColor, callback) {
+    return this.__setBgOverlayColor('backgroundColor', backgroundColor, function(){
+      this.renderAll();
+      callback && callback()
+    }.bind(this));
+  },
   setInteractive: function (value) {
     this.interactive = value;
-  }, /**
-   * @private
-   * @param {Object} [options] Options object
-   */
+  },
   _initOptions: function (options) {
     this.width = this.width || parseInt(this.lowerCanvasEl.width, 10) || 0;
     this.height = this.height || parseInt(this.lowerCanvasEl.height, 10) || 0;
@@ -70,9 +169,8 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
 
     this.viewportTransform = this.viewportTransform.slice();
   },
-  contextTopImageSmoothingEnabled: true,
   _createUpperCanvas: function () {
-    this._createUpperCanvasNative();
+    fabric.Canvas.prototype._createUpperCanvas.call(this);
     var ctx = this.contextTop;
 
     if(ctx.imageSmoothingEnabled){
@@ -84,10 +182,6 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
     ctx.msImageSmoothingEnabled     = this.contextTopImageSmoothingEnabled;
     ctx.oImageSmoothingEnabled      = this.contextTopImageSmoothingEnabled;
   },
-  /**
-   * @private
-   * @param {Event} e Event object fired on mouseup
-   */
   _onMouseUpInDrawingMode: function(e) {
     this._isCurrentlyDrawing = false;
     if (this.clipTo) {
@@ -106,11 +200,6 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
     options = options || {};
 
 
-    if(options.project){
-      if(!options.application){
-        options.application = options.project.application;
-      }
-    }
 
     if(options.application){
       options.application.fire("entity:created",{target : this , options : options});
@@ -133,7 +222,7 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
       this._initEventListeners();
       this._initRetinaScaling();
       this.calcOffset();
-     this.initLayers();
+      this.initLayers();
 
 
 
@@ -170,30 +259,6 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
 
     this.calcOffset();
 
-    this.on({
-      'object:moving': function (obj) {
-        this.fire('target:modified', this, obj)
-      },
-      'selection:cleared': function (event) {
-        if(!this.target)return;
-        this.target.fire('deselected', event);
-        this.target = null;
-        this.fire('target:cleared', event);
-      },
-      'object:selected': function (event) {
-        event.previous = this.target;
-        this.target = event.target;
-        if(event.previous){
-          event.previous.fire('deselected', event);
-        }
-        this.fire('target:changed', event);
-      },
-      'group:selected': function (event) {
-        this.target = event.target;
-        this.fire('target:changed', event);
-      }
-    });
-
     // this.load(options,callback);
 
     this.fire("created");
@@ -205,18 +270,13 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
     if(this.upperCanvasEl){
       this.wrapperEl.appendChild(this.upperCanvasEl);
     }
-
-
     //todo from layers module
-
-
   },
   create: function () {
     this.created = true;
     this._initInteractive();
     this._createCacheCanvas();
   },
-  storeProperties: ['*','backgroundImage','width','height'],
   toObject: function (propertiesToInclude) {
 
     propertiesToInclude = (propertiesToInclude || []).concat(this.storeProperties);
@@ -258,12 +318,6 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
 
     return _data;
   },
-  defaultText: "text",
-  defaultTextType: "text",
-  thumbSize: {
-    width: 50,
-    height: 100
-  },
   setTemplate: function(template){
 
     this.template = template;
@@ -290,11 +344,36 @@ fabric.SlideCanvas = fabric.util.createClass(fabric.Canvas,fabric.PluginsMixin, 
       movementLimits : this.activeArea
     });
   },
-  uploadClass: 'Image',
-  uploadImageTool: false,
-  addTextTool: false,
-  insertAddText: false,
-  insertUploadImage: false
+  /**
+   * Additional Event Listeners
+   *  - loading:end
+   *  - target:modified - couldbe used to detect active object changes
+   *  - target:changed
+   *  - target:cleared
+   */
+  eventListeners: {
+    'object:moving': function (obj) {
+      this.fire('target:modified', this, obj)
+    },
+    'selection:cleared': function (event) {
+      if(!this.target)return;
+      this.target.fire('deselected', event);
+      this.target = null;
+      this.fire('target:cleared', event);
+    },
+    'object:selected': function (event) {
+      event.previous = this.target;
+      this.target = event.target;
+      if(event.previous){
+        event.previous.fire('deselected', event);
+      }
+      this.fire('target:changed', event);
+    },
+    'group:selected': function (event) {
+      this.target = event.target;
+      this.fire('target:changed', event);
+    }
+  }
 });
 fabric.SlideCanvas.__idcounter = 0;
 fabric.SlideCanvas.fromJson = function(url,callback , element){
@@ -304,15 +383,14 @@ fabric.SlideCanvas.fromJson = function(url,callback , element){
 };
 
 fabric.SlideCanvas.prototype.actions = fabric.util.object.extend({}, {
-  //selectAll: {
-  //  title: 'selectAll',
-  //  type: 'key'
-  //},
+  selectAll: {
+   title: 'selectAll',
+   type: 'key'
+  },
   backgroundColor : {
     type: "color"
   },
   addText: {
-//    insert: 'addTextTool',
     className:  'fa fa-font',
     title: 'text',
     action: function () {
@@ -321,23 +399,15 @@ fabric.SlideCanvas.prototype.actions = fabric.util.object.extend({}, {
   }
 });
 
-fabric.SlideCanvas.addPlugin = fabric.PluginsMixin.addPlugin.bind(fabric.SlideCanvas);
-
-
-
-fabric.Application.prototype.loadSlide = function (callback) {
-
-  var _canvas = this.canvas;
-  if (this.slide) {
-
+fabric.util.object.extend(fabric.Application.prototype, {
+  setSlide: function (value, callback) {
+    var _canvas = this.canvas;
     if (_canvas.load) {
-      _canvas.load(this.slide, callback);
+      _canvas.load(value, callback);
     } else {
-      _canvas.createObjects(this.slide, callback);
+      _canvas.createObjects(value, callback);
     }
   }
-};
-
-fabric.Application.addPlugin("postloaders","loadSlide");
+});
 
 fabric.Application.prototype.canvasClass = 'SlideCanvas';

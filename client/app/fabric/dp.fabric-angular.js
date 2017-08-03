@@ -2,6 +2,27 @@ angular.module('dp.fabric-angular',[])
   .service('Fabric', [function() {
     return window.fiera;
   }])
+  .directive('ffGallery',  function() {
+    return {
+      restrict: 'A',
+      scope: {
+        elements: "&",
+        target: "=",
+        app: "="
+      },
+      link: function (scope, element, attrs) {
+
+
+        if(scope.app.ready){
+          scope.app.createGallery(scope.target || scope.app, element)
+        }else{
+          scope.app.on("ready",function(){
+              scope.app.createGallery(scope.target || scope.app, element)
+          });
+        }
+      }
+    }
+  })
   .directive('ffThumb',  function() {
     return {
       restrict: 'A',

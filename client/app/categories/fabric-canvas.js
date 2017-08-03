@@ -23,13 +23,26 @@ angular.module('app.example', [
 	// ================================================================
 	$scope.init = function() {
 
+    FabricConstants.callback = function(){
+      $scope.$apply();
+    };
+
+    FabricConstants.setElementFromMenu = function (selectedData) {
+      this.canvas.createObject({
+        type: "clipart",
+        position: "center",
+        active: true,
+        src: selectedData.data.src
+      });
+    };
+
     FabricConstants.slide = {
       width: 600,
       height: 780,
       objects: [
         {
-          type: "image",
-          src: dataService.chosenImage || "assets/blue-lion-open-mouth.png",
+          type: "clipart",
+          src: dataService.chosenImage || "assets/mary9.svg",
           left: 300,
           top: 50,
           height: 200

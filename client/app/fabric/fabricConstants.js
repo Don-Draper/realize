@@ -3,15 +3,19 @@ angular.module('common.fabric.constants', [])
 .service('FabricConstants', [function() {
 
   return {
+    debug: true,
     credentials: true,
     // loaderContainer: ".xx-container",
     // loaderTemplate: "<span class='canvas-load-spinner'><img src='{loaderIcon}'></span>",
-    resizable: true,
+    stretchable: true,
     canvasContainer: "fiera-canvas",
-    canvas: true,
-    // util: {
-    //   mediaRoot: '../../media/'
-    // },
+    // mediaRoot: '/assets/',
+    applicationToolbarContainer: "application-menu",
+    canvasToolbarContainer: "slide-menu",
+    objectsToolbarContainer: "object-menu",
+    objectsToolbarOptions: {
+      marginY: -50
+    },
     fonts: {
       standart: [
         'Arial',
@@ -22,119 +26,113 @@ angular.module('common.fabric.constants', [])
         'Times New Roman'
       ],
       google: [
-        'Pacifico' ,
+        'Lora' ,
+        'Lato' ,
+        'Abril Fatface' ,
+        'Droid Sans' ,
+        'Jim Nightshade' ,
         'Croissant One' ,
         'Architects Daughter' ,
+        'Arizonia' ,
+        'Great Vibes' ,
+        'Cormorant Handgloves' ,
         'Emblema One' ,
         'Graduate' ,
-        'Eczar Handgloves' ,
+        'Hammersmith One' ,
         'Oswald' ,
         'Oxygen' ,
-        'Old Standard TT Handgloves' ,
+        'Krona One' ,
         'Indie Flower' ,
         'Courgette' ,
         'Gruppo' ,
-        'Ranchers' ,
-        'Raleway Handgloves' ,
-        'Open Sans' ,
-        'Josephin Slab' ,
-        'Abril Fatface' ,
-        'Old Standard TT' ,
-        'Indie Flower' ,
-        'Pacifico' ,
-        'Dancing Script' ,
-        'Shadows Into Light' ,
-        'Amatic SC' ,
-        'Courgette' ,
-        'Permanent Marker' ,
-        'Cookie' ,
-        'Great Vibes' ,
-        'Tangerine' ,
-        'Bad Script' ,
-        'Rochester' ,
-        'Pinyon Script' ,
-        'Parisienne' ,
-        'Rouge Script' ,
-        'Fondamento' ,
-        'Felipa' ,
-        'Comfortaa' ,
-        'Poiret One' ,
-        'Pirata One' ,
-        'Luckiest Guy' ,
-        'Monoton' ,
-        'Cabin Sketch' ,
-        'Limelight' ,
-        'Fredericka the Great' ,
-        'Cinzel Decorative' ,
-        'Gruppo' ,
-        'UnifrakturMaguntia' ,
-        'Vast Shadow' ,
-        'Lorinda Shadow' ,
-        'Prata' ,
-        'Marcellus' ,
-        'Italiana' ,
-        'Josephin Sans' ,
-        'Rajdhani Light' , 
-        'Work Sans Extra-Light' ,
-        'Quicksand Light' ,
-        'Open Sans Condensed' ,
-        'Lato Light' ,
-        'Julius Sans One' ,
-        'Sarpanch Bold' ,
-        'Cormorant Garamond Light' ,
-        'Trirong Extra-Light' ,
-        'Cormorant Upright Light'
+        'Ranchers'
       ],
       custom: [
         //"Open Sans"
       ]
     },
-    /*css: [
-      "../../media/fonts/stylesheet.css"
-    ],*/
-    toolbar : {
-      application:  "application-menu",
-      canvas:       "slide-menu",
-      objects: {
-        container: "object-menu"
-      }
-    },
     prototypes: {
-      Image:{
-        insertImageFilters: true
-      },
-      Photo:{
-        insertPhotoFrames: true,
-        insertPhotoClip: true
+      Clipart: {
+        galleryCategory: "clipart",
+        tools: [
+          //"source",
+          "colors",
+          "*"
+        ]
       },
       Object: {
         originX: "center",
-        insertRemove: true
+        tools: [
+          "center",
+          "remove"
+        ]
       },
       Text: {
+        tools: [
+          "textFill",
+          "textBold",
+          "textItalic",
+          "textUnderline",
+          "fontFamily",
+          "textFontSize",
+          "*"
+        ]
       },
       Textbox: {
-        insertToggleListStyleType: true,
+        tools: [
+          "textAlign",
+          "toggleListStyleType",
+          "*"
+        ],
         listStyleType: "decimal",
         textAligmentTools: true,
-        textPadding: 50
+        listTextPadding: 50
       },
       SlideCanvas : {
+        stretchable: true,
         dotsPerUnit: 10,
+        handModeEnabled: true,
         history: true,
         historyTools: true,
+        zoomTools: true,
         zoomToPointEnabled: true,
-        backgroundColor:  '#ffffff',
-        //handModeEnabled: true,
-       // mouseWheelEnabled: true,
-       // zoomCtrlKey: false,
+        backgroundColor:  "#ffffff",
+        mouseWheelEnabled: true,
         minZoomFactor: 0.9,
+        zoomCtrlKey: false,
         changeDimensionOnZoom: false,
         autoCenterAndZoomOutEnabled: true,
-        insertUploadImage: true,
-        insertRenderArea: true
+        tools: [
+          "backgroundColor",
+          "uploadImage",
+          "zoomOut",
+          "zoomIn",
+          "renderArea"
+        ]
       }
     },
+    setElementFromMenu: function (selectedData) {
+      this.canvas.createObject({
+        type: "clipart",
+        position: "center",
+        active: true,
+        src: selectedData.data.src
+      });
+    },
+    getLibraryElements: function(){
+      return  [
+        {
+          src: "assets/mary9.svg"
+        },
+        {
+          src: "assets/c-anglican.svg"
+        },
+        {
+          src: "assets/jesus31.svg"
+        }
+      ]
+    },
+    galleryCategory: "clipart",
     presetSizes: [
       {
         name: 'Portrait (8.5 x 11)',
