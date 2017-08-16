@@ -26,12 +26,6 @@ var data = [
     "type":"icon"
   },
   {
-    "filename":"eagle29.svg",
-    "trueUrl":"assets/eagle29.svg",
-    "tag":"eagle",
-    "type":"icon"
-  },
-  {
     "filename":"eagle12.svg",
     "trueUrl":"assets/eagle12.svg",
     "tag":"eagle",
@@ -138,7 +132,212 @@ var data = [
     "trueUrl":"assets/deer12.svg",
     "tag":"deer",
     "type":"icon"
+  },
+  {
+    "filename":"eagle3.svg",
+    "trueUrl":"assets/eagle3.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle4.svg",
+    "trueUrl":"assets/eagle4.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle7.svg",
+    "trueUrl":"assets/eagle7.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle15.svg",
+    "trueUrl":"assets/eagle15.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle22.svg",
+    "trueUrl":"assets/eagle22.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle26.svg",
+    "trueUrl":"assets/eagle26.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle29.svg",
+    "trueUrl":"assets/eagle29.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis.svg",
+    "trueUrl":"assets/fleurdelis.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis4.svg",
+    "trueUrl":"assets/fleurdelis4.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis3.svg",
+    "trueUrl":"assets/fleurdelis3.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis5.svg",
+    "trueUrl":"assets/fleurdelis5.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis2.svg",
+    "trueUrl":"assets/fleurdelis2.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"horse.svg",
+    "trueUrl":"assets/horse.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse4.svg",
+    "trueUrl":"assets/horse4.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse2.svg",
+    "trueUrl":"assets/horse2.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse5.svg",
+    "trueUrl":"assets/horse5.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse6.svg",
+    "trueUrl":"assets/horse6.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse18.svg",
+    "trueUrl":"assets/horse18.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse27.svg",
+    "trueUrl":"assets/horse27.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"lion27.svg",
+    "trueUrl":"assets/lion27.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion18.svg",
+    "trueUrl":"assets/lion18.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion19.svg",
+    "trueUrl":"assets/lion19.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion9.svg",
+    "trueUrl":"assets/lion9.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion8.svg",
+    "trueUrl":"assets/lion8.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion20.svg",
+    "trueUrl":"assets/lion20.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion7.svg",
+    "trueUrl":"assets/lion7.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion25.svg",
+    "trueUrl":"assets/lion25.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion28.svg",
+    "trueUrl":"assets/lion28.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion31.svg",
+    "trueUrl":"assets/lion31.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion37.svg",
+    "trueUrl":"assets/lion37.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion36.svg",
+    "trueUrl":"assets/lion36.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion38.svg",
+    "trueUrl":"assets/lion38.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion39.svg",
+    "trueUrl":"assets/lion39.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion40.svg",
+    "trueUrl":"assets/lion40.svg",
+    "tag":"lion",
+    "type":"icon"
   }
+
 
 ];
 
@@ -146,10 +345,12 @@ var data = [
    //      console.log('collection removed')
    //      });
 
-  //  Image.collection.insertMany(data, function(err,r) {
-  //   assert.equal(null, err);
-  //   assert.equal(20, r.insertedCount);
-  //  });  
+
+   // Image.collection.insertMany(data, function(err,r) {
+   //  assert.equal(null, err);
+   //  assert.equal(53, r.insertedCount);
+   // });  
+
 
 var data2 = [
   {
