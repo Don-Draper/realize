@@ -32,7 +32,7 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
 
-
+  $scope.showAdd = false;
   $scope.workable = [];
   $scope.chosen = {'lastName':''};
 
@@ -42,6 +42,7 @@ angular.module('app.categories', ['app.checklist-model'])
     Categories.getCategories().then(function(data){
       // console.log("Scope.getAll: ", data);
       $scope.data = data;
+      $scope.newBeliefCategory = $scope.data[0];
       for(var i = 0; i < data.length; i ++){
         $scope.workable.push(data[i].name);
       }
@@ -96,6 +97,15 @@ angular.module('app.categories', ['app.checklist-model'])
     $location.path('/lastname');
   }
 
+  $scope.addBelief = function(){
+    if(!$scope.newBeliefCategory.name || !$scope.newBelief){
+      alert("Field can not be empty");
+      return;
+    }
+    $scope.tempSeven.push($scope.newBeliefCategory.name);
+    $scope.mainBeliefs.push($scope.newBelief);
+    $scope.newBelief = "";
+  }
 
   $scope.getRandomBelief = function(itemId) {
     if(itemId <= 2){

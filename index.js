@@ -8,7 +8,7 @@ var app = express();
 app.use(bodyParser.json());
 
 var MONGOLAB_URI='mongodb://emmitfitz:Emmit3900@ds117271.mlab.com:17271/realize';
-// mongoose.connect('mongodb://localhost/realize');
+//mongoose.connect('mongodb://localhost/realize');
 mongoose.connect(MONGOLAB_URI);
 
 require('./server/config/routes.js')(app, express);
