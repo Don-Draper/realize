@@ -23,7 +23,7 @@ var data = [
       "Pray every morning.",
       "That which does not kill us only makes us stronger.",
       "Believe in yourself.",
-      "The future is as bright as your faith,",
+      "The future is as bright as your faith.",
       "Faith is taking the first step even when you don't see the stairs.",
       "If God brings you to it, He will bring you through it.",
       "Understand that to achieve anything requires faith in yourself, hard work and determination.",
