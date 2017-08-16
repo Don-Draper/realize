@@ -26,12 +26,6 @@ var data = [
     "type":"icon"
   },
   {
-    "filename":"eagle29.svg",
-    "trueUrl":"assets/eagle29.svg",
-    "tag":"eagle",
-    "type":"icon"
-  },
-  {
     "filename":"eagle12.svg",
     "trueUrl":"assets/eagle12.svg",
     "tag":"eagle",
@@ -138,6 +132,120 @@ var data = [
     "trueUrl":"assets/deer12.svg",
     "tag":"deer",
     "type":"icon"
+  },
+  {
+    "filename":"eagle3.svg",
+    "trueUrl":"assets/eagle3.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle4.svg",
+    "trueUrl":"assets/eagle4.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle7.svg",
+    "trueUrl":"assets/eagle7.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle15.svg",
+    "trueUrl":"assets/eagle15.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle22.svg",
+    "trueUrl":"assets/eagle22.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle26.svg",
+    "trueUrl":"assets/eagle26.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"eagle29.svg",
+    "trueUrl":"assets/eagle29.svg",
+    "tag":"eagle",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis.svg",
+    "trueUrl":"assets/fleurdelis.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis4.svg",
+    "trueUrl":"assets/fleurdelis4.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis3.svg",
+    "trueUrl":"assets/fleurdelis3.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis5.svg",
+    "trueUrl":"assets/fleurdelis5.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"fleurdelis2.svg",
+    "trueUrl":"assets/fleurdelis2.svg",
+    "tag":"fleurdelis",
+    "type":"icon"
+  },
+  {
+    "filename":"horse.svg",
+    "trueUrl":"assets/horse.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse2.svg",
+    "trueUrl":"assets/horse2.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse4.svg",
+    "trueUrl":"assets/horse4.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse5.svg",
+    "trueUrl":"assets/horse3.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse6.svg",
+    "trueUrl":"assets/horse6.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse18.svg",
+    "trueUrl":"assets/horse18.svg",
+    "tag":"horse",
+    "type":"icon"
+  },
+  {
+    "filename":"horse27.svg",
+    "trueUrl":"assets/horse27.svg",
+    "tag":"horse",
+    "type":"icon"
   }
 
 ];
@@ -148,7 +256,7 @@ var data = [
 
    Image.collection.insertMany(data, function(err,r) {
     assert.equal(null, err);
-    assert.equal(20, r.insertedCount);
+    assert.equal(38, r.insertedCount);
    });  
 
 var data2 = [

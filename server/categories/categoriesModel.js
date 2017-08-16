@@ -23,9 +23,10 @@ var data = [
       "Pray every morning.",
       "That which does not kill us only makes us stronger.",
       "Believe in yourself.",
+      "The future is as bright as your faith,",
       "Faith is taking the first step even when you don't see the stairs.",
       "If God brings you to it, He will bring you through it.",
-      "Understand to achieve anything requires faith in yourself, hard work and determination.",
+      "Understand that to achieve anything requires faith in yourself, hard work and determination.",
       "All things are possible to those who believe.",
       "Be faithful in small things because it is in them that your strength lies.",
       "Have faith in your abilities.",
@@ -35,7 +36,7 @@ var data = [
       "In great difficulty, you will argue with yourself that there is no way forward. But with God, nothing is impossible.",
       "Attach yourself to what is spiritually superior, regardless of what other people think or do.",
       "Fasting brings you closer to God.",
-      "Let your Faith be bigger than your fears."
+      "Let your Faith be bigger than your fear."
     ]
   },
   {
@@ -48,6 +49,7 @@ var data = [
     "beliefs":[
       "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
       "Learn from yesterday. Live for today. Hope for tomorrow.",
+      "Start where you are. Use what you have. Do what you can.",
       "There must be darkness for dawn to come.",
       "Be willing to give up what you are to become what you will be.",
       "Out of suffering emerge the strongest of souls.",
