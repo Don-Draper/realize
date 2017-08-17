@@ -2,6 +2,7 @@
   font-family: "Futura";
 }*/
 
+
 input,
 button,
 select,
@@ -49,10 +50,26 @@ input .lastname {
 
 }
 
-/*.hereandnow {
-  font-family: 'Limelight';
-  font-size: 50px;
+/*.image {
+  background-image: '../../assets/space-sunset.jpg';
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }*/
+
+.hereandnow {
+  font-family: 'Now';
+  font-weight: 200;
+  font-size: 50px;
+  color: black;
+  background-color: 'chucknorris';
+}
+
+.redz {
+  color: red;
+}
 
 .container {
   position: absolute;
@@ -87,9 +104,9 @@ h3 .word-wrap {
   font-size: 20px;
 }
 
-body {
+/*body {
   padding: 10px;
-}
+}*/
 
 .image-builder-container {
   position: relative;

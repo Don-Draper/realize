@@ -120,17 +120,20 @@ angular.module('common.fabric.constants', [])
       });
     },
     getLibraryElements: function(){
-      return  [
-        {
-          src: "assets/mary9.svg"
-        },
-        {
-          src: "assets/c-anglican.svg"
-        },
-        {
-          src: "assets/jesus31.svg"
-        }
-      ]
+      return dataService.images;
+
+      // [
+      //   {
+      //     src: "assets/mary9.svg"
+      //   },
+      //   {
+      //     src: "assets/c-anglican.svg"
+      //   },
+      //   {
+      //     src: "assets/jesus31.svg"
+      //   }
+      // ]
+
     },
     galleryCategory: "clipart",
     presetSizes: [
