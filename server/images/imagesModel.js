@@ -19,24 +19,7 @@ var ImageSchema = new Schema({
 var Image = mongoose.model('Image', ImageSchema);
 
 var data = [
-  {
-    "filename":"jesus31.svg",
-    "trueUrl":"assets/jesus31.svg",
-    "tag":"jesus",
-    "type":"icon"
-  },
-  {
-    "filename":"eagle12.svg",
-    "trueUrl":"assets/eagle12.svg",
-    "tag":"eagle",
-    "type":"icon"
-  },
-  {
-    "filename":"a-blackletter.svg",
-    "trueUrl":"assets/a-blackletter.svg",
-    "tag":"letter",
-    "type":"icon"
-  },
+
   {
     "filename":"bear8.svg",
     "trueUrl":"assets/bear8.svg",
@@ -336,8 +319,51 @@ var data = [
     "trueUrl":"assets/lion40.svg",
     "tag":"lion",
     "type":"icon"
+  },
+  {
+    "filename":"lion41.svg",
+    "trueUrl":"assets/lion41.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion44.svg",
+    "trueUrl":"assets/lion44.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion45.svg",
+    "trueUrl":"assets/lion45.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion47.svg",
+    "trueUrl":"assets/lion47.svg",
+    "tag":"lion",
+    "type":"icon"
+  },
+  {
+    "filename":"lion48.svg",
+    "trueUrl":"assets/lion48.svg",
+    "tag":"lion",
+    "type":"icon"
   }
 
+
+  // {
+  //   "filename":"jesus31.svg",
+  //   "trueUrl":"assets/jesus31.svg",
+  //   "tag":"jesus",
+  //   "type":"icon"
+  // },
+  // {
+  //   "filename":"a-blackletter.svg",
+  //   "trueUrl":"assets/a-blackletter.svg",
+  //   "tag":"letter",
+  //   "type":"icon"
+  // },
 
 ];
 
@@ -347,7 +373,7 @@ var data = [
 
    // Image.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(53, r.insertedCount);
+   //  assert.equal(57, r.insertedCount);
    // });  
 
 var data2 = [

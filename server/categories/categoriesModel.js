@@ -129,8 +129,8 @@ var data = [
     ]
   },
   {
-    "name":"Hard Work/Goal-Setting",
-    "description": "Hard work and persistence in achieving a goal.",
+    "name":"Hard Work/Goals",
+    "description": "Habitually setting goals and being persistent in achieving them.",
     "mottoes":[
       "Diligence  Resilience  Integrity",
       "Excellence Through Effort",
@@ -246,8 +246,8 @@ var data = [
     ]
   },
   {
-    "name":"Wisdom",
-    "description": "The quality of using good judgement in decisions.",
+    "name":"Prudence",
+    "description": "The quality of using good judgement in decisions, especially with money.",
     "mottoes":[
       "Strength  Wisdom  Courage"
     ],
