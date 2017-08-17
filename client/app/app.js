@@ -19,6 +19,7 @@ angular.module('app', [
   this.tempSeven = [];
   this.urls = [];
   this.mainBeliefsString = '';
+  this.images = [];
   this.changeMainBeliefsFromArrayToString = function() {
     var final = [];
     for(var i = 0; i < this.mainBeliefs.length; i ++) {
@@ -33,7 +34,7 @@ angular.module('app', [
 
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('teal', {
+    .primaryPalette('indigo', {
       'default': '400',
       'hue-1' : '100',
       'hue-2' : '600',
