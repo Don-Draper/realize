@@ -1,6 +1,8 @@
-/*body {
-  font-family: "Futura";
-}*/
+body {
+  font-family: "Raleway";
+  font-weight: lighter;
+/*  background-image: '../assets/space-sunset.jpg';
+*/}
 
 input,
 button,
@@ -11,11 +13,6 @@ textarea {
   line-height: inherit;
 }
 
-/*body {
-  font-family: "Raleway";
-  font-size: 50px;
-}*/
-
 input {
   border-width: 0px;
 }
@@ -23,15 +20,6 @@ input {
 input .lastname {
   border-width: 1px;
 }
-
-/*html {
-  background: url('../../assets/space-sunset.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
-
 
 .image {
   background-image: '../../assets/space-sunset.jpg';
@@ -43,16 +31,13 @@ input .lastname {
   z-index: 2;
   position: absolute;
   display: block;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 
 }
 
-/*.hereandnow {
+.hereandnow {
   font-family: 'Limelight';
   font-size: 50px;
-}*/
+}
 
 .container {
   position: absolute;

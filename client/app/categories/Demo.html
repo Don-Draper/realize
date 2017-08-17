@@ -2,7 +2,7 @@
 
   <h1 layout="row" layout-align="center">Your Cultural Legacy</h1>
   <div class="legacy" >
-    <p style="font-weight: normal" layout="row" layout-align="center" class="word-wrap">Click on the image or the text. When the squares appear, you can drag to move or change size by dragging a corner square. When you're done, click the Download button and you'll get a PNG image to keep.</p>
+    <p style="font-weight: normal" layout="row" layout-align="center" class="word-wrap">Click on the image or the text. When the blue squares appear, you can drag to move. To change the size, click on a blue corner square and drag. Have fun with it! There's limited functionality for now so if you mess up beyond repair, you'll have to start over from the beginning of the app. When you're done, click the Download button and you'll get a PNG image to keep.</p>
   </div>
 </div>
 
@@ -14,15 +14,13 @@
 
   <div class='row'>
     <div class='col-xs-3'>
-
-      <div id="application-menu"></div>
-      <div id="slide-menu"></div>
+      <div id="application-menu" class="toolbar-menu"></div>
       <hr/>
-      <div id="images-library" ff-gallery
-           elements="app.getLibraryElements()"
-           app="app"></div>
+      <div id="slide-menu"  class="toolbar-menu"></div>
       <hr/>
-      <div id="object-menu"></div>
+      <div id="object-menu" class="toolbar-menu"></div>
+      <hr/>
+      <div id="images-library" ff-gallery elements="app.getLibraryElements()" app="app"></div>
     </div>
 
     <div class='col-xs-9'>

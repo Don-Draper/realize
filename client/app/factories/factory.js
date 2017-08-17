@@ -70,7 +70,7 @@ angular.module('app.factory', [])
       url: '/api/images'
     })
     .then(function(response){
-      // console.log("response.data in factory: ", response.data);
+      console.log("response.data in factory: ", response.data);
       return response.data;
     });
   };

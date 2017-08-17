@@ -13,9 +13,10 @@ angular.module('common.fabric.constants', [])
     applicationToolbarContainer: "application-menu",
     canvasToolbarContainer: "slide-menu",
     objectsToolbarContainer: "object-menu",
-    objectsToolbarOptions: {
-      marginY: -50
-    },
+    draggableArea: ".image-builder-container",
+    // objectsToolbarOptions: {
+    //   marginY: -50
+    // },
     fonts: {
       standart: [
         'Arial',
@@ -27,15 +28,8 @@ angular.module('common.fabric.constants', [])
       ],
       google: [
         'Lora' ,
-        'Lato' ,
-        'Abril Fatface' ,
-        'Droid Sans' ,
-        'Jim Nightshade' ,
         'Croissant One' ,
         'Architects Daughter' ,
-        'Arizonia' ,
-        'Great Vibes' ,
-        'Cormorant Handgloves' ,
         'Emblema One' ,
         'Graduate' ,
         'Hammersmith One' ,
@@ -52,6 +46,11 @@ angular.module('common.fabric.constants', [])
       ]
     },
     prototypes: {
+      Toolbar : {
+        colorpickerOptions: {
+            position: "left top"
+        }
+      },
       Clipart: {
         galleryCategory: "clipart",
         tools: [
@@ -122,12 +121,15 @@ angular.module('common.fabric.constants', [])
     getLibraryElements: function(){
       return  [
         {
+          type: "image",
           src: "assets/mary9.svg"
         },
         {
+          type: "image",
           src: "assets/c-anglican.svg"
         },
         {
+          type: "image",
           src: "assets/jesus31.svg"
         }
       ]

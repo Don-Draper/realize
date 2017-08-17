@@ -4,13 +4,8 @@
   
   <h1 layout="row" layout-align="center">Choose an Image</h1>
   <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >
-    <p layout="row" layout-align="center" class="word-wrap">Words mean different things to different people. Images, however, bypass our cluttered minds and speak directly to the soul.</p>
-
-    <p layout="row" layout-align="center" class="word-wrap">What do you want to inspire in those who see your Legacy? For most of us, lions evoke feelings of courage, bears evoke strength and power and shields evoke feelings of prestige and wealth. </p>
-
+    <p layout="row" layout-align="center" class="word-wrap">Every great culture has at least one image that unites and inspires its members. How do you feel when you see the icon of your favorite team or university? Doesn't every successful company and every great app have a logo? That's no accident. It's because colors and shapes speak directly to the soul, in a language we're all fluent in: Passion. </p>
     <p>Which one inspires YOU?</p>
-
-    <p>(On the next page, you'll be able to add as many images as you want and change their colors. You'll also be able to upload your own image.)</p>
   </div>
 
   </div>
@@ -20,7 +15,7 @@
       <img src="{{image.trueUrl}}">
       <md-card-content>
         <div flex layout="column" layout-align="center">
-<!--           <h3 style="text-align:center">{{image.tag}}</h3> -->
+          <h3 style="text-align:center">{{image.tag}}</h3>
           <md-button type="submit" class="md-raised md-primary cat-button" ng-click="chooseImage(image.trueUrl)">
             Choose
           </md-button>

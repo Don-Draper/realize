@@ -10,14 +10,14 @@ angular.module('dp.fabric-angular',[])
         target: "=",
         app: "="
       },
-      link: function (scope, element, attrs) {
+      link: function (scope, element) {
 
 
         if(scope.app.ready){
-          scope.app.createGallery(scope.target || scope.app, element)
+          scope.app.createElementsList(element, scope.elements() );
         }else{
           scope.app.on("ready",function(){
-              scope.app.createGallery(scope.target || scope.app, element)
+            scope.app.createElementsList(element, scope.elements() );
           });
         }
       }

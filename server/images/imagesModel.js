@@ -374,7 +374,7 @@ var data = [
 
    // Image.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(57, r.insertedCount);
+   //  assert.equal(55, r.insertedCount);
    // });  
 
 

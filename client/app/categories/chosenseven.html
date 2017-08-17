@@ -1,26 +1,25 @@
-<!-- <md-toolbar color="primary">
+<md-toolbar color="primary">
   <button>
   <h1 class="hereandnow">Realize</h1>
   </button>
-</md-toolbar> -->
+</md-toolbar>
 <div class="beliefsContainer" layout="column" layout-align="center center">
-  <h1 >Maxims</h1>
+  <h1 >Your Cultural Summary</h1>
   <div ng-style="{'max-width': '40em', 'text-align': 'center', 'font-size': '20px'}" >
-  <p layout="row" layout-align="center" class="word-wrap">Based on your three chosen categories, we have selected seven maxims from a database of founding fathers, poets and geniuses. 
-
-  On the left you'll see which category each belongs to. The button on the right will choose another maxim randomly from our database. Or click on the text and change the text however you like.</p>
-
-  <p>Got one of your own? Something Grandpa once told you or something Mom always said? Add it in!</p>
+  <p layout="row" layout-align="center" class="word-wrap">Based on your chosen priorities, we have selected seven cultural standards and mental habits from a large database of quotes from poets, geniuses and founding fathers. On the left you'll see which category each belongs to. The button on the right will choose another one randomly from our database. Or click on the text and change it however you like.</p>
+  <p>Got one of your own? Just add it in</p>
   </div>
+
+ <!--        <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button> -->
 
   <br/>
   <table cellpadding="10" layout="row" layout-align="center">
     <tr ng-style="{'font-size': '20px'}" ng-repeat="belief in mainBeliefs track by $index">
-    <td align="center"><md-button class="md-raised md-muted btn-block" >{{tempSeven[$index]}}</md-button>
-      
+    <td align="center">
+      {{tempSeven[$index]}}
     </td>
     <td>
-      &nbsp;&nbsp;&nbsp;{{$index+1}}.&nbsp; 
+      {{$index+1}}. 
     </td>
     <td align="left">
       <div>
@@ -41,23 +40,7 @@
 
     </tr>
   </table>
-  <table cellpadding="10" layout="row" layout-align="center" ng-show="showAdd">
-    <tr ng-style="{'font-size': '20px'}">
-      <td align="left">
-        <select ng-options="category as category.name for category in data" ng-model="newBeliefCategory"></select>
-      </td>
-      <td align="center">
-      <div>
-        <input class="addBeliefInput" type="text" size="70" ng-model="newBelief">
-        <!-- {{$index+1}}. {{belief}} -->
-      </div>
-    </td>
-      <td align="right">  
-        <md-button class="md-raised md-primary cat-button" ng-click="addBelief()">Add</md-button>
-      </td>
-    </tr>
-  </table>
-  <md-button class="md-raised md-primary cat-button" ng-click="showAdd = !showAdd">Add Your Own</md-button>
+
 <!--   <div class="addToSevenBeliefs">
     <input type="text" name="addBelief" ng-model="addedBelief" ngMaxLength="240" required="String"> -->
   <!--  <button class="btn-danger" ng-click="removeCategory(data, category)">Remove</button> -->
@@ -70,7 +53,7 @@
     </div>
     <div layout="row" layout-align="center">
 
-      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToLastName()" >Submit</md-button>
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToLastName()" class="btn-primary" >Submit</md-button>
     </div>
 
   </div>

@@ -1,0 +1,378 @@
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Toolbars
+
+    example
+
+    <div id="objects-menu" class="toolbar-menu">
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+@maincolor: black;
+
+.toolbar-menu-blue{
+  position: relative;
+
+  >.object-menu-item:first-child .object-menu-item:first-child,
+  >.object-menu-item:first-child{
+    border-top-left-radius: 10.1px;
+    border-bottom-left-radius: 10.1px;
+  }
+  >.object-menu-item:last-child .object-menu-item:last-child,
+  >.object-menu-item:last-child{
+    border-top-right-radius: 10.1px;
+    border-bottom-right-radius: 10.1px;
+  }
+
+  background-color: rgba(52, 164, 244, 0.11);
+  background-position: 65px 45px;
+  box-shadow: none;
+  border: 1px solid white;
+  border-radius: 10px;
+
+}
+
+.toolbar-menu-simple {
+
+  color: @maincolor;
+
+  .object-menu-select label,
+  .option-title,
+  .button-title {
+    display: none;
+  }
+
+  .btn{
+    background: lightgrey;
+  }
+}
+
+.toolbar-menu{
+
+  .toolbar-menu-simple;
+
+  .-object-menu-item-input-long{
+    height: 20px;
+    display: block;
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+  }
+
+  .-object-menu-item-input-box{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: none;
+    + label i{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      padding: 3px;
+      display: block;
+    }
+    &:checked +label i{
+      background-color: #7FBFDE !important
+    }
+  }
+
+  //text elements general styles
+  .toolbar-input-text{
+    height: 40px;
+    line-height: 34px;
+    margin: 1px;
+    padding: 3px;
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #f0f0f0);
+    background-image: -moz-linear-gradient(top, #f9f9f9, #f0f0f0);
+    background-image: -o-linear-gradient(top, #f9f9f9, #f0f0f0);
+    background-image: -ms-linear-gradient(top, #f9f9f9, #f0f0f0);
+    background-image: linear-gradient(top, #f9f9f9, #f0f0f0);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$from', EndColorStr='$to');
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+  }
+
+  .object-menu-item {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    //----------------------------------------------------------------------------------------------------------------
+    //    Buttons, checkboxes, text, range
+    .btn {
+      margin: 1px;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      &:hover{
+        //box-shadow: none;
+      }
+    }
+
+    >input[type="radio"]{
+      .-object-menu-item-input-box;
+    }
+
+
+    &.object-menu-checkbox {
+      >input[type="checkbox"] {
+        .-object-menu-item-input-box;
+        +label{
+          //not checked
+        }
+        &:checked+label{
+          //checked
+          background-color: #7FBFDE !important;
+        }
+      }
+
+    }
+
+    >input[type="range"]{
+      margin: 10px 2px;
+      .-object-menu-item-input-long;
+    }
+
+    >input[type="text"] {
+      .-object-menu-item-input-long;
+    }
+
+    &.object-menu-number{
+      input[type="number"]{
+        position: relative;
+        cursor: pointer;
+        width: 60px;
+        .toolbar-input-text;
+      }
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------
+    //    Font selector
+    &.object-menu-font-family .fontSelect{
+      width: 188px;
+      .toolbar-input-text;
+    }
+
+    //----------------------------------------------------------------------------------------------------------------
+    //    Color picker
+    .minicolors.minicolors-theme-default {
+
+      width: 34px;
+      height: 34px;
+      margin: 3px;
+      display: block;
+
+
+      &.minicolors-position-bottom .minicolors-panel {
+        margin-top: 5px;
+        top: 100%;
+      }
+      &.minicolors-position-right .minicolors-panel {
+        right: -4px;
+      }
+
+      .minicolors-input {
+        display: none;
+      }
+      >.minicolors-swatch {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        margin: 0;
+        border-radius: 40px;
+        right: 0 !important;
+        padding: 0;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    }
+
+    //----------------------------------------------------------------------------------------------------------------
+    //    SubMenu (clipart colors)
+
+    &.object-menu-menu {
+      padding: 0;
+
+      > label {
+        display: block;
+        font-size: 12px;
+        color: white;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 2px;
+        text-transform: capitalize;
+        border-bottom: 1px solid white;
+        right: 2px;
+        text-align: left;
+        left: 0;
+      }
+
+      &.hovered,
+      &.toggled{
+        position: relative;
+
+        .button-menu-trigger {
+          display: block;
+        }
+        .object-menu.submenu {
+          position: absolute;
+          z-index: 1;
+          background-color: rgba(52, 164, 244, 0.11);
+          background-position: 65px 45px;
+          box-shadow: none;
+          border: 1px solid white;
+          color: white;
+          padding: 0;
+          border-radius: 10.1px;
+          z-index: 1;
+          height: 46px;
+        }
+      }
+      &:not(.toggled):not(.hovered){
+        .button-menu-trigger {
+          display: none;
+        }
+      }
+      .object-menu.submenu {
+        display: block ;
+      }
+    }
+
+    //----------------------------------------------------------------------------------------------------------------
+    //  Options (TextAlign)
+
+    &.object-menu-options{
+
+      padding: 0;
+
+      .btn-selected-option {
+        input{
+          display: none;
+        }
+      }
+      //description of every item
+      .option-title {
+        position: absolute;
+        text-shadow: 1px 1px 0 white;
+        z-index: 1;
+        left: 2px;
+        bottom: 2px;
+        font-size: 10px;
+        line-height: 10px;
+      }
+
+      &.items-column {
+        //display otions on mouse hover
+        &:hover{
+          > .object-menu-options-container {
+            display: block;
+          }
+        }
+
+        //do not display preview icon
+        >.button-menu-trigger input{
+          display: none;
+        }
+
+        //styles of deopdown options list
+        > .object-menu-options-container {
+          margin: 1px -1px;
+          display: none;
+
+          label.btn{
+            display: block;
+          }
+
+          input[type=radio]:checked + label{
+            background-color: #7FBFDE !important;
+          }
+
+          position: absolute;
+          bottom: 100%;
+
+          > .object-menu-item {
+            &.active {
+              bottom: -46px;
+              position: absolute;
+            }
+            &.object-menu-options {
+              width: 46px;
+              height: 46px;
+              padding: 0;
+              z-index: 10;
+            }
+          }
+          &:hover > div {
+            > .object-menu-item {
+              display: block;
+            }
+          }
+        }
+
+      }
+
+      &.items-row{
+        width: auto !important;
+
+        .object-menu-option{
+
+        }
+        input[type=radio]:checked + label.btn{
+          background-color: rgba(8, 20, 31, 0.1);
+        }
+        label.btn{
+          display: block;
+        }
+      }
+    }
+
+
+    &[disabled] {
+      cursor: default;
+      > *{
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+
+    //----------------------------------------------------------------------------------------------------------------
+    //  Parameters (popup windows)
+
+    .menu-action-parameters {
+      padding: 10px;
+      text-align: left;
+      width: 300px;
+      position: absolute;
+      bottom: 100%;
+      background: white;
+      right: -6px;
+      margin-bottom: 10.1px;
+      border-radius: 10px;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        border: 10px transparent solid;
+        border-bottom: 0;
+        border-width: 10px 10px 0 10px;
+        border-top: white 10px solid;
+        right: 20px;
+      }
+    }
+  }
+
+
+}
