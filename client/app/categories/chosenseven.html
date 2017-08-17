@@ -41,7 +41,23 @@
 
     </tr>
   </table>
-
+  <table cellpadding="10" layout="row" layout-align="center" ng-show="showAdd">
+    <tr ng-style="{'font-size': '20px'}">
+      <td align="left">
+        <select ng-options="category as category.name for category in data" ng-model="newBeliefCategory"></select>
+      </td>
+      <td align="center">
+      <div>
+        <input class="addBeliefInput" type="text" size="70" ng-model="newBelief">
+        <!-- {{$index+1}}. {{belief}} -->
+      </div>
+    </td>
+      <td align="right">  
+        <md-button class="md-raised md-primary cat-button" ng-click="addBelief()">Add</md-button>
+      </td>
+    </tr>
+  </table>
+  <md-button class="md-raised md-primary cat-button" ng-click="showAdd = !showAdd">Add Your Own</md-button>
 <!--   <div class="addToSevenBeliefs">
     <input type="text" name="addBelief" ng-model="addedBelief" ngMaxLength="240" required="String"> -->
   <!--  <button class="btn-danger" ng-click="removeCategory(data, category)">Remove</button> -->
