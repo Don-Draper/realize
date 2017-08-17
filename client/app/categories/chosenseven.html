@@ -4,22 +4,23 @@
   </button>
 </md-toolbar> -->
 <div class="beliefsContainer" layout="column" layout-align="center center">
-  <h1 >Your Cultural Summary</h1>
+  <h1 >Maxims</h1>
   <div ng-style="{'max-width': '40em', 'text-align': 'center', 'font-size': '20px'}" >
-  <p layout="row" layout-align="center" class="word-wrap">Based on your chosen priorities, we have selected seven cultural standards and mental habits from a large database of quotes from poets, geniuses and founding fathers. On the left you'll see which category each belongs to. The button on the right will choose another one randomly from our database. Or click on the text and change it however you like.</p>
-  <p>Got one of your own? Just add it in</p>
-  </div>
+  <p layout="row" layout-align="center" class="word-wrap">Based on your three chosen categories, we have selected seven maxims from a database of founding fathers, poets and geniuses. 
 
- <!--        <md-button class="md-raised md-primary cat-button" type="submit" ng-click="show()" class="btn-primary" >show chosenLastName</md-button> -->
+  On the left you'll see which category each belongs to. The button on the right will choose another maxim randomly from our database. Or click on the text and change the text however you like.</p>
+
+  <p>Got one of your own? Something Grandpa once told you or something Mom always said? Add it in!</p>
+  </div>
 
   <br/>
   <table cellpadding="10" layout="row" layout-align="center">
     <tr ng-style="{'font-size': '20px'}" ng-repeat="belief in mainBeliefs track by $index">
-    <td align="center">
-      {{tempSeven[$index]}}
+    <td align="center"><md-button class="md-raised md-muted btn-block" >{{tempSeven[$index]}}</md-button>
+      
     </td>
     <td>
-      {{$index+1}}. 
+      &nbsp;&nbsp;&nbsp;{{$index+1}}.&nbsp; 
     </td>
     <td align="left">
       <div>
@@ -69,7 +70,7 @@
     </div>
     <div layout="row" layout-align="center">
 
-      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToLastName()" class="btn-primary" >Submit</md-button>
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="moveToLastName()" >Submit</md-button>
     </div>
 
   </div>
