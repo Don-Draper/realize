@@ -13,9 +13,10 @@ angular.module('common.fabric.constants', [])
     applicationToolbarContainer: "application-menu",
     canvasToolbarContainer: "slide-menu",
     objectsToolbarContainer: "object-menu",
-    objectsToolbarOptions: {
-      marginY: -50
-    },
+    draggableArea: ".image-builder-container",
+    // objectsToolbarOptions: {
+    //   marginY: -50
+    // },
     fonts: {
       standart: [
         'Arial',
@@ -48,10 +49,15 @@ angular.module('common.fabric.constants', [])
         'Ranchers'
       ],
       custom: [
-        //"Open Sans"
+        "Open Sans"
       ]
     },
     prototypes: {
+      Toolbar : {
+        colorpickerOptions: {
+            position: "left top"
+        }
+      },
       Clipart: {
         galleryCategory: "clipart",
         tools: [
@@ -69,7 +75,7 @@ angular.module('common.fabric.constants', [])
       },
       Text: {
         tools: [
-          "textFill",
+          "fill",
           "textBold",
           "textItalic",
           "textUnderline",
@@ -88,15 +94,10 @@ angular.module('common.fabric.constants', [])
         textAligmentTools: true,
         listTextPadding: 50
       },
-      SlideCanvas : {
+      Canvas: {
         stretchable: true,
-        dotsPerUnit: 10,
         handModeEnabled: true,
-        history: true,
-        historyTools: true,
-        zoomTools: true,
         zoomToPointEnabled: true,
-        backgroundColor:  "#ffffff",
         mouseWheelEnabled: true,
         minZoomFactor: 0.9,
         zoomCtrlKey: false,
@@ -109,33 +110,28 @@ angular.module('common.fabric.constants', [])
           "zoomIn",
           "renderArea"
         ]
+      },
+      Slide : {
+        backgroundColor:  "#ffffff"
       }
     },
-    setElementFromMenu: function (selectedData) {
-      this.canvas.createObject({
-        type: "clipart",
-        position: "center",
-        active: true,
-        src: selectedData.data.src
-      });
-    },
     getLibraryElements: function(){
-      return dataService.images;
-
-      // [
-      //   {
-      //     src: "assets/mary9.svg"
-      //   },
-      //   {
-      //     src: "assets/c-anglican.svg"
-      //   },
-      //   {
-      //     src: "assets/jesus31.svg"
-      //   }
-      // ]
-
+      return [
+        {
+          type: "image",
+          src: "assets/mary9.svg"
+        },
+        {
+          type: "image",
+          src: "assets/c-anglican.svg"
+        },
+        {
+          type: "image",
+          src: "assets/jesus31.svg"
+        }
+      ];
+      // dataService.images;
     },
-    galleryCategory: "clipart",
     presetSizes: [
       {
         name: 'Portrait (8.5 x 11)',
