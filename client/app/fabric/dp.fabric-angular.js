@@ -10,14 +10,15 @@ angular.module('dp.fabric-angular',[])
         target: "=",
         app: "="
       },
-      link: function (scope, element, attrs) {
+      link: function (scope, element) {
 
+        var app = scope.app;
 
-        if(scope.app.ready){
-          scope.app.createGallery(scope.target || scope.app, element)
+        if(app.ready){
+          app.createElementsList(element, scope.elements() );
         }else{
-          scope.app.on("ready",function(){
-              scope.app.createGallery(scope.target || scope.app, element)
+          app.on("ready",function(){
+            app.createElementsList(element, scope.elements() );
           });
         }
       }
@@ -140,7 +141,7 @@ angular.module('dp.fabric-angular',[])
       }
     };
   })
-.directive('ffCanvas',  function() {
+  .directive('ffCanvas',  function() {
     return {
       restrict: 'A',
       //templateUrl: config.templatesRoot + "canvas.html",
@@ -149,100 +150,100 @@ angular.module('dp.fabric-angular',[])
       },
       link: function(scope, element, attrs) {
         console.log(scope.canvas);
-    /*    var canvas = scope.canvas = new fabric.SlideCanvas(element[0]);
-        scope.$emit('canvas:created', {element:  canvas});
-        Toolbar.makeActions( canvas );*/
-/*
-        Toolbar.makeActions( canvas );
-        canvas._onResize = function(){
-          updateBack();
-          $timeout(function(){})
-        };
-        canvas.project.on("slide:changed",function(event){
-          slide = event.slide;
-        });
-        if(scope.ffIde){
+        /*    var canvas = scope.canvas = new fabric.SlideCanvas(element[0]);
+         scope.$emit('canvas:created', {element:  canvas});
+         Toolbar.makeActions( canvas );*/
+        /*
+         Toolbar.makeActions( canvas );
+         canvas._onResize = function(){
+         updateBack();
+         $timeout(function(){})
+         };
+         canvas.project.on("slide:changed",function(event){
+         slide = event.slide;
+         });
+         if(scope.ffIde){
 
-          scope.ffIde.on("scale",function(scale){
-            canvas.setZoom(scale);
-          });
-        }
+         scope.ffIde.on("scale",function(scale){
+         canvas.setZoom(scale);
+         });
+         }
 
-        function updateBack(){
-          var scale = 1;// slide.scaleValue;
+         function updateBack(){
+         var scale = 1;// slide.scaleValue;
 
-          if(!slide || !slide.canvas)return;
+         if(!slide || !slide.canvas)return;
 
-          if(slide.canvas.sheet){
-            var _sheet = slide.canvas.sheet;
-            scope.paperStyle = {
-              "top":   _sheet.data.top * scale,
-              "left":  _sheet.data.left * scale
-            };
-
-
-            scope.backCoverStyle = {
-
-              "background-image": "url(" + _sheet.image.src +  ")",
-              width:  _sheet.data.width * scale,
-              height:  _sheet.data.height * scale
-            };
-          }else {
-            scope.paperStyle = {};
-          }
-
-          scope.slideStyle = {
-            width: canvas.width * scale,
-            height: canvas.height * scale
-          };
-
-        }
+         if(slide.canvas.sheet){
+         var _sheet = slide.canvas.sheet;
+         scope.paperStyle = {
+         "top":   _sheet.data.top * scale,
+         "left":  _sheet.data.left * scale
+         };
 
 
-        scope.$watch(function(){
-          return canvas  && canvas.width;
-        },updateBack);
+         scope.backCoverStyle = {
 
-        scope.$watch(function(){
-          return canvas  && canvas.height;
-        },updateBack);
+         "background-image": "url(" + _sheet.image.src +  ")",
+         width:  _sheet.data.width * scale,
+         height:  _sheet.data.height * scale
+         };
+         }else {
+         scope.paperStyle = {};
+         }
 
-        //scope.$watch(function(){
-        //    return scope.ffCanvas.resources.sheet;
-        //},updateBack);
+         scope.slideStyle = {
+         width: canvas.width * scale,
+         height: canvas.height * scale
+         };
 
-        scope.$watch(function(){
-          return canvas  && canvas.zoom;
-        },updateBack);
-
-        scope.ceil = Math.ceil;
+         }
 
 
-        function left(event){
-          return (event.pageX - offset().left )/ slide.scaleValue;
-        }
+         scope.$watch(function(){
+         return canvas  && canvas.width;
+         },updateBack);
 
-        function top(event){
-          return (event.pageY - offset().top) / slide.scaleValue;
-        }
+         scope.$watch(function(){
+         return canvas  && canvas.height;
+         },updateBack);
 
-        function offset(){
-          return $("#editor-paper").offset();
-        }
+         //scope.$watch(function(){
+         //    return scope.ffCanvas.resources.sheet;
+         //},updateBack);
 
-        scope.createHRule = function(event){
-          new GuideLine(slide,{y: top(event) });
-        };
+         scope.$watch(function(){
+         return canvas  && canvas.zoom;
+         },updateBack);
 
-        scope.createVRule = function(event){
-          new GuideLine(slide,{x: left(event) });
-        };
+         scope.ceil = Math.ceil;
 
-        scope.setGuideValue = function(guide,event){
-          var value = guide.x ? left(event)  : top(event);
-          guide.setValue(value );
-          scope.$apply();
-        };*/
+
+         function left(event){
+         return (event.pageX - offset().left )/ slide.scaleValue;
+         }
+
+         function top(event){
+         return (event.pageY - offset().top) / slide.scaleValue;
+         }
+
+         function offset(){
+         return $("#editor-paper").offset();
+         }
+
+         scope.createHRule = function(event){
+         new GuideLine(slide,{y: top(event) });
+         };
+
+         scope.createVRule = function(event){
+         new GuideLine(slide,{x: left(event) });
+         };
+
+         scope.setGuideValue = function(guide,event){
+         var value = guide.x ? left(event)  : top(event);
+         guide.setValue(value );
+         scope.$apply();
+         };*/
       }
     };
   })
@@ -255,27 +256,27 @@ angular.module('dp.fabric-angular',[])
       link: function(scope, element, attrs) {
         var data = _.extend({},scope.albumSlide);
 
-          //scope.$watch('albumSlide',function(_new,_old){
-            data.offsets = {
-              left:0 ,
-              right: 0,
-              bottom:0,
-              top:0
-            };
-            data.scale = 1;
+        //scope.$watch('albumSlide',function(_new,_old){
+        data.offsets = {
+          left:0 ,
+          right: 0,
+          bottom:0,
+          top:0
+        };
+        data.scale = 1;
 
-            var canvas = new fabric.SlideCanvas(null, data,function(){
-              var _canvas = element[0];
-              if(_canvas.toDataURL){
-                this.renderThumb(_canvas);
-              }else{
-                var _canvas = fabric.util.createCanvasElementWithSize(element[0]);
-                this.renderThumb(_canvas);
-                element[0].src = _canvas.toDataURL()
-              }
-              //modified = slide.modified;
-            });
-          //});
+        var canvas = new fabric.SlideCanvas(null, data,function(){
+          var _canvas = element[0];
+          if(_canvas.toDataURL){
+            this.renderThumb(_canvas);
+          }else{
+            var _canvas = fabric.util.createCanvasElementWithSize(element[0]);
+            this.renderThumb(_canvas);
+            element[0].src = _canvas.toDataURL()
+          }
+          //modified = slide.modified;
+        });
+        //});
       }
     };
   })
