@@ -1,6 +1,6 @@
 angular.module('common.fabric.constants', [])
 
-  .service('FabricConstants', [function() {
+  .service('FabricConstants', ['dataService',function(dataService ) {
 
     return {
       debug: true,
@@ -116,7 +116,7 @@ angular.module('common.fabric.constants', [])
         }
       },
       getLibraryElements: function(){
-        return [
+        return dataService.images; /*[
           {
             type: "image",
             src: "assets/mary9.svg"
@@ -130,7 +130,7 @@ angular.module('common.fabric.constants', [])
             src: "assets/jesus31.svg"
           }
         ];
-        // dataService.images;
+        // dataService.images;*/
       },
       presetSizes: [
         {
