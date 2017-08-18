@@ -2,7 +2,6 @@ angular.module('app.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, dataService, Categories, Auth) {
   $scope.user = {};
-
   $scope.signin = function () {
     Auth.signin($scope.user)
       .then(function (token) {

@@ -31,13 +31,21 @@
 
 </div> -->
 
-<div layout="column" ng-style="{'color': 'black'}" layout-align="center center">
-  <h1 layout="row"  layout-align="center">Which three are most important to you?</h1>
+<md-toolbar >
+
+  <md-button ><img style="width:300px; height:75px; padding:5px;" src="/../assets/realize-logo-transparent.png"></md-button>
+
+</md-toolbar>
+
+<div layout="column" layout-align="center center">
+  <div ng-style="{'max-width': '40em', 'text-align': 'center', 'font-size': '20px'}" >
+  <h1 >Which are the three most important categories for living a happy and healthy life?</h1>
+  </div>
   <div ng-style="{'max-width': '30em', 'text-align': 'center', 'font-size': '20px'}" >
   <br/>
-    <p layout="row" layout-align="center" class="word-wrap">Legacies are defined by ideas.</p>
-    <br/>
-    <p>Which of these define YOUR ideal Legacy?</p>
+    <p layout="row" layout-align="center" class="word-wrap">On the next page, we'll display maxims related to each category you've chosen. You'll be able to pick and choose which you like. 
+  <br/>
+    When you're ready, click "Submit".</p>
   </div>
   <br/>
 
@@ -49,14 +57,14 @@
 
     </td>
 
-    <td align="left">{{category.description}}
+    <td align="left">{{category.description}}&nbsp;
     </td>
   </tr>
   </table>
   <br/>
     <div layout="row" layout-align="center">
 
-      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="grabResponseAndShowQuestionTwo()" class="btn-primary" >Submit</md-button>
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="grabResponseAndShowQuestionTwo()">Submit</md-button>
     </div>
 
 </div>

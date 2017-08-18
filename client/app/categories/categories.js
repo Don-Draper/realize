@@ -32,6 +32,8 @@ angular.module('app.categories', ['app.checklist-model'])
   $scope.mainBeliefs = dataService.mainBeliefs;
   $scope.userCategories = dataService.userCategories;
 
+  $scope.images = dataService.images;
+
   $scope.showAdd = false;
   $scope.workable = [];
   $scope.chosen = {'lastName':''};

@@ -1,6 +1,7 @@
-body {
+/*body {
   font-family: "Futura";
-}
+}*/
+
 
 input,
 button,
@@ -49,10 +50,26 @@ input .lastname {
 
 }
 
-/*.hereandnow {
-  font-family: 'Limelight';
-  font-size: 50px;
+/*.image {
+  background-image: '../../assets/space-sunset.jpg';
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }*/
+
+.hereandnow {
+  font-family: 'Now';
+  font-weight: 200;
+  font-size: 50px;
+  color: black;
+  background-color: 'chucknorris';
+}
+
+.redz {
+  color: red;
+}
 
 .container {
   position: absolute;
@@ -87,9 +104,9 @@ h3 .word-wrap {
   font-size: 20px;
 }
 
-body {
+/*body {
   padding: 10px;
-}
+}*/
 
 .image-builder-container {
   position: relative;
@@ -204,12 +221,14 @@ md-checkbox {
 }
 .signout-container{
   position: absolute;
-  top:10px;
-  right: 10px;
+  top:35px;
+  right: 20px;
+  z-index: 99;
 }
 .signout-container button{
   background: none;
-  border: 3px solid rgb(38,166,154);
+  border: 3px solid white;
   width: 70px;
   padding: 5px;
+  color:white;
 }
