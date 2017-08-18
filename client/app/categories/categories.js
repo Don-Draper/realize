@@ -50,6 +50,7 @@ angular.module('app.categories', ['app.checklist-model'])
         $scope.obj[$scope.workable[i]] = data[i].beliefs;
       }
     }).catch(function(err) {
+      $location.path('/signin')
       console.log(err);
     })
   };

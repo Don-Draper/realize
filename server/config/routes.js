@@ -1,13 +1,13 @@
 var categoriesController = require('../categories/categoriesController.js');
 var userController = require('../users/userController.js');
 var imagesController = require('../images/imagesController.js');
-
+var passport = require("passport");
 
 module.exports = function(app, express) {
 
 ////////////////////these are the categories routes/////////////////////
   // get all categories from main collection
-  app.get('/api/categories', categoriesController.getCategories);
+  app.get('/api/categories', passport.authenticate('jwt', { session: false }), categoriesController.getCategories);
   //randomize order of beliefs in categories
   app.post('/api/getrandombelief', categoriesController.getRandomBelief);
   //add a belief to an existing category

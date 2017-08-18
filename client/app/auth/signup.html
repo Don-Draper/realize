@@ -1,13 +1,12 @@
-<div class="parallax">
-  <div id='signup'>
-    <h1>Sign Up</h1>
-    <form name='signupForm' ng-submit='signup()'>
-      <input type='text' ng-model='user.username'>
-      <input type='password' ng-model='user.password'>
-      <button class="btn-secondary">submit</button>
+<div class="image" style="background-image: url('../assets/legacy-sunset.png')">
+  <div class="signin-container">
+    <div flex layout="row" layout-align="center center">
+    <form name='signinForm'>
+      <input type='text' ng-model='user.username' placeholder="Username">
+      <input type='password' ng-model='user.password' placeholder="Password">
+      <md-button class="md-raised md-primary cat-button" type="submit" ng-click="signup()" class="btn-primary" >Sign Up</md-button>
     </form>
-    <br>
     <a class="redirectSignin" href='#/signin'>Already have an account? <strong>Click here to sign in!</strong></a>
-
+    </div>
   </div>
 </div>

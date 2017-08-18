@@ -116,6 +116,8 @@ angular.module('app.factory', [])
     })
     .catch(function(error){
       if(error.status === 401){
+        console.log(JSON.stringify(error));
+        alert(error.data.message);
         return error.status;
       }
       console.error(error);

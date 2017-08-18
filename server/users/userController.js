@@ -1,4 +1,4 @@
-var jwt = require('jwt-simple');
+var jwt = require('jsonwebtoken');
 var User = require('./userModel.js');
 var UserCategory = require('./userCategoriesModel.js');
 var mongoose = require('mongoose');
@@ -21,44 +21,30 @@ var categories = ['Faith', 'Hope', 'Empathy', 'Perseverance', 'Diligence',
 module.exports = {
  ///////////////////////////user authentication requests//////////////////////
   signin: function (req, res, next) {
-    console.log("this should be a user " + req.body.username)
-    var username = req.body.username;
-    var password = req.body.password;
-
-    findUser({username: username})
-      .then(function (user) {
-        console.log(user);
-        if (!user) {
-          res.status(401).send();
-
-          // next(new Error('User does not exist'));
-        } else {
-          return user.comparePassword(password)
-            .then(function (foundUser) {
-              if (foundUser) {
-                findUserAndGetCategories({'username': username})
-                  .then(function(cats) {
-                      var categories = [];
-                      cats.forEach(function(cat){
-                        categories.push(cat.name);
-                      });
-                      var token = jwt.encode(user, 'secret');
-                      res.json({
-                        token: token, 
-                        username: username, 
-                        mainBeliefs: user.mainBeliefs,
-                        categories: categories
-                      });
-                  })
-              } else {
-                return next(new Error('No user'));
-              }
-            });
+    if(req.body.username && req.body.password){
+      var username = req.body.username;
+      var password = req.body.password;
+    }
+    // usually this would be a database call:
+    findUser({ username: username }).then(function (user) {
+      //console.log(err);
+      if( ! user ){
+        res.status(401).json({message:"no such user found"});
+      }
+      return user.comparePassword(password).then(function(foundUser){
+        if(foundUser){
+          // from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
+          var payload = {id: user.id};
+          var token = jwt.sign(payload, "indianSnakeGods");
+          res.json({message: "ok", token: token});
+        }else{
+          console.log('here');
+          res.status(401).json({message:"passwords did not match"});
         }
-      })
-      .fail(function (error) {
-        next(error);
+      }).fail(function(error){
+        console.log(error);
       });
+    });
   },
 
   signup: function (req, res, next) {
@@ -70,7 +56,7 @@ module.exports = {
     findUser({username: username})
       .then(function (user) {
         if (user) {
-          next(new Error('user already exists!'));
+          res.status(401).json({message:"user already exists"});
           console.log('user already exists!');
         } else {
           // make a new user
@@ -81,13 +67,13 @@ module.exports = {
         }
       })
       .then(function (user) {
-        console.log("User: ", user);
         // create token to send back for auth
-        var token = jwt.encode(user, 'secret');
-        res.send(JSON.stringify({token: token, user: username}));
-        console.log("this is the new user token " + token)
+        //var token = jwt.encode(user, 'secret');
+        if(user){
+          res.send(JSON.stringify({user: username}));
+        }
       })
-      .then(function (user) {
+      /*.then(function (user) {
         if (user) {
           next(new Error('user already exists!'));
           // console.log('user already exists!');
@@ -108,7 +94,7 @@ module.exports = {
             });
           });
         }
-      })
+      })*/
       .fail(function (error) {
         next(error);
       });

@@ -187,3 +187,29 @@ md-checkbox {
 .form-control {
   font-weight: normal;
 }
+.signin-container{
+  position:absolute;
+  top:78%;
+  left:25%;
+}
+.signin-container h4{
+  color:white;
+}
+.signin-container a{
+  color: white;
+}
+.signin-container input{
+  height: 33px;
+  padding: 5px;
+}
+.signout-container{
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+.signout-container button{
+  background: none;
+  border: 3px solid rgb(38,166,154);
+  width: 70px;
+  padding: 5px;
+}

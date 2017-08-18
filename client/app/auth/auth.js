@@ -8,17 +8,12 @@ angular.module('app.auth', [])
       .then(function (token) {
         // console.log("token in scope.signin: ", token);
         if(token === 401) {
-          $location.path('/signup');
+          //$location.path('/signup');
         } else {
           console.log("in signin, $scope.user.username: ", $scope.user.username);
           $window.localStorage.setItem('com.createaculture', token);
           $window.localStorage.setItem('user', $scope.user.username);        
-          Categories.getUserCatsAndBeliefs($scope.user.username)
-            .then(function(data) {
-              dataService.mainBeliefs = data.mainBeliefs;
-              dataService.userCategories = data.categories;
-            });
-          $location.path('/homebase');
+          $location.path('/firstseven');
         }
       })
       .catch(function (error) {
@@ -32,19 +27,20 @@ angular.module('app.auth', [])
       .then(function (resp) {
         console.log("resp.data: ", resp);
         $window.localStorage.setItem('com.createaculture', resp.token);
-        $window.localStorage.setItem('user', resp.user);        
+        $window.localStorage.setItem('user', resp.user);
+        alert('Account created. Please login.')      
         $location.path('/');
         console.log("New user signed up!")
       })
       .catch(function (error) {
-        console.error(error);
+        alert(error.data.message);
       });
   };
 
   $scope.signout = function () {
     Auth.signout($scope.user)
       .then(function (token) {
-        $window.localStorage.setItem('com.createaculture', token);
+        $window.localStorage.setItem('com.createaculture', '');
         $location.path('/signin');
         console.log('user has signed out!')
       })
