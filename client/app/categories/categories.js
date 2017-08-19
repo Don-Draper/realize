@@ -101,41 +101,21 @@ angular.module('app.categories', ['app.checklist-model'])
   }
 
   $scope.addBelief = function(){
-    if(!$scope.newBeliefCategory.name || !$scope.newBelief){
-      alert("Field can not be empty");
-      return;
+    if(!$scope.newBelief){
+      $scope.newBelief = $scope.getRandomBelief($scope.tempSeven.length,$scope.newBeliefCategory.name)
     }
     $scope.tempSeven.push($scope.newBeliefCategory.name);
     $scope.mainBeliefs.push($scope.newBelief);
     $scope.newBelief = "";
   }
 
-  $scope.getRandomBelief = function(itemId) {
-    if(itemId <= 2){
-      var newbie = Categories.getRandomBelief($scope.threeChoices[0], itemId)
+  $scope.getRandomBelief = function(itemId,category) {
+    var newbie = Categories.getRandomBelief(category, itemId)
       .then(function(data) {
         $scope.mainBeliefs[itemId] = data;
       }).catch(function(err) {
         console.log(err);
       })
-    };
-    if(itemId === 3 || itemId === 4) {
-      var newbie = Categories.getRandomBelief($scope.threeChoices[1], itemId)
-      .then(function(data) {
-        $scope.mainBeliefs[itemId] = data;
-      }).catch(function(err) {
-        console.log(err);
-      })
-    };
-    if(itemId === 5 || itemId === 6) {
-      var newbie = Categories.getRandomBelief($scope.threeChoices[2], itemId)
-      .then(function(data) {
-        $scope.mainBeliefs[itemId] = data;
-      }).catch(function(err) {
-        console.log(err);
-      })
-    };
-
     return newbie;
   }
 
