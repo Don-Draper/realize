@@ -41,6 +41,12 @@
   var settings;
 
   var methods = {
+    destroy : function(options) {
+      this.ul.remove();
+    },
+    close : function(options) {
+      this.closeUl();
+    },
     init : function(options) {
 
       settings = $.extend( {
@@ -92,7 +98,7 @@
         });
       }
 
-      var closeUl = function() {
+      var closeUl = this.closeUl = function() {
         ul.slideUp('fast', function() {
           visible = false;
         });
@@ -114,7 +120,7 @@
 
       // Setup markup
       $root.prepend('<span>' + settings['initial'].replace(/'/g,'&#039;') + '</span>');
-      var ul = $('<ul class="fontSelectUl"></ul>').appendTo('body');
+      var ul = this.ul = $('<ul class="fontSelectUl"></ul>').appendTo('body');
       ul.hide();
       positionUl();
 

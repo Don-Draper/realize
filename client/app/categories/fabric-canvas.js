@@ -42,7 +42,7 @@ angular.module('app.example', [
       objects: [
         {
           type: "clipart",
-          src: dataService.chosenImage || "assets/mary9.svg",
+          src: dataService.chosenImage || "assets/bear21.svg",
           left: 300,
           top: 50,
           height: 200
