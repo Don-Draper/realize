@@ -20,7 +20,7 @@ angular.module('app.categories', ['app.checklist-model'])
 
 // })
 
-.controller('categoriesController', function($scope, $location, dataService, Categories, Auth) {
+.controller('categoriesController', function($scope, $location, $timeout, dataService, Categories, Auth) {
   $scope.data;
 // $scope is the intermediary between what the user sees and the
 // factory. $scope methods grab from the factory and display it
@@ -105,7 +105,9 @@ angular.module('app.categories', ['app.checklist-model'])
       $scope.newBelief = $scope.getRandomBelief($scope.tempSeven.length,$scope.newBeliefCategory.name)
     }
     $scope.tempSeven.push($scope.newBeliefCategory.name);
-    $scope.mainBeliefs.push($scope.newBelief);
+    $timeout(function(){
+      $scope.mainBeliefs.push($scope.newBelief);
+    },0);
     $scope.newBelief = "";
   }
 

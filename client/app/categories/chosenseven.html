@@ -24,7 +24,7 @@
       &nbsp;&nbsp;&nbsp;{{$index+1}}.&nbsp; 
     </td>
     <td align="left">
-      <div>
+      <div ng-cloak>
         <input type="text" size="85" ng-model="mainBeliefs[$index]">
         <!-- {{$index+1}}. {{belief}} -->
       </div>
@@ -49,7 +49,7 @@
       </td>
       <td align="center">
       <div>
-        <input class="addBeliefInput" type="text" size="70" ng-model="newBelief">
+        <input class="addBeliefInput" type="text" size="70" ng-model="newBelief" style="display:none">
         <!-- {{$index+1}}. {{belief}} -->
       </div>
     </td>
