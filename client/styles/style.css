@@ -232,3 +232,9 @@ md-checkbox {
   padding: 5px;
   color:white;
 }
+.minicolors-position-bottom .minicolors-panel:before{
+  right:176px !important;
+}
+.minicolors-position-right .minicolors-panel{
+  right: -163px !important;
+}
