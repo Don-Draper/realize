@@ -125,6 +125,7 @@ body {
   display: inline-block;
   border: 1px solid lightgrey;
   margin: 2px;
+  box-sizing: content-box;
 }
 #images-library{
   height: 500px;

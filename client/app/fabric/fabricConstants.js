@@ -1,7 +1,5 @@
 angular.module('common.fabric.constants', [])
-
   .service('FabricConstants', ['dataService','Images',function(dataService,Images ) {
-
     return {
       debug: true,
       credentials: true,
@@ -141,11 +139,15 @@ angular.module('common.fabric.constants', [])
         return Images.getImages().then(function(data){
           return _.map(data,function(element){
             return {
-              type: "image",
+              type: "clipart",
               src: element.trueUrl
             }
           });
         });
+      },
+      gallery: {
+        imageWidth: 90,
+        imageHeight: 90
       },
       presetSizes: [
         {
