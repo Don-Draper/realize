@@ -9,14 +9,26 @@ angular.module('common.fabric.constants', [])
       // loaderTemplate: "<span class='canvas-load-spinner'><img src='{loaderIcon}'></span>",
       stretchable: true,
       canvasContainer: "fiera-canvas",
-      // mediaRoot: '/assets/',
-      applicationToolbarContainer: "application-menu",
-      canvasToolbarContainer: "slide-menu",
-      objectsToolbarContainer: "object-menu",
+      toolbars: {
+        application: {
+          container: "application-menu"
+        },
+        canvas: {
+          container: "slide-menu",
+          colorpicker: {
+            text: false,
+            position: "top left"
+          }
+        },
+        objects: {
+          container: "object-menu",
+          colorpicker: {
+            text: false,
+            position: "top left"
+          }
+        }
+      },
       draggableArea: ".image-builder-container",
-      // objectsToolbarOptions: {
-      //   marginY: -50
-      // },
       fonts: {
         standart: [
           'Arial',
@@ -61,7 +73,6 @@ angular.module('common.fabric.constants', [])
         Clipart: {
           galleryCategory: "clipart",
           tools: [
-            //"source",
             "colors",
             "*"
           ]

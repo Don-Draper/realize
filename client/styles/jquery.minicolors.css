@@ -54,7 +54,7 @@
 }
 /* Panel positioning */
 .minicolors-position-top .minicolors-panel {
-  top: -154px;
+  bottom: 100%;
 }
 .minicolors-position-right .minicolors-panel {
   right: 0;
@@ -62,14 +62,26 @@
 .minicolors-position-bottom .minicolors-panel {
   top: auto;
 }
-.minicolors-position-bottom .minicolors-panel:before {
+.minicolors-panel:before {
   content: "";
   position: absolute;
-  bottom: 100%;
-  right: 10px;
   border: solid transparent;
+}
+.minicolors-position-bottom .minicolors-panel:before {
+  bottom: 100%;
   border-width: 0 10px 10px 10px;
   border-bottom-color: white;
+}
+.minicolors-position-top .minicolors-panel:before {
+  top: 100%;
+  border-width: 10px 10px 0 10px;
+  border-top-color: white;
+}
+.minicolors-position-right .minicolors-panel:before {
+  right: 10px;
+}
+.minicolors-position-left .minicolors-panel:before {
+  left: 10px;
 }
 .minicolors-position-left .mini colors-panel {
   left: 0;
