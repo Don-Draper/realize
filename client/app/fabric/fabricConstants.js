@@ -1,6 +1,6 @@
 angular.module('common.fabric.constants', [])
 
-  .service('FabricConstants', ['dataService',function(dataService ) {
+  .service('FabricConstants', ['dataService','Images',function(dataService,Images ) {
 
     return {
       debug: true,
@@ -126,22 +126,26 @@ angular.module('common.fabric.constants', [])
           backgroundColor:  "#ffffff"
         }
       },
-      getLibraryElements: function(){
-        return dataService.images; /*[
-          {
-            type: "image",
-            src: "assets/mary9.svg"
-          },
-          {
-            type: "image",
-            src: "assets/c-anglican.svg"
-          },
-          {
+      /**
+       *
+       * @param callback
+       * @returns {HTMLCollection|*|Array}
+       * @example
+       * {
             type: "image",
             src: "assets/jesus31.svg"
           }
-        ];
-        // dataService.images;*/
+       */
+      getLibraryElements: function(){
+
+        return Images.getImages().then(function(data){
+          return _.map(data,function(element){
+            return {
+              type: "image",
+              src: element.trueUrl
+            }
+          });
+        });
       },
       presetSizes: [
         {

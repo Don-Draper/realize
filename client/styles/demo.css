@@ -118,3 +118,15 @@ body {
   height: 26px;
   margin-left: 23px;
 }
+
+
+.list-item {
+  width: 90px;
+  display: inline-block;
+  border: 1px solid lightgrey;
+  margin: 2px;
+}
+#images-library{
+  height: 500px;
+  overflow: auto;
+}

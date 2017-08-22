@@ -15,10 +15,16 @@ angular.module('dp.fabric-angular',[])
         var app = scope.app;
 
         if(app.ready){
-          app.createElementsList(element, scope.elements() );
+          scope.elements().then(function(data){
+            app.createElementsList(element, data );
+          });
+
         }else{
           app.on("ready",function(){
-            app.createElementsList(element, scope.elements() );
+
+            scope.elements().then(function(data){
+              app.createElementsList(element, data );
+            });
           });
         }
       }
