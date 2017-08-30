@@ -181,7 +181,7 @@ var data = [
       "Nothing of real value comes easily.",
       "Luck is real. The harder you work, the more you have.",
       "Without labor, nothing prospers.",
-      "Want something? No shortcuts. Earn it."
+      "Want something? There are no shortcuts to an achievement of real value. Go earn it."
     ]
   },
   {
@@ -246,30 +246,25 @@ var data = [
     ]
   },
   {
-    "name":"Prudence",
-    "description": "The quality of using good judgement in decisions, especially with money.",
+    "name":"Wisdom",
+    "description": "The quality of using good judgement in decisions.",
     "mottoes":[
       "Strength  Wisdom  Courage"
     ],
     "beliefs":[
-      "Invest one-fourth of everything you earn.",
       "The doorstep to the Temple of Wisdom is knowledge of our own ignorance.",
-      "Not our thoughts or emotions. It is our actions that define us.",
-      "We are responsible for what we do no matter how we feel.",
       "When in doubt, use discretion.",
       "Do not answer a question until you understand why it was asked.",
       "Tell stories of times you were wrong and the lessons learned.",
       "Regardless of circumstances, always evaluate new information. Always.",
       "Priorities: Physically fit, emotionally stable and spiritually sound.",
-      "Spend less than you earn. Invest the rest.",
-      "Practice the art of interpreting situations as they happen.",
+      "Practice the art of predicting the eventuality of events as they are happening.",
       "Adjust or accept. Do not whine.",
-      "Truth alone will endure. All the rest will be swept away before the tide of time.",
-      "If you wish to know a man, ignore his words and observe his actions.",
+      "Men acquire a particular quality by constantly acting in a particular way.",
       "Only idiots make the same mistake twice.",
       "The only true wisdom is in knowing you know nothing.",
       "Think before you act. Something done in an instant can give you heartache for life.",
-      "Evaluate what you want to say. Then and only then, speak.",
+      "Evaluate the probable effects of what you want to say. Then and only then, speak.",
       "Change what you can, accept what you can't and remove yourself from the unacceptable.",
       "In times of pleasurable temptation, focus your thoughts on a different pleasure.",
       "Let your word become known as unimpeachable.",
@@ -279,20 +274,15 @@ var data = [
       "Poor is the man who is slave to his emotions.",
       "Inside each of us are two fighting wolves, Good and Bad. Which wins? The one you feed.",
       "Take nothing personally. Nothing others do is because of you.",
-      "Do what you say you will do.",
       "Worrying is as effective as trying to solve an algebra problem by chewing bubble gum.",
       "If you are patient in one moment of anger, you will escape a hundred days of sorrow.",
       "Visualize accomplishment then anticipate and strategize probable challenges.",
       "For there is nothing good or bad, but thinking makes it so.",
-      "Let your name be known as synonymous with Integrity.",
       "Do unto others as you would have them do unto you.",
       "You are neither your thoughts nor your emotions. Only the weak are subject to them.",
-      "Know your exact net worth at all times.",
-      "Always face fear.",
-      "The fisherman know that the sea is dangerous and the storm terrible. But they have never found these reasons sufficient for staying ashore.",
-      "Weakness of attitude becomes weakness of character.",
+      "Always face your fears.",
+      "The fishermen know the sea is dangerous and the storm terrible. But they have never found these reasons sufficient for staying ashore.",
       "Preparation is the key to remaining calm under pressure.",
-      "In all matters of money, take nothing personally but remain vigilant - everyone is self-interested.",
       "Always be open to new information.",
       "Do not deny your emotions. Master them.",
       "Download lessons from mistakes then delete them from memory.",
@@ -302,9 +292,8 @@ var data = [
       "Any person capable of angering you becomes your master.",
       "It is the act of an ill-constructed man to blame others for his own bad condition.",
       "Success is never final; failure is never fatal. It's courage that counts.",
-      "If you don't have time to do it right, when will you have time to do it over?",
+      "If you don't have time to do it right the first time, when will you have time to do it over?",
       "Trust your gut to point in the right direction. Then use logic and reason to make the decision.",
-      "Keep a ledger.",
       "Apologize when you've wronged. Do not withhold forgiveness.",
       "Choose your words wisely, embrace every moment and never waste time.",
       "Strive for excellence in everything you do.",
@@ -314,9 +303,94 @@ var data = [
       "Never make excuses.",
       "First learn the meaning of what you will say. Then speak.",
       "Exercise and practice mindfulness daily.",
-      "Do not let what you cannot do interfere with what you can do.",
+      "Do not let what you cannot do interfere with what you can do."
+    ]
+  },
+  {
+    "name":"Knowledge of Money",
+    "description": "The fundamentals of money and using good judgement in financial decisions.",
+    "mottoes":[
+      "Strength  Integrity  Wealth"
+    ],
+    "beliefs":[
+      "Invest one-fourth of everything you earn.",
       "Always pay yourself first by investing one-fourth of your earnings before doing anything else.",
-      "Never spend on the unnecessary what you haven't already earned."
+      "Never spend on the unnecessary what you haven't already earned.",
+      "Spend less than you earn. Invest the rest.",
+      "Money is a tool, not a result.",
+      "The only real security a man will have in this world is a reserve of knowledge, experience and ability.",
+      "Practice the art of predicting the eventuality of events as they are happening.",
+      "Adjust or accept. Do not whine.",
+      "Find or create something of value then do it better than anyone else.",
+      "Never spend money before you have it.",
+      "Money is just a way to keep score. The real excitement is playing the game.",
+      "Attend to nothing except reason in everything you encounter.",
+      "Money is a tool for making more money.",
+      "A wise man should have money in his head, but not in his heart.",
+      "Do what you love and the money will follow.",
+      "In all matters of money, take nothing personally but remain vigilant - everyone is self-interested.",
+      "Always be open to new information.",
+      "Save more than you spend.",
+      "Always pay yourself first.",
+      "Remain grounded. Great opportunity can be found when others believe the sky is falling.",
+      "Always know your exact net worth.",
+      "Find or create something you love doing that has marketable value.",
+      "Live on half your pre-tax income.",
+      "Focus your mind on Prosperity, not debt.",
+      "Value = Useful",
+      "Money grows on the tree of persistence.",
+      "For all significant financial moves, sleep on it.",
+      "Money = Freedom",
+      "Separate money from emotion.",
+      "Loopholes are hidden everywhere. Find them.",
+      "Keep a ledger."
+    ]
+  },
+  {
+    "name":"Integrity",
+    "description": "The quality of being honest and having strong moral principles.",
+    "mottoes":[
+      "Integrity  Strength  Courage"
+    ],
+    "beliefs":[
+      "It's not our thoughts or emotions that define us. It is our actions.",
+      "We are responsible for our actions, no matter how we feel.",
+      "The only correct actions are those that demand no explanation and no apology.",
+      "Courage + Integrity = Character",
+      "Never 'for the sake of peace and quiet' deny your own experience or convictions.",
+      "It takes less time to do a thing right than to explain why you did it wrong.",
+      "Men acquire a particular quality by constantly acting in a particular way.",
+      "To know what is right and not do it is the worst cowardice.",
+      "Master your emotions.",
+      "Truthfulness is the main element of character.",
+      "Integrity is the essence of everything successful.",
+      "Relentlessly pursue honesty at all times.",
+      "To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.",
+      "Refuse to to do or say anything that damages your self-respect.",
+      "Credibility can only be built over time from the history of your words and actions.",
+      "The true perfection of man lies not in what man has, but in what man is.",
+      "Whoever is careless with the truth in small matters cannot be trusted with important matters.",
+      "Power is actualized only when word and deed have not parted company.",
+      "Real integrity is doing the right thing, knowing that nobody's going to know whether you did it or not.",
+      "Do what you say you will do.",
+      "You are already of consequence in the world if you are known as a man of strict integrity.",
+      "If you tell the truth, you don't have to remember anything.",
+      "Keep true, never be ashamed of doing right, decide on what you think is right and stick to it.",
+      "Never make excuses.",
+      "First learn the meaning of what you will say. Then speak.",
+      "Choose your words wisely.",
+      "Keep your promises.",
+      "If you don't have time to do it right the first time, when will you have time to do it over?",
+      "It is the act of an ill-constructed man to blame others for his own bad condition.",
+      "Let your name be known as synonymous with Integrity.",
+      "Evaluate the probable effects of what you want to say. Then and only then, speak.",
+      "Your word is your bond.",
+      "Always tell the truth.",
+      "Truth alone will endure. All the rest will be swept away before the tide of time.",
+      "Adjust or accept. Do not whine.",
+      "Weakness of attitude becomes weakness of character.",
+      "If you wish to know a man, ignore his words and observe his actions."
+
     ]
   },
   {
@@ -328,6 +402,7 @@ var data = [
     "beliefs":[
       "In times of temptation, reflect on what you're grateful for.",
       "Do something everyday that scares you.",
+      "Control thy passions lest they take vengeance on thee.",
       "Out of suffering emerge the strongest souls. The most massive characters are seared with scars.",
       "The pain of today is the strength of tomorrow.",
       "Preparation is the key to remaining calm under pressure.",
@@ -339,7 +414,7 @@ var data = [
       "He who angers you conquers you.",
       "Poor is the man ruled by his emotions.",
       "For there is nothing good or bad, but thinking makes it so.",
-      "Make your bed first thing every day.",
+      "Making your bed perfectly is the first thing you do every day of your life.",
       "Do not judge the day by the harvest you reap but by the seeds you plant.",
       "Make whatever you think best a law you never set aside.",
       "Remain vigilant: Your progress can be wrecked or preserved by a single day and a single event.",
@@ -364,6 +439,7 @@ var data = [
     "beliefs":[
       "Only fools worry about things beyond their control.",
       "Be yourself. Everyone else is already taken.",
+      "Happiness lies in the joy of achievement, in the thrill of creative effort.",
       "Try something new. Enjoy the fun of failure.",
       "I am satisfied: I see, dance, laugh and sing.",
       "Wherever you are, be there totally.",
@@ -507,7 +583,7 @@ var data = [
       "Learn by doing, failing, and doing it again better.",
       "It is impossible for a person to learn what he or she thinks they already know.",
       "With goal in mind, failure is but a stepping stone.",
-      "When you meet people, show appreciation then genuine curiosity. Everyone has something interesting.",
+      "When you meet people, show appreciation then genuine curiosity. Almost everyone has something you can learn.",
       "Books are the training weights of the mind.",
       "Skillful pilots gain their reputation from storms and tempests.",
       "Learning takes patience and persistence. Even Einstein began with 1 + 1 = 2.",
@@ -523,6 +599,8 @@ var data = [
       "Whoever sees himself as the sole judge of Truth will be shipwrecked by the laughter of the gods."
     ]
   }
+
+
 ];
 
    // Category.collection.remove({}, function(err) {
@@ -531,7 +609,7 @@ var data = [
 
    // Category.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(10, r.insertedCount);
+   //  assert.equal(12, r.insertedCount);
    // });
 
 module.exports = Category;
