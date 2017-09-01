@@ -1,6 +1,6 @@
-/*body {
-  font-family: "Futura";
-}*/
+body {
+padding-bottom: 40px;
+}
 
 
 input,
@@ -10,6 +10,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  padding-bottom: 40px;
 }
 
 /*body {
@@ -73,6 +74,7 @@ input .lastname {
 
 .container {
   position: absolute;
+  padding-bottom: 40px;
 }
 
 .paraWidth {
