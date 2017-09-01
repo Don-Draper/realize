@@ -1,10 +1,22 @@
 angular.module('common.fabric.constants', [])
   .service('FabricConstants', ['dataService','Images',function(dataService,Images ) {
     return {
+      /**
+       * only for development. enable app, canvas, target variables in console.
+       */
       debug: true,
-      credentials: true,
+      /**
+       * information in console.
+       */
+      credentials: false,
+      /**
+       * loader templates.
+       */
       // loaderContainer: ".xx-container",
       // loaderTemplate: "<span class='canvas-load-spinner'><img src='{loaderIcon}'></span>",
+      /**
+       * makes canvas stretchable
+       */
       stretchable: true,
       canvasContainer: "fiera-canvas",
       toolbars: {
