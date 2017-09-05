@@ -351,175 +351,181 @@ var data = [
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian3.svg",
+    "trueUrl":"assets/christian3.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"b-anglican.svg",
-    "trueUrl":"assets/b-anglican.svg",
-    "tag":"initial",
+    "filename":"christian5.svg",
+    "trueUrl":"assets/christian5.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus5.svg",
+    "trueUrl":"assets/jesus5.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus9.svg",
+    "trueUrl":"assets/jesus9.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus10.svg",
+    "trueUrl":"assets/jesus10.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus24.svg",
+    "trueUrl":"assets/jesus24.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus36.svg",
+    "trueUrl":"assets/jesus36.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus34.svg",
+    "trueUrl":"assets/jesus34.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"jesus13.svg",
+    "trueUrl":"assets/jesus13.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian16.svg",
+    "trueUrl":"assets/christian16.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian21.svg",
+    "trueUrl":"assets/christian21.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian22.svg",
+    "trueUrl":"assets/christian22.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian23.svg",
+    "trueUrl":"assets/christian23.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"christian24.svg",
+    "trueUrl":"assets/christian24.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross2.svg",
+    "trueUrl":"assets/cross2.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross3.svg",
+    "trueUrl":"assets/cross3.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross4.svg",
+    "trueUrl":"assets/cross4.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross5.svg",
+    "trueUrl":"assets/cross5.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross6.svg",
+    "trueUrl":"assets/cross6.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross7.svg",
+    "trueUrl":"assets/cross7.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross8.svg",
+    "trueUrl":"assets/cross8.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross9.svg",
+    "trueUrl":"assets/cross9.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross10.svg",
+    "trueUrl":"assets/cross10.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross11.svg",
+    "trueUrl":"assets/cross11.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross12.svg",
+    "trueUrl":"assets/cross12.svg",
+    "tag":"christian",
     "type":"icon"
   },
   {
-    "filename":"a-anglican.svg",
-    "trueUrl":"assets/a-anglican.svg",
-    "tag":"initial",
+    "filename":"cross13.svg",
+    "trueUrl":"assets/cross13.svg",
+    "tag":"christian",
+    "type":"icon"
+  },
+  {
+    "filename":"cross14.svg",
+    "trueUrl":"assets/cross14.svg",
+    "tag":"christian",
+    "type":"icon"
+  },
+  {
+    "filename":"cross15.svg",
+    "trueUrl":"assets/cross15.svg",
+    "tag":"christian",
+    "type":"icon"
+  },
+  {
+    "filename":"cross16.svg",
+    "trueUrl":"assets/cross16.svg",
+    "tag":"christian",
     "type":"icon"
   }
 
 
-  // {
-  //   "filename":"jesus31.svg",
-  //   "trueUrl":"assets/jesus31.svg",
-  //   "tag":"jesus",
-  //   "type":"icon"
-  // },
-  // {
-  //   "filename":"a-blackletter.svg",
-  //   "trueUrl":"assets/a-blackletter.svg",
-  //   "tag":"letter",
-  //   "type":"icon"
-  // },
 
 ];
 
@@ -528,10 +534,10 @@ var data = [
    //      });
 
 
-   // Image.collection.insertMany(data, function(err,r) {
-   //  assert.equal(null, err);
-   //  assert.equal(56, r.insertedCount);
-   // });  
+   Image.collection.insertMany(data, function(err,r) {
+    assert.equal(null, err);
+    assert.equal(84, r.insertedCount);
+   });  
 
 
 var data2 = [

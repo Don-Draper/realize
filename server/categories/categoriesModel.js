@@ -84,8 +84,8 @@ var data = [
     ]
   },
   {
-    "name":"Kindness",
-    "description": "The quality of being friendly, generous and considerate.",
+    "name":"Compassion & Empathy",
+    "description": "Kindness and the ability to understand the feelings of another.",
     "mottoes":[
       "Kindness Matters"
     ],
