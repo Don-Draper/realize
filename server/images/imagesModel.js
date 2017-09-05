@@ -534,10 +534,10 @@ var data = [
    //      });
 
 
-   Image.collection.insertMany(data, function(err,r) {
-    assert.equal(null, err);
-    assert.equal(84, r.insertedCount);
-   });  
+   // Image.collection.insertMany(data, function(err,r) {
+   //  assert.equal(null, err);
+   //  assert.equal(84, r.insertedCount);
+   // });  
 
 
 var data2 = [
