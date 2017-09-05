@@ -1,4 +1,4 @@
-/*! Fiera.js Copyright 2016, www.homeTLT.ru (Denis Ponomarev <ponomarevtlt@gmail.com>) */
+
 var fiera =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

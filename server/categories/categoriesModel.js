@@ -412,20 +412,25 @@ var data = [
       "No man is free who is not a master of himself.",
       "Capitulation is for lesser souls.",
       "He who angers you conquers you.",
+      "Master mindfulness.",
+      "Meticulously keep a food diary or a financial ledger.",
+      "Begin every day by making your bed with excellence then meditating for ten minutes.",
+      "With large goals, break it down into manageable chunks.",
+      "Meditation is like push-ups for your mind. Do it every day.",
+      "Occasional fasting strengthens the will and the spirit.",
       "Poor is the man ruled by his emotions.",
       "For there is nothing good or bad, but thinking makes it so.",
       "Making your bed perfectly is the first thing you do every day of your life.",
       "Do not judge the day by the harvest you reap but by the seeds you plant.",
-      "Make whatever you think best a law you never set aside.",
       "Remain vigilant: Your progress can be wrecked or preserved by a single day and a single event.",
       "Resolve to live as a grown-up, and make whatever you think best a law you never set aside.",
-      "You are not your thoughts. You are not your emotions. Become their master.",
+      "You are not your thoughts. You are not your emotions. You are your actions.",
       "Decisions against our betters selves offend the soul.",
       "Attach yourself to what is spiritually superior, regardless of what other people think or do.",
       "Begin everyday by counting your blessings.",
       "It's not what happens to you, but how you react to it that matters.",
-      "When faced with temptation, occupy yourself with prayer, a wholesome pleasure or work.",
-      "Fiercely guard your environment against temptation.",
+      "When faced with temptation, occupy your mind with prayer, distraction or tell yourself you'll do it later.",
+      "Fiercely guard your environment against temptation. When it's unavoidable, tell yourself you'll do it later.",
       "Forgive yourself, make corrections, redouble your efforts and move forward."
     ]
   },
@@ -598,6 +603,38 @@ var data = [
       "Only the educated are free.",
       "Whoever sees himself as the sole judge of Truth will be shipwrecked by the laughter of the gods."
     ]
+  },
+  {
+    "name":"Human Nature",
+    "description":"Understanding people.",
+    "mottoes":[
+      "To Err is Human"
+    ],
+    "beliefs":[
+      "To err is human, to forgive divine.",
+      "Everyone lies. Everyone. Pay more attention to one's actions than their words.",
+      "Most people you see every day are struggling through something.",
+      "People will give anything for what they want most.",
+      "Everyone's greatest fear is their own death.",
+      "Be warm and open to others but remain wary: Everyone is self-interested and many will take from you what they can.",
+      "Most people want more than anything to feel connected to someone or something."
+    ]
+  },
+  {
+    "name":"Privacy & Technology",
+    "description":"Knowledge and skills helpful to advances in the accessibility of information.",
+    "mottoes":[
+      ""
+    ],
+    "beliefs":[
+      "Always think twice before posting.",
+      "All transmitted information is documented forever.",
+      "One comment left unposted can save you ten versions of sorrow.",
+      "Never post when you're angry.",
+      "Texting while driving is something idiots do.",
+      "When searching for an answer, bookmark alternate paths until you find it. Then, and only then, explore.",
+      "Whoever sees himself as the sole judge of Truth will be shipwrecked by the laughter of the gods."
+    ]
   }
 
 
@@ -609,7 +646,7 @@ var data = [
 
    // Category.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(12, r.insertedCount);
+   //  assert.equal(14, r.insertedCount);
    // });
 
 module.exports = Category;
