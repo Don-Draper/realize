@@ -523,6 +523,18 @@ var data = [
     "trueUrl":"assets/cross16.svg",
     "tag":"christian",
     "type":"icon"
+  },
+  {
+    "filename":"yin-yang.svg",
+    "trueUrl":"assets/yin-yang.svg",
+    "tag":"spirituality",
+    "type":"icon"
+  },
+  {
+    "filename":"creativity.svg",
+    "trueUrl":"assets/creativity.svg",
+    "tag":"creativity",
+    "type":"icon"
   }
 
 
@@ -536,7 +548,7 @@ var data = [
 
    // Image.collection.insertMany(data, function(err,r) {
    //  assert.equal(null, err);
-   //  assert.equal(84, r.insertedCount);
+   //  assert.equal(86, r.insertedCount);
    // });  
 
 
