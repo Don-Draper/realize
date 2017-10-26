@@ -10161,7 +10161,7 @@ Toolbar.prototype.colorpickerOptions = {
 };
 
 Toolbar.prototype.tools.color = {
-  template: '<div class="object-menu-item" title="{title}">' + '<div class="btn button-{id} {className}">' + '<input type="text" data-format="rgba" data-opacity="true" data-text="true" data-control="saturation" data-swatches="#fff|#000|#f00|#0f0|#00f|#ff0|#0ff"  value="{valueCurrent}" transclude>',
+  template: '<div class="object-menu-item" title="background color">' + '<div class="btn button-{id} {className}">' + '<input type="text" data-format="rgba" data-opacity="true" data-text="true" data-control="saturation" data-swatches="#fff|#000|#f00|#0f0|#00f|#ff0|#0ff"  value="{valueCurrent}" transclude>',
   post: function post($item, data, options, transclude) {
     //var target = data.target;
 
