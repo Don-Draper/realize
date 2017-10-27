@@ -90,7 +90,7 @@ angular.module('common.fabric.constants', [])
         Object: {
           originX: "center",
           tools: [
-            /*"center",*/
+            "center",
             "remove"
           ]
         },
